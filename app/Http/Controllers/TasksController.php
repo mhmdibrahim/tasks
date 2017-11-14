@@ -17,10 +17,11 @@ class TasksController extends Controller
         $request->validate([
             'task' => 'required|max:255'
         ]);
+
         $task = new Task();
         $task->content = $request->task;
         $task->user_id =auth()->user()->id;
         $task->save();
-        return redirect("task");
+        return redirect('task');
     }
 }
