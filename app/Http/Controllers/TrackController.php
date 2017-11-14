@@ -17,10 +17,8 @@ class TrackController extends Controller
     {
         $department = Department::with([
             'employees.tasks' => function($query) {
-                $today = Carbon::today();
-                $tomorrow = $today->addDay();
-                $query->where('created_at','>=',$today)
-                        ->where('created_at','<',$tomorrow);
+                $query->where('created_at','>=',Carbon::today())
+                        ->where('created_at','<',Carbon::tomorrow());
             }
         ])->find($department);
         return view('showDepartment')->with('department',$department);
