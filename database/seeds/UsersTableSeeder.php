@@ -17,7 +17,6 @@ class UsersTableSeeder extends Seeder
         $user->email = 'admin@admin.com';
         $user->password =bcrypt('password');
         $user->role = 'admin';
-        $user->department_id = 1;
         $user->save();
         $user = new \App\User();
         $user->first_name = 'tracker';
@@ -25,7 +24,6 @@ class UsersTableSeeder extends Seeder
         $user->email = 'tracker@tracker.com';
         $user->password =bcrypt('password');
         $user->role = 'tracker';
-        $user->department_id = 1;
         $user->save();
     }
 }

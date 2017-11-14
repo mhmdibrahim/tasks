@@ -21,6 +21,6 @@ class TasksController extends Controller
         $task->content = $request->task;
         $task->user_id =auth()->user()->id;
         $task->save();
-        return redirect("task");
+        return redirect('task');
     }
 }

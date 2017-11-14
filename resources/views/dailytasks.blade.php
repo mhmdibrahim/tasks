@@ -1,5 +1,4 @@
 @extends('layouts\app')
-
 @section('content')
     <div class="container">
         <div class="row">
@@ -7,7 +6,7 @@
                 <h1>New Task </h1>
             </div>
         </div>
-        <form action="/task/{{$id}}" method="post" >
+        <form action="/task" method="post" >
             {{csrf_field()}}
             <div class="row">
                 <div class="col-md-10">
