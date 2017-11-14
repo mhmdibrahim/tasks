@@ -25,5 +25,6 @@ class TrackController extends Controller
         ])->find($department);
         return view('showDepartment')->with('department',$department);
     }
+
 }
 

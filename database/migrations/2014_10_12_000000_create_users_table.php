@@ -19,13 +19,12 @@ class CreateUsersTable extends Migration
             $table->string('last_name');
             $table->enum('role',['admin','tracker','regular'])->default('regular');
             $table->string('email')->unique();
-            $table->integer('department_id');
+            $table->integer('department_id')->nullable();
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
         });
     }
-
     /**
      * Reverse the migrations.
      *
