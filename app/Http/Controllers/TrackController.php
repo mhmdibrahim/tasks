@@ -11,17 +11,19 @@ class TrackController extends Controller
 {
     public function index()
     {
-        return view('track')->with('departments', Department::all());
+        return view('track')->with('departments', Department::all());            ;
     }
     public function showDepartment($department)
     {
+        $today =Carbon::today()->toDateString();
+
         $department = Department::with([
             'employees.tasks' => function($query) {
                 $query->where('created_at','>=',Carbon::today())
                         ->where('created_at','<',Carbon::tomorrow());
             }
         ])->find($department);
-        return view('showDepartment')->with('department',$department);
+        return view('showDepartment')->with('department',$department)->with('date',$today);
     }
 
 }
