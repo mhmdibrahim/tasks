@@ -2,6 +2,18 @@
 @section('content')
     <div class="container">
         <div class="row">
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+            @if(session('status') != null)
+                <div class="alert alert-success">{{session('status')}}</div>
+            @endif
             <div class="col-md-3" style="float: left">
                 <h1>Add Employee</h1>
                  <form method="post" action="addemp" >

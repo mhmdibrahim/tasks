@@ -3,12 +3,18 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div class="alert alert-danger">
-                    <ul>
-                        <li>one</li>
-                        <li>two</li>
-                    </ul>
-                </div>
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+                @if(session('status') != null)
+                    <div class="alert alert-success">{{session('status')}}</div>
+                @endif
             </div>
         </div>
         <div class="row">
