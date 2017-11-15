@@ -25,7 +25,7 @@ class Dashboard extends Controller
         $user->department_id = $request->department;
         $user->password =bcrypt($request->password);
         $user->save();
-        return redirect('/')->with('status','Employee Added');
+        return back()->with('status','Employee Added');
     }
     public function createDepartment(Request $request){
         $request->validate([
@@ -34,11 +34,11 @@ class Dashboard extends Controller
         $department = new  Department();
         $department->name = $request->department;
         $department->save();
-        return redirect('/')->with('status','Department Added');
+        return back()->with('status','Department Added');
     }
     public function deleteDepartment(Request $request , $id){
         Department::destroy($id);
-        return redirect('/')->with('status','Department Deleted');
+        return back()->with('status','Department Deleted');
     }
 
 }
