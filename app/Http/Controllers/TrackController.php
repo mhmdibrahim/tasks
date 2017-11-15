@@ -13,15 +13,20 @@ class TrackController extends Controller
     {
         return view('track')->with('departments', Department::all());
     }
-    public function showDepartment($department)
+    public function showDepartment(Request $request,$department)
     {
+        if($request->date != null){
+            $day = $request->date;
+        }else{
+            $day = Carbon::today()->toDateString();
+        }
         $department = Department::with([
-            'employees.tasks' => function($query) {
-                $query->where('created_at','>=',Carbon::today())
-                        ->where('created_at','<',Carbon::tomorrow());
+            'employees.tasks' => function($query) use($day) {
+                $query->where('created_at','>=',(new Carbon($day)))
+                        ->where('created_at','<',((new Carbon($day))->addDay()));
             }
         ])->find($department);
-        return view('showDepartment')->with('department',$department);
+        return view('showDepartment')->with('department',$department)->with('date',$day);
     }
 }
 
