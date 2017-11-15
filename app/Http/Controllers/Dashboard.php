@@ -18,6 +18,7 @@ class Dashboard extends Controller
             'password'=>'required|max:255',
             'department'=>'required|exists:departments,id'
         ]);
+
         $user = new User();
         $user->first_name = $request->firstName;
         $user->last_name = $request->lastName;

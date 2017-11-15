@@ -27,19 +27,19 @@
                     <div class="form-group">
                         <label class="control-label col-md-4">First Name</label>
                         <div class="col-md-8">
-                            <input class="form-control" type="text" name="firstName" placeholder="Enter First Name">
+                            <input class="form-control" type="text" name="firstName" placeholder="Enter First Name" value="{{old('firstName')}}">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-md-4">Last Name</label>
                         <div class="col-md-8">
-                            <input class="form-control" type="text" name="lastName" placeholder="Enter Last Name">
+                            <input class="form-control" type="text" name="lastName" placeholder="Enter Last Name" value="{{old('lastName')}}">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-md-4">Email</label>
                         <div class="col-md-8">
-                            <input class="form-control" type="email" name="email" placeholder="Enter Email">
+                            <input class="form-control" type="email" name="email" placeholder="Enter Email" value="{{old('email')}}">
                         </div>
                     </div>
                     <div class="form-group">
@@ -52,9 +52,17 @@
                         <label class="control-label col-md-4">Department</label>
                         <div class="col-md-8">
                             <select class="form-control" name="department">
-                                <option disabled selected>-Select Department-</option>
+                                @if(!$errors->any())
+                                    <option disabled selected>-Select Department-</option>
+                                @else
+                                    <option disabled>-Select Department-</option>
+                                @endif
                                 @foreach($departments as $department)
-                                    <option value="{{$department->id}}">{{$department->name}}</option>
+                                    @if(old('department') == $department->id)
+                                        <option value="{{$department->id}}" selected>{{$department->name}}</option>
+                                    @else
+                                        <option value="{{$department->id}}">{{$department->name}}</option>
+                                    @endif
                                 @endforeach
                             </select>
                         </div>
@@ -97,7 +105,7 @@
                             <ul>
                                 @foreach($department->employees as $employee)
                                     <li>
-                                        {{$employee->first_name}}
+                                        {{$employee->first_name}} {{$employee->last_name}}
                                     </li>
                                 @endforeach
                             </ul>

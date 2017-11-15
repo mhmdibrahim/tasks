@@ -10,7 +10,7 @@
                    <div class="panel-body">
                        <ul>
                            @forelse($department->employees as $employee)
-                               <li>{{$employee->first_name}}</li>
+                               <li>{{$employee->first_name}} {{$employee->last_name}}</li>
                            @empty No Employees
                            @endforelse
                        </ul>
