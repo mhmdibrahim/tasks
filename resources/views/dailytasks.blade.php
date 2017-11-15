@@ -22,9 +22,11 @@
                 <h1>New Task </h1>
             </div>
         </div>
-        <form action="/task" method="post" >
+        <hr>
+        <form action="/task" method="post"  class="form-horizontal">
             {{csrf_field()}}
-            <div class="row">
+            <div class="form-group">
+            <div class="form-group">
                 <div class="col-md-10">
                     <input autofocus="autofocus" class="form-control" type="text" name="task" placeholder="Enter Your Task Here">
                 </div>
@@ -33,7 +35,9 @@
                 </div>
             </div>
         </form>
+        <hr>
         <div class="row">
+            <div class="col-md-12"><h1>Today's Tasks</h1></div>
             <div class="col-md-10">
                 <div class="list-group" >
                     @forelse($tasks as $task)
