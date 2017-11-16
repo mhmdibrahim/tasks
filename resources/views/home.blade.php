@@ -52,7 +52,7 @@
                         <label class="control-label col-md-4">Department</label>
                         <div class="col-md-8">
                             <select class="form-control" name="department">
-                                @if(!$errors->any())
+                                @if(old('department') == null)
                                     <option disabled selected>-Select Department-</option>
                                 @else
                                     <option disabled>-Select Department-</option>

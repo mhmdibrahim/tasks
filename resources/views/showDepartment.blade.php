@@ -2,6 +2,7 @@
 @section('content')
     <div class="container">
         <div class="row">
+<<<<<<< HEAD
             <form  id="form" method="GET">
                 <input name="date" type="date" id="date" value="{{$date}}">
             </form>
