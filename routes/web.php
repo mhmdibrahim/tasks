@@ -41,4 +41,10 @@ Route::post('task', 'TasksController@addTask')
 Route::get('track','TrackController@index')
     ->middleware('auth')
     ->middleware('tracker');
-Route::get('/track/{department}','TrackController@showDepartment');
+Route::get('/track/{department}','TrackController@showDepartment')
+    ->middleware('auth')
+    ->middleware('tracker');
+Route::get('/moreDetails/{department}','TrackController@moreDetails')
+    ->middleware('auth')
+    ->middleware('tracker');
+

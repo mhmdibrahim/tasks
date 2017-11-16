@@ -45,7 +45,19 @@
                     <div class="form-group">
                         <label class="control-label col-md-4">Password</label>
                         <div class="col-md-8">
-                            <input class="form-control" type="password" name="password" placeholder="Enter Password">
+                            <input class="form-control" type="password" name="password" placeholder="Enter Password" >
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4">Job Title</label>
+                        <div class="col-md-8">
+                            <input class="form-control" type="text" name="jobTitle" placeholder="Enter Job Title" value="{{old('jobTitle')}}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4">Phone Number</label>
+                        <div class="col-md-8">
+                            <input class="form-control" type="text" name="phoneNumber" placeholder="Enter Phone Number" value="{{old('phoneNumber')}}">
                         </div>
                     </div>
                     <div class="form-group">

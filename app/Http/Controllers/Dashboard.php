@@ -16,15 +16,21 @@ class Dashboard extends Controller
             'lastName'=>'required|max:255',
             'email'=>'required|max:255|email',
             'password'=>'required|max:255',
-            'department'=>'required|exists:departments,id'
+            'department'=>'required|exists:departments,id',
+            'jobTitle'=>'required|max:255',
+            'phoneNumber'=>[
+                'required',
+                'regex:/^01[0124]\d{8}$/'
+            ]
         ]);
-
         $user = new User();
         $user->first_name = $request->firstName;
         $user->last_name = $request->lastName;
         $user->email = $request->email;
         $user->department_id = $request->department;
         $user->password =bcrypt($request->password);
+        $user->job_title = $request->jobTitle;
+        $user->phone = $request->phoneNumber;
         $user->save();
         return back()->with('status','Employee Added');
     }
@@ -41,5 +47,6 @@ class Dashboard extends Controller
         Department::destroy($id);
         return back()->with('status','Department Deleted');
     }
+
 
 }
