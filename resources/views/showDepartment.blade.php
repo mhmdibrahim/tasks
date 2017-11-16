@@ -1,14 +1,14 @@
 @extends('layouts\app')
 @section('content')
     <div class="container">
+        <div class="row">
+            <form  id="form" method="GET">
+                <input name="date" type="date" id="date" value="{{$date}}">
+            </form>
+        </div>
+        <br>
         @forelse($department->employees as $employee)
             <div class="col-md-6">
-                <div class="row">
-                    <form  id="form" method="GET">
-                        <input name="date" type="date" id="date" value="{{$date}}">
-                    </form>
-                    {{$date}}
-                </div>
                 <div class="panel panel-primary">
                     <div class="panel-heading">
                         {{$employee->first_name}}
