@@ -20,8 +20,8 @@ class CreateUsersTable extends Migration
             $table->enum('role',['admin','tracker','regular'])->default('regular');
             $table->string('email')->unique();
             $table->integer('department_id')->nullable();
-            $table->string('jop_title')->nullable;
-            $table->string('phone')->nullable;
+            $table->string('job_title')->nullable();
+            $table->string('phone')->nullable();
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
