@@ -41,10 +41,22 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
+                        <select>
+                            <option value="volvo">English</option>
+                            <option value="saab">Arabic</option>
+                        </select>
                         <!-- Authentication Links -->
                         @guest
                             <li><a href="{{ route('login') }}">Login</a></li>
+                            {{--<div class="dropdown">--}}
+                                {{--<button class="dropbtn">Language</button>--}}
+                                {{--<div class="dropdown-content">--}}
+                                    {{--<a href="#">English</a>--}}
+                                    {{--<a href="#">Arabic</a>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
                         @else
+
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
                                     HI {{ Auth::user()->first_name }} <span class="caret"></span>

@@ -47,4 +47,11 @@ Route::get('/track/{department}','TrackController@showDepartment')
 Route::get('/moreDetails/{department}','TrackController@moreDetails')
     ->middleware('auth')
     ->middleware('tracker');
+Route::post('/language-chooser','LanguageController@changeLanguage');
+Route::post('/language/',array(
+                        'before'=>'csrf',
+                        'as'=>'language-chooser',
+                        'uses'=>'LanguageController@changeLanguage'
+));
+
 
