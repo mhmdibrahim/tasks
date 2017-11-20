@@ -28,9 +28,10 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="#">
-                        Syal
-                    </a>
+                    {{--<a class="navbar-brand" href="#">--}}
+                       <h3>Syal</h3>
+                    {{--</a>--}}
+                    @yield('nav')
                 </div>
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
 

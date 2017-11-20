@@ -1,4 +1,13 @@
 @extends('layouts\app')
+@section('nav')
+    <div>
+        <ul class="breadcrumb">
+            <li><a href="/">Home</a></li>
+            <li><a href="/track/{{$department->id}}">Show Department Tasks</a></li>
+            <li class="active">Show Department Employees Tasks</li>
+        </ul>
+    </div>
+@endsection
 @section('content')
     <div class="container">
         <div class="row">
