@@ -26,13 +26,13 @@
                         <ul>
                             @forelse($employee->tasks as $task)
                                 <li>{{$task->content}}</li>
-                            @empty No Tasks
+                            @empty @lang('No Tasks')
                             @endforelse
                         </ul>
                     </div>
                 </div>
             </div>
-        @empty No Employees
+        @empty @lang('No Employees')
         @endforelse
     </div>
 @endsection

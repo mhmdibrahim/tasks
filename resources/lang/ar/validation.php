@@ -8,9 +8,10 @@ return [
     |
     | The following language lines contain the default error messages used by
     | the validator class. Some of these rules have multiple versions such
-    | as the size rules. Feel free to tweak each of these messages.
+    | as the size rules. Feel free to tweak each of these messages here.
     |
     */
+
 
     'accepted'             => 'يجب قبول :attribute',
     'active_url'           => ':attribute لا يُمثّل رابطًا صحيحًا',
@@ -87,22 +88,6 @@ return [
     'uploaded'             => 'فشل في تحميل الـ :attribute',
     'url'                  => 'صيغة الرابط :attribute غير صحيحة',
 
-    /*
-    |--------------------------------------------------------------------------
-    | Custom Validation Language Lines
-    |--------------------------------------------------------------------------
-    |
-    | Here you may specify custom validation messages for attributes using the
-    | convention "attribute.rule" to name the lines. This makes it quick to
-    | specify a specific custom language line for a given attribute rule.
-    |
-    */
-
-    'custom'               => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
-        ],
-    ],
 
     /*
     |--------------------------------------------------------------------------

@@ -4,7 +4,11 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+<<<<<<< HEAD
+    | Password Reset Language Lines
+=======
     | Password Reminder Language Lines
+>>>>>>> 830d9b961571119a883a83e75973ce9a69182c8b
     |--------------------------------------------------------------------------
     |
     | The following language lines are the default lines which match reasons
