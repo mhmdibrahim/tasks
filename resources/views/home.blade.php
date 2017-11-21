@@ -20,54 +20,54 @@
 
         <div class="row">
             <div class="col-md-5 pull-left">
-                <h1 class="text-center">Add Employee</h1>
+                <h1 class="text-center">@lang('Add Employee') </h1>
                 <hr>
                 <form method="post" action="addemp" class="form-horizontal">
                     {{csrf_field()}}
                     <div class="form-group">
-                        <label class="control-label col-md-4">First Name</label>
+                        <label class="control-label col-md-4">@lang('First Name')</label>
                         <div class="col-md-8">
-                            <input class="form-control" type="text" name="firstName" placeholder="Enter First Name" value="{{old('firstName')}}">
+                            <input class="form-control" type="text" name="firstName" placeholder=@lang('Enter First Name') value="{{old('firstName')}}">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-md-4">Last Name</label>
+                        <label class="control-label col-md-4">@lang('Last Name') </label>
                         <div class="col-md-8">
-                            <input class="form-control" type="text" name="lastName" placeholder="Enter Last Name" value="{{old('lastName')}}">
+                            <input class="form-control" type="text" name="lastName" placeholder=@lang('Enter Last Name') value="{{old('lastName')}}">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-md-4">Email</label>
+                        <label class="control-label col-md-4">@lang('Email') </label>
                         <div class="col-md-8">
-                            <input class="form-control" type="email" name="email" placeholder="Enter Email" value="{{old('email')}}">
+                            <input class="form-control" type="email" name="email" placeholder=@lang("Enter Email")  value="{{old('email')}}">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-md-4">Password</label>
+                        <label class="control-label col-md-4">@lang('Password') </label>
                         <div class="col-md-8">
-                            <input class="form-control" type="password" name="password" placeholder="Enter Password" >
+                            <input class="form-control" type="password" name="password" placeholder=@lang("Enter Password")  >
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-md-4">Job Title</label>
+                        <label class="control-label col-md-4">@lang('Job Title') </label>
                         <div class="col-md-8">
-                            <input class="form-control" type="text" name="jobTitle" placeholder="Enter Job Title" value="{{old('jobTitle')}}">
+                            <input class="form-control" type="text" name="jobTitle" placeholder=@lang("Enter Job Title")  value="{{old('jobTitle')}}">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-md-4">Phone Number</label>
+                        <label class="control-label col-md-4">@lang('Phone Number') </label>
                         <div class="col-md-8">
-                            <input class="form-control" type="text" name="phoneNumber" placeholder="Enter Phone Number" value="{{old('phoneNumber')}}">
+                            <input class="form-control" type="text" name="phoneNumber" placeholder=@lang("Enter Phone Number")  value="{{old('phoneNumber')}}">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-md-4">Department</label>
+                        <label class="control-label col-md-4">@lang('Department')</label>
                         <div class="col-md-8">
                             <select class="form-control" name="department">
                                 @if(old('department') == null)
-                                    <option disabled selected>-Select Department-</option>
+                                    <option disabled selected>@lang('-Select Department-')</option>
                                 @else
-                                    <option disabled>-Select Department-</option>
+                                    <option disabled>@lang('-Select Department-')</option>
                                 @endif
                                 @foreach($departments as $department)
                                     @if(old('department') == $department->id)
@@ -80,24 +80,24 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <input class="btn btn-success col-md-offset-5" type="submit" value="Add Emplyee">
+                        <input class="btn btn-success col-md-offset-5" type="submit" value=@lang("Add Emplyee") >
                     </div>
                 </form>
 
             </div>
             <div class="col-md-5 pull-right">
-                <h1>Add department</h1>
+                <h1>@lang('Add department') </h1>
                 <hr>
                 <form action="d-department" method="post" class="form-horizontal">
                     {{csrf_field()}}
                     <div class="form-group">
-                        <label class="control-label col-md-4">Department Name</label>
+                        <label class="control-label col-md-4">@lang('Department Name') </label>
                         <div class="col-md-8">
-                            <input class="form-control" type="text" name="department" placeholder="Enter Department Name">
+                            <input class="form-control" type="text" name="department" placeholder=@lang("Enter Department Name") >
                         </div>
                     </div>
                     <div class="form-group">
-                        <input class="btn btn-success col-md-offset-4" type="submit" value="Add Department">
+                        <input class="btn btn-success col-md-offset-4" type="submit" value=@lang("Add Department") >
                     </div>
                 </form>
             </div>

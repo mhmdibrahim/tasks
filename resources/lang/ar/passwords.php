@@ -4,7 +4,11 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+<<<<<<< HEAD
     | Password Reset Language Lines
+=======
+    | Password Reminder Language Lines
+>>>>>>> 830d9b961571119a883a83e75973ce9a69182c8b
     |--------------------------------------------------------------------------
     |
     | The following language lines are the default lines which match reasons
@@ -13,10 +17,10 @@ return [
     |
     */
 
-    'password' => 'Passwords must be at least six characters and match the confirmation.',
-    'reset' => 'Your password has been reset!',
-    'sent' => 'We have e-mailed your password reset link!',
-    'token' => 'This password reset token is invalid.',
-    'user' => "We can't find a user with that e-mail address.",
+    'password' => 'يجب أن لا يقل طول كلمة المرور عن ستة أحرف، كما يجب أن تتطابق مع حقل التأكيد',
+    'reset'    => 'تمت إعادة تعيين كلمة المرور',
+    'sent'     => 'تم إرسال تفاصيل استعادة كلمة المرور الخاصة بك إلى بريدك الإلكتروني',
+    'token'    => '.رمز استعادة كلمة المرور الذي أدخلته غير صحيح',
+    'user'     => 'لم يتم العثور على أيّ حسابٍ بهذا العنوان الإلكتروني',
 
 ];

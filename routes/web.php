@@ -38,20 +38,16 @@ Route::get('task', 'TasksController@index')
     ->middleware('auth');
 Route::post('task', 'TasksController@addTask')
     ->middleware('auth');
-Route::get('track','TrackController@index')
+Route::get('track', 'TrackController@index')
     ->middleware('auth')
     ->middleware('tracker');
-Route::get('/track/{department}','TrackController@showDepartment')
+Route::get('/track/{department}', 'TrackController@showDepartment')
     ->middleware('auth')
     ->middleware('tracker');
-Route::get('/moreDetails/{department}','TrackController@moreDetails')
+Route::get('/moreDetails/{department}', 'TrackController@moreDetails')
     ->middleware('auth')
     ->middleware('tracker');
-Route::post('/language-chooser','LanguageController@changeLanguage');
-Route::post('/language/',array(
-                        'before'=>'csrf',
-                        'as'=>'language-chooser',
-                        'uses'=>'LanguageController@changeLanguage'
-));
 
+Route::get('language/{lang}','LanguageController@changeLanguage')
+    ->name('language-chooser');
 

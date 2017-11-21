@@ -18,10 +18,10 @@
                             <li>{{$task->content}}</li>
                         @empty
                         @endforelse
-                    @empty No Tasks
+                    @empty @lang('No Tasks')
                     @endforelse
                 </ul>
-                <a href="/moreDetails/{{$department->id}}">Details</a>
+                <a href="/moreDetails/{{$department->id}}">@lang('Details')</a>
             </div>
         </div>
     </div>

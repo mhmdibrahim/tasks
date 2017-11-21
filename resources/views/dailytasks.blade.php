@@ -13,13 +13,13 @@
                     </div>
                 @endif
                 @if(session('status') != null)
-                    <div class="alert alert-success">{{session('status')}}</div>
+                    <div class="alert alert-success">{{__(session('status'))}}</div>
                 @endif
             </div>
         </div>
         <div class="row">
             <div class="col-md-12">
-                <h1>New Task </h1>
+                <h1>@lang('New Task')  </h1>
             </div>
         </div>
         <hr>
@@ -28,16 +28,16 @@
             <div class="form-group">
             <div class="form-group">
                 <div class="col-md-10">
-                    <input autofocus="autofocus" class="form-control" type="text" name="task" placeholder="Enter Your Task Here">
+                    <input autofocus="autofocus" class="form-control" type="text" name="task" placeholder= @lang('Enter Your Task Here')>
                 </div>
                 <div class="col-md-2">
-                    <input type="submit" class="btn btn-success" value="ADD">
+                    <input type="submit" class="btn btn-success" value= @lang("ADD")>
                 </div>
             </div>
         </form>
         <hr>
         <div class="row">
-            <div class="col-md-12"><h1>Today's Tasks</h1></div>
+            <div class="col-md-12"><h1>@lang("Today's Tasks")</h1></div>
             <div class="col-md-10">
                 <div class="list-group" >
                     @forelse($tasks as $task)
@@ -45,7 +45,7 @@
                             {{$task->content}}
                         </div>
                     @empty
-                        <h1>You Have No Tasks</h1>
+                        <h1>@lang('You Have No Tasks') </h1>
                     @endforelse
                 </div>
             </div>
