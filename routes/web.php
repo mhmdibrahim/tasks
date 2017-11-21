@@ -51,4 +51,8 @@ Route::get('/changePassword','ChangePasswordController@index')
     ->middleware('auth');
 Route::post('/change','ChangePasswordController@change')
     ->middleware('auth');
+Route::get('edit','EditProfileController@index')
+    ->middleware('auth');
+Route::post('edit','EditProfileController@edit')
+    ->middleware('auth');
 
