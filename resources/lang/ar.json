@@ -40,5 +40,16 @@
   "Enter Department Name":"إدخل",
   "Add Department":"إضافه",
   "Add Emplyee":"إضافه",
-  "Task Added" : "تم إضافة المهمة"
+  "Task Added" : "تم إضافة المهمة",
+  "Home":"الرئيسيه",
+  "change password":"تغيير الرقم السرى" ,
+  "Change Password":"تغيير الرقم السرى",
+  "new password":"الرقم السرى الجديد",
+  "Enter new password":"إدخل",
+  "Enter the password agin":"إدخل",
+  "confirm password":"تأكييد الرقم السرى",
+  "Show Department Tasks":"عرض مهام القسم",
+  "Show Department Employees Tasks":"عرض مهام الموظفين داخل القسم",
+  "Tasks":"المهام"
+
 }

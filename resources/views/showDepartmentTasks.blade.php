@@ -2,8 +2,8 @@
 @section('nav')
     <div>
         <ul class="breadcrumb">
-            <li><a href="/">Home</a></li>
-            <li class="active">Show Department Tasks</li>
+            <li><a href="/">@lang('Home')</a></li>
+            <li class="active">@lang('Show Department Tasks')</li>
         </ul>
     </div>
 @endsection

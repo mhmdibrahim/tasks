@@ -2,7 +2,7 @@
 @section('nav')
     <div>
         <ul class="breadcrumb">
-            <li class="active">Home</li>
+            <li class="active">@lang('Home')</li>
         </ul>
     </div>
 @endsection
