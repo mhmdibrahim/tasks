@@ -12,6 +12,9 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @if(app()->getLocale() == 'ar')
+    <link href="{{asset('css/bootstrap-rtl.min.css')}}" rel="stylesheet">
+    @endif
 </head>
 <body>
 <div id="app">
