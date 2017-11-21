@@ -1,4 +1,12 @@
 @extends('layouts\app')
+@section('nav')
+    <div>
+        <ul class="breadcrumb">
+            <li><a href="/">Home</a></li>
+            <li class="active">Show Department Tasks</li>
+        </ul>
+    </div>
+@endsection
 @section('content')
     <div class="container">
         <div class="row">

@@ -30,6 +30,7 @@
                     <a class="navbar-brand" href="#">
                         @lang('Syal')
                     </a>
+                    @yield('nav')
                 </div>
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
@@ -64,6 +65,9 @@
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                             {{ csrf_field() }}
                                         </form>
+                                    </li>
+                                    <li>
+                                        <a href="/changePassword">change password</a>
                                     </li>
                                 </ul>
                             </li>

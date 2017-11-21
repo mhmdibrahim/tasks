@@ -47,6 +47,10 @@ Route::get('/track/{department}', 'TrackController@showDepartment')
 Route::get('/moreDetails/{department}', 'TrackController@moreDetails')
     ->middleware('auth')
     ->middleware('tracker');
+Route::get('/changePassword','ChangePasswordController@index')
+    ->middleware('auth');
+Route::post('/change','ChangePasswordController@change')
+    ->middleware('auth');
 
 Route::get('language/{lang}','LanguageController@changeLanguage')
     ->name('language-chooser');
