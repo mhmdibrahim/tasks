@@ -53,8 +53,13 @@
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
                                     @lang('HI') {{ Auth::user()->first_name }} <span class="caret"></span>
                                 </a>
-
                                 <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="/edit">@lang('Edit Profile')</a>
+                                    </li>
+                                    <li>
+                                        <a href="/changePassword">@lang('change password')</a>
+                                    </li>
                                     <li>
                                         <a href="{{ route('logout') }}"
                                            onclick="event.preventDefault();
@@ -66,9 +71,7 @@
                                             {{ csrf_field() }}
                                         </form>
                                     </li>
-                                    <li>
-                                        <a href="/changePassword">@lang('change password')</a>
-                                    </li>
+
                                 </ul>
                             </li>
                             @endguest
