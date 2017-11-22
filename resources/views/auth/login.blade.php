@@ -1,6 +1,10 @@
 @extends('layouts.master')
+@section('header')
+@endsection
+@section('footer')
+@endsection
 @section('styles')
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 @endsection
 @section('content')
     <div id="wrapper">

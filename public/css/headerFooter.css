@@ -108,8 +108,6 @@ html #footer .footer-block {
 .btn-primary {
     border-radius: 4px;
     float: right;
-    /* text-align: center; */
-    width: 97px;
 }
 .btn-primary:hover {
     border: 1px solid gold;
