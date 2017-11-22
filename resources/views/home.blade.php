@@ -98,7 +98,7 @@
                 @foreach($departments as $department)
                 <div class="notification  col-md-6">
                     @if($department->employees->count() < 1)
-                    <span class="notification-close"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+                    <span  data-id="{{$department->id}}"  class="notification-close"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
                     @endif
                     <h3 class="notification-title">{{$department->name}}</h3>
                     <ol class="custom-counter">
@@ -110,5 +110,9 @@
                 @endforeach
             </div>
         </section>
+        <form action="/deletDepartment" id="form-delete" method="post">
+            {{csrf_field()}}
+            <input type="hidden" id="inputId" name="id">
+        </form>
     </main>
 @endsection
