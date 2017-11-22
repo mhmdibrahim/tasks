@@ -106,8 +106,8 @@
                     </select>
                 </div>
             </div>
-            <div class="form-group">
-                <input class="btn btn-success col-md-offset-5" type="submit" value=@lang("Add Emplyee")>
+            <div class="form-group" >
+                <button type="submit" class="btn btn-primary">@lang('Edit')</button>
             </div>
         </form>
     </div>

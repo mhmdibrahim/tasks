@@ -31,8 +31,8 @@
                         <input type="text" id="task" class="floatLabel" name="task">
                         <label for="task">@lang('Enter Your Task Here')</label>
                     </div>
-                    <button type="submit" class="btn btn-primary")>@lang('ADD')</button>
-                </div> <!-- /.form-group -->
+                    <button type="submit" class="btn btn-primary">@lang('ADD')</button>
+                </div>
             </form>
         </section>
         <hr>

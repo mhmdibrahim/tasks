@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.master')
 @section('nav')
     <div>
         <ul class="breadcrumb">
@@ -40,7 +40,7 @@
             </div>
             <div class="form-group">
                 <div class="col-md-4 col-md-offset-3">
-                    <input type="submit" value=@lang("change password") class="form-control btn btn-success">
+                    <button type="submit" class="btn btn-primary")>@lang('Change')</button>
                 </div>
             </div>
         </form>
