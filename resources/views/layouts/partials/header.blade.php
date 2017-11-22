@@ -12,7 +12,7 @@
             <div class="collapse navbar-collapse  navbar-right" id="navbarNav">
                 <ul class="navbar-nav">
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="active"><a href="#">@lang('Home')</a></li>
+                        <li class="active"><a href="/">@lang('Home')</a></li>
 
                         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"
                                                 href="#">{{ Auth::user()->first_name }} <span class="caret"></span>
