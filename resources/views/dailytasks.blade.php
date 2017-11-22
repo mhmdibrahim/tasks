@@ -31,13 +31,13 @@
                         <input type="text" id="task" class="floatLabel" name="task">
                         <label for="task">@lang('Enter Your Task Here')</label>
                     </div>
-                    <button type="submit" class="btn btn-primary")>@lang('add')</button>
+                    <button type="submit" class="btn btn-primary")>@lang('ADD')</button>
                 </div> <!-- /.form-group -->
             </form>
         </section>
         <hr>
         <section class="row task">
-            <h2 class="heading">today's task</h2>
+            <h2 class="heading">@lang("Today's Tasks")</h2>
             @forelse($tasks as $task)
             <div class="notification">
                 <h3 class="notification-title">{{$task->content}}</h3>
