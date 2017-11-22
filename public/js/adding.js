@@ -1,9 +1,9 @@
 $('.notification-close').on('click', notificationClose);
 
 function notificationClose() {
-  $(this)
-    .parent('.notification')
-    .hide();
+
+	$('#inputId').val($(this).data('id'));
+	$('#form-delete').submit();
 };
 (function($){
 	function floatLabel(inputType){

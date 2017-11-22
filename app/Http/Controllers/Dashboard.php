@@ -44,8 +44,8 @@ class Dashboard extends Controller
         $department->save();
         return back()->with('status','Department Added');
     }
-    public function deleteDepartment(Request $request , $id){
-        Department::destroy($id);
+    public function deleteDepartment(Request $request){
+        Department::destroy($request->id);
         return back()->with('status','Department Deleted');
     }
 
