@@ -1,60 +1,56 @@
-@extends('layouts\app')
-@section('nav')
-    <div>
-        <ul class="breadcrumb">
-            <li class="active">@lang('Home')</li>
-        </ul>
-    </div>
+@extends('layouts.master')
+@section('styles')
+    @if($tasks->count() == 0)
+    <link rel="stylesheet" href="/css/default.css">
+    @endif
 @endsection
 @section('content')
-    <div class="container">
+    <main class="container @if($tasks->count() == 0) default @endif">
         <div class="row">
             <div class="col-md-12">
-                @if ($errors->any())
-                    <div class="alert alert-danger">
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+            @if(session('status') != null)
+                <div class="alert alert-success">{{__(session('status'))}}</div>
+            @endif
+            </div>
+        </div>
+        <section class="row enter-task">
+            <form action="/task" method="post" >
+                {{csrf_field()}}
+                <div class="form-group">
+                    <h2 class="heading">@lang('New Task')</h2>
+                    <div class="controls">
+                        <input type="text" id="task" class="floatLabel" name="task">
+                        <label for="task">@lang('Enter Your Task Here')</label>
                     </div>
-                @endif
-                @if(session('status') != null)
-                    <div class="alert alert-success">{{__(session('status'))}}</div>
-                @endif
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <h1>@lang('New Task')  </h1>
-            </div>
-        </div>
+                    <button type="submit" class="btn btn-primary")>@lang('add')</button>
+                </div> <!-- /.form-group -->
+            </form>
+        </section>
         <hr>
-        <form action="/task" method="post"  class="form-horizontal">
-            {{csrf_field()}}
-            <div class="form-group">
-            <div class="form-group">
-                <div class="col-md-10">
-                    <input autofocus="autofocus" class="form-control" type="text" name="task" placeholder= @lang('Enter Your Task Here')>
-                </div>
-                <div class="col-md-2">
-                    <input type="submit" class="btn btn-success" value= @lang("ADD")>
-                </div>
+        <section class="row task">
+            <h2 class="heading">today's task</h2>
+            @forelse($tasks as $task)
+            <div class="notification">
+                <h3 class="notification-title">{{$task->content}}</h3>
             </div>
-        </form>
-        <hr>
-        <div class="row">
-            <div class="col-md-12"><h1>@lang("Today's Tasks")</h1></div>
-            <div class="col-md-10">
-                <div class="list-group" >
-                    @forelse($tasks as $task)
-                        <div  class="list-group-item">
-                            {{$task->content}}
-                        </div>
-                    @empty
-                        <h1>@lang('You Have No Tasks') </h1>
-                    @endforelse
+            @empty
+                <div class="icon text-center">
+                    <div class="block">
+                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                    </div>
+                    <p>@lang('You Have No Tasks')</p>
                 </div>
-            </div>
-        </div>
-    @endsection
+            @endforelse
+        </section>
+    </main>
+
+@endsection

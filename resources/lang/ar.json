@@ -51,5 +51,7 @@
   "Show Department Tasks":"عرض مهام القسم",
   "Show Department Employees Tasks":"عرض مهام الموظفين داخل القسم",
   "Tasks":"المهام",
-  "Edit Profile":"تعديل البيانات الشخصيه"
+  "Edit Profile":"تعديل البيانات الشخصيه",
+  "Language" : "اللغة",
+  "menu":"القائمه"
 }

@@ -10,12 +10,13 @@ class TasksController extends Controller
 {
     public function index(Request $request)
     {
-      $tasks =  auth()->user()->tasks()->where('created_at', '>=', Carbon::today())
+        $tasks = auth()->user()->tasks()->where('created_at', '>=', Carbon::today())
             ->where('created_at', '<', Carbon::tomorrow())
-                ->get();
+            ->get();
         return view('dailytasks')->with('tasks', $tasks)
             ->with('id', auth()->user()->id);
     }
+
     public function addTask(Request $request)
     {
         $request->validate([
@@ -25,6 +26,6 @@ class TasksController extends Controller
         $task->content = $request->task;
         $task->user_id = auth()->user()->id;
         $task->save();
-        return back()->with('status','Task Added');
+        return back()->with('status', 'Task Added');
     }
 }

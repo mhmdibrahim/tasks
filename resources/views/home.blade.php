@@ -1,15 +1,8 @@
-@extends('layouts\app')
-@section('nav')
-    <div>
-        <ul class="breadcrumb">
-            <li class="active"><a>@lang('Home')</a></li>
-        </ul>
-    </div>
-@endsection
+@extends('layouts.master')
 @section('content')
-    <div class="container">
+    <main class="container">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-xs-12">
                 @if ($errors->any())
                     <div class="alert alert-danger">
                         <ul>
@@ -24,53 +17,40 @@
                 @endif
             </div>
         </div>
-
-        <div class="row">
-            <div class="col-md-5 pull-left">
-                <h1 class="text-center">@lang('Add Employee') </h1>
-                <hr>
-                <form method="post" action="addemp" class="form-horizontal">
-                    {{csrf_field()}}
+        <section class="row addSec">
+            <aside class="col-md-6">
+                <form method="post" action="/addemp">
+                {{csrf_field()}}
+                <!--  General -->
                     <div class="form-group">
-                        <label class="control-label col-md-4">@lang('First Name')</label>
-                        <div class="col-md-8">
-                            <input class="form-control" type="text" name="firstName" placeholder=@lang('Enter First Name') value="{{old('firstName')}}">
+                        <h2 class="heading">@lang('Add Employee')</h2>
+                        <div class="controls">
+                            <input type="text" id="firstName" class="floatLabel" name="firstName" value="{{old('firstName')}}">
+                            <label for="firstName">@lang('First Name')</label>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-md-4">@lang('Last Name') </label>
-                        <div class="col-md-8">
-                            <input class="form-control" type="text" name="lastName" placeholder=@lang('Enter Last Name') value="{{old('lastName')}}">
+                        <div class="controls">
+                            <input type="text" id="lastName" class="floatLabel" name="lastName" value="{{old('lastName')}}">
+                            <label for="lastName">@lang('Last Name')</label>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-md-4">@lang('Email') </label>
-                        <div class="col-md-8">
-                            <input class="form-control" type="email" name="email" placeholder=@lang("Enter Email")  value="{{old('email')}}">
+                        <div class="controls">
+                            <input type="text" id="email" class="floatLabel" name="email" value="{{old('email')}}">
+                            <label for="email">@lang('Email')</label>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-md-4">@lang('Password') </label>
-                        <div class="col-md-8">
-                            <input class="form-control" type="password" name="password" placeholder=@lang("Enter Password")  >
+                        <div class="controls">
+                            <input type="text" id="password" class="floatLabel" name="password">
+                            <label for="password">@lang('Password')</label>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-md-4">@lang('Job Title') </label>
-                        <div class="col-md-8">
-                            <input class="form-control" type="text" name="jobTitle" placeholder=@lang("Enter Job Title")  value="{{old('jobTitle')}}">
+                        <div class="controls">
+                            <input type="text" id="jobTitle" class="floatLabel" name="jobTitle" value="{{old('jobTitle')}}">
+                            <label for="jobTitle">@lang('Job Title')</label>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-md-4">@lang('Phone Number') </label>
-                        <div class="col-md-8">
-                            <input class="form-control" type="text" name="phoneNumber" placeholder=@lang("Enter Phone Number")  value="{{old('phoneNumber')}}">
+                        <div class="controls">
+                            <input type="tel" id="phoneNumber" class="floatLabel" name="phoneNumber" value="{{old('phoneNumber')}}">
+                            <label for="phoneNumber">@lang('Phone Number')</label>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-md-4">@lang('Department')</label>
-                        <div class="col-md-8">
-                            <select class="form-control" name="department">
+                        <div class="controls">
+                            <i class="fa fa-sort"></i>
+                            <select class="floatLabel">
                                 @if(old('department') == null)
                                     <option disabled selected>@lang('-Select Department-')</option>
                                 @else
@@ -84,54 +64,51 @@
                                     @endif
                                 @endforeach
                             </select>
+                            <label>@lang('Department')</label>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <input class="btn btn-success col-md-offset-5" type="submit" value=@lang("Add Emplyee") >
+                        <button type="submit" class="btn btn-primary">@lang("Add Emplyee")</button>
                     </div>
                 </form>
+            </aside>
 
-            </div>
-            <div class="col-md-5 pull-right">
-                <h1>@lang('Add department') </h1>
-                <hr>
-                <form action="d-department" method="post" class="form-horizontal">
-                    {{csrf_field()}}
+            <aside class="col-md-6">
+                <form action="/d-department" method="post">
+                    <!--  Details -->
                     <div class="form-group">
-                        <label class="control-label col-md-4">@lang('Department Name') </label>
-                        <div class="col-md-8">
-                            <input class="form-control" type="text" name="department" placeholder=@lang("Enter Department Name") >
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <input class="btn btn-success col-md-offset-4" type="submit" value=@lang("Add Department") >
-                    </div>
+                        <h2 class="heading">@lang('Add department')</h2>
+                        <form action="/d-department" method="post">
+                            {{csrf_field()}}
+                            <div class="controls">
+                                <input type="text" id="department" class="floatLabel" name="department">
+                                <label for="department">@lang('Department Name')</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">@lang("Add Department")</button>
+                        </form>
+
+
+                    </div> <!-- /.form-group -->
                 </form>
-            </div>
-        </div>
+            </aside>
+        </section>
         <hr>
-        <div class="row">
-            @foreach($departments as $department)
-                <div class="col-md-6">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            {{$department->name}}
-                            @if($department->employees->count() < 1)
-                                <button class="btn btn-danger btn-sm pull-right"><a
-                                            href="/deletDepartment/{{$department->id}}">X</a></button>@endif
-                        </div>
-                        <div class="panel-body">
-                            <ul>
-                                @foreach($department->employees as $employee)
-                                    <li>
-                                        {{$employee->first_name}} {{$employee->last_name}}
-                                    </li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    </div>
+        <!--        added departments     -->
+        <section class="row department">
+            <h2 class="heading">@lang('Departments')</h2>
+            <div class="container">
+                @foreach($departments as $department)
+                <div class="notification  col-md-6">
+                    @if($department->employees->count() < 1)
+                    <span class="notification-close"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+                    @endif
+                    <h3 class="notification-title">{{$department->name}}</h3>
+                    <ol class="custom-counter">
+                        @foreach($department->employees as $employee)
+                        <li>{{$employee->first_name}} {{$employee->last_name}}</li>
+                        @endforeach
+                    </ol>
                 </div>
-            @endforeach
-        </div>
-    </div>
+                @endforeach
+            </div>
+        </section>
+    </main>
 @endsection
