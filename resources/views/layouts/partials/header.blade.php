@@ -18,7 +18,9 @@
                                                 href="#">{{ Auth::user()->first_name }} <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a href="/edit">@lang('Edit Profile')</a></li>
+                                @if(auth()->user()->role == "regular")
+                                    <li><a href="/edit">@lang('Edit Profile')</a></li>
+                                @endif
                                 <li><a href="/changePassword">@lang('change password')</a></li>
                                 <li>
                                     <a href="{{ route('logout') }}"

@@ -2,6 +2,11 @@
 @section('content')
     <main class="container">
         <!--        added departments     -->
+        <div>
+            <ul class="breadcrumb">
+                <li class="active">@lang('Home')</li>
+            </ul>
+        </div>
         <section class="row department">
             <h2 class="heading">Departments</h2>
             <div class="container">

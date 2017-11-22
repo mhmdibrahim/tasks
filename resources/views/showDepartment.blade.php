@@ -1,11 +1,13 @@
 @extends('layouts.master')
-{{--@section('styles')--}}
-    {{--@if($tasks <1)--}}
-        {{--<link rel="stylesheet" href="/css/default.css">--}}
-    {{--@endif--}}
-{{--@endsection--}}
 @section('content')
     <main class="container">
+        <div>
+            <ul class="breadcrumb">
+                <li><a href="/">@lang('Home')</a></li>
+                <li><a href="/track/{{$department->id}}">@lang('Show Department Tasks')</a></li>
+                <li class="active">@lang('Show Department Employees Tasks')</li>
+            </ul>
+        </div>
         <section class="row addSec">
             <form id="form" method="GET">
                 <div class="form-group">

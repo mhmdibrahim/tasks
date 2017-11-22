@@ -6,6 +6,12 @@
 @endsection
 @section('content')
     <main class="container @if($tasks <1) default @endif">
+        <div>
+            <ul class="breadcrumb">
+                <li><a href="/">@lang('Home')</a></li>
+                <li class="active">@lang('Show Department Tasks')</li>
+            </ul>
+        </div>
         <!--        employee details     -->
         <section class="row addSec">
             <form id="form" method="GET">

@@ -6,6 +6,11 @@
 @endsection
 @section('content')
     <main class="container @if($tasks->count() == 0) default @endif">
+        <div>
+            <ul class="breadcrumb">
+                <li class="active">@lang('Home')</li>
+            </ul>
+        </div>
         <div class="row">
             <div class="col-md-12">
             @if ($errors->any())
