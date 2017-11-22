@@ -1,8 +1,8 @@
-@extends('layouts\app')
+@extends('layouts.app')
 @section('nav')
     <div>
         <ul class="breadcrumb">
-            <li class="active">Home</a></li>
+            <li class="active"><a>@lang('Home')</a></li>
         </ul>
     </div>
 @endsection

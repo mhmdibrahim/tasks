@@ -10,6 +10,7 @@ class Dashboard extends Controller
     public function index(){
         return view('home')->with('departments',Department::all());
     }
+
     public function createUser(Request $request){
         $request->validate([
             'firstName'=>'required|max:255',

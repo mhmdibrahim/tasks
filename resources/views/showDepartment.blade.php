@@ -1,10 +1,10 @@
-@extends('layouts\app')
+@extends('layouts.app')
 @section('nav')
     <div>
         <ul class="breadcrumb">
-            <li><a href="/">Home</a></li>
-            <li><a href="/track/{{$department->id}}">Show Department Tasks</a></li>
-            <li class="active">Show Department Employees Tasks</li>
+            <li><a href="/">@lang('Home')</a></li>
+            <li><a href="/track/{{$department->id}}">@lang('Show Department Tasks')</a></li>
+            <li class="active">@lang('Show Department Employees Tasks')</li>
         </ul>
     </div>
 @endsection
