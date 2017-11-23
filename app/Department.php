@@ -12,4 +12,8 @@ class Department extends Model
     public function employees (){
         return $this->hasMany('App\User');
     }
+
+    public function tasks(){
+        return $this->hasManyThrough('App\Task','App\User');
+    }
 }

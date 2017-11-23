@@ -8,7 +8,7 @@ use Carbon\Carbon;
 
 class TasksController extends Controller
 {
-    public function index(Request $request)
+    public function index()
     {
         $tasks = auth()->user()->tasks()->where('created_at', '>=', Carbon::today())
             ->where('created_at', '<', Carbon::tomorrow())

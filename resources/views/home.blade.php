@@ -1,22 +1,29 @@
 @extends('layouts.master')
 @section('content')
     <main class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                @if ($errors->any())
-                    <div class="alert alert-danger">
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
-                @endif
-                @if(session('status') != null)
-                    <div class="alert alert-success">{{session('status')}}</div>
-                @endif
-            </div>
+        <div>
+            <ul class="breadcrumb">
+                <li class="active"><a>@lang('Home')</a></li>
+            </ul>
         </div>
+        <section>
+            <div class="row">
+                <div class="col-xs-12">
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+                    @if(session('status') != null)
+                        <div class="alert alert-success">{{session('status')}}</div>
+                    @endif
+                </div>
+            </div>
+        </section>
         <section class="row addSec">
             <aside class="col-md-6">
                 <form method="post" action="/addemp">
