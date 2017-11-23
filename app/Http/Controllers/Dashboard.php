@@ -15,7 +15,7 @@ class Dashboard extends Controller
         $request->validate([
             'firstName'=>'required|max:255',
             'lastName'=>'required|max:255',
-            'email'=>'required|max:255|email',
+            'email'=>'required|max:255|email|unique:users,email',
             'password'=>'required|max:255',
             'department'=>'required|exists:departments,id',
             'jobTitle'=>'required|max:255',
