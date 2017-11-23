@@ -57,7 +57,7 @@
                         </div>
                         <div class="controls">
                             <i class="fa fa-sort"></i>
-                            <select class="floatLabel">
+                            <select class="floatLabel" name="department">
                                 @if(old('department') == null)
                                     <option disabled selected>@lang('-Select Department-')</option>
                                 @else
