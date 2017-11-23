@@ -20,7 +20,7 @@
                         <div class="row">
                             <div class="controls">
                                 <input type="date" id="arrive" class="floatLabel" name="date" value="{{$date}}">
-                                <label for="arrive" class="label-date"><i class="fa fa-calendar"></i>&nbsp;&nbsp;Date</label>
+                                <label for="arrive" class="label-date"><i class="fa fa-calendar"></i>&nbsp;&nbsp;@lang('Date')</label>
                             </div>
                         </div>
                     </div>
@@ -28,7 +28,7 @@
             </form>
         </section>
         <section class="row department margin-top">
-            <h2 class="heading">department tasks</h2>
+            <h2 class="heading">@lang('Department Tasks')</h2>
             <div class="container">
                 <div class="notification  col-md-6">
                     <h3 class="notification-title">{{$department->name}}</h3>
@@ -43,7 +43,7 @@
                                     <div class="block">
                                         <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                     </div>
-                                    <p>No Tasks ..</p>
+                                    <p>@lang('No Tasks')</p>
                                 </div>
                         @endif
                     </ol>

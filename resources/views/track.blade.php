@@ -8,7 +8,8 @@
             </ul>
         </div>
         <section class="row department">
-            <h2 class="heading">Departments</h2>
+            <br>
+            <h2 class="heading">@lang('Departments')</h2>
             <div class="container">
                 @forelse($departments as $department)
                     <div class="notification  col-md-6">
@@ -23,7 +24,7 @@
                         @endforelse
                     </ol>
                     <div class="footer">
-                        <a href="/track/{{$department->id}}" class="btn btn-default">Details</a>
+                        <a href="/track/{{$department->id}}" class="btn btn-default">@lang('Details')</a>
                     </div>
                 </div>
                 @empty @lang('No Departments')

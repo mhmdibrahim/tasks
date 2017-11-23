@@ -49,5 +49,4 @@ class Dashboard extends Controller
         return back()->with('status','Department Deleted');
     }
 
-
 }

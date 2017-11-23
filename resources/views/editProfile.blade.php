@@ -1,4 +1,7 @@
 @extends('layouts.master')
+<br>
+<br>
+<br>
 @section('nav')
     <div>
         <ul class="breadcrumb">

@@ -55,5 +55,10 @@
   "Language" : "اللغة",
   "menu":"القائمه",
   "Change":"تغيير",
-  "Edit":"تعديل"
+  "Edit":"تعديل",
+  "Department Tasks": "مهام القسم" ,
+  "Profile Edited":"تم تعديل الملف الشخصى" ,
+  "Departments":"الاقسام" ,
+  "Department Deleted" : "تم اضافه القسم" ,
+  "Date":"التاريخ"
 }

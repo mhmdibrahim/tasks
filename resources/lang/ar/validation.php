@@ -130,5 +130,10 @@ return [
         'time'                  => 'الوقت',
         'available'             => 'مُتاح',
         'size'                  => 'الحجم',
+        'first name'           =>'الاسم الاول',
+        'last name'            =>'اسم العائله',
+        'department'           =>'القسم',
+        'job_title'            =>'المسمى الوظيفى' ,
+        'phone number'         =>'رقم الهاتف'
     ],
 ];
