@@ -37,6 +37,8 @@
             <link rel="stylesheet" href="/css/headerFooter.css">
         @endif
         <link rel="stylesheet" href="/css/adding.css">
+        <link rel="stylesheet" href="/css/extra.css">
+
     @endauth
     @yield('styles')
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
