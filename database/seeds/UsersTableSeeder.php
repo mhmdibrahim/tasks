@@ -25,5 +25,7 @@ class UsersTableSeeder extends Seeder
         $user->password =bcrypt('password');
         $user->role = 'tracker';
         $user->save();
+
+        factory(\App\User::class,100)->create();
     }
 }
