@@ -6,6 +6,7 @@ body{
      /* display: flex; */
      width: 100%;
     text-align: left;
+    background-color: #f2f2f2;
 }
 html,
 main {
@@ -155,8 +156,7 @@ html #footer .footer-block {
     clear: both;
 }
 .custom-counter1 li {
-    margin: 20px 44px;
-    list-style-type: disc;
+    margin: 15px 4px;
 }
 .notification .footer .btn{
     /* float: right; */
