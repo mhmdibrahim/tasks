@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('content')
-    <main class="container">
+    <main class="container addSec">
         <div>
             <ul class="breadcrumb">
                 <li class="active"><a>@lang('Home')</a></li>
@@ -24,7 +24,7 @@
                 </div>
             </div>
         </section>
-        <section class="row addSec">
+        <section class="row ">
             <aside class="col-md-6">
                 <h2 class="heading">@lang('Add Employee')</h2>
                 <form method="post" action="/addemp">

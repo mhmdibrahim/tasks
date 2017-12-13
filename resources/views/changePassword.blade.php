@@ -12,7 +12,7 @@
 @endsection
 @section('content')
     <main class="container ">
-       <div class="post">
+       
         <div class="col-md-12 ">
             @if ($errors->any())
                 <div class="alert alert-danger">
@@ -27,20 +27,21 @@
                 <div class="alert alert-success">{{session('status')}}</div>
             @endif
         </div>
+        <div class="post">
         <div class="post-header">
             <h1>@lang('Change Password')</h1>
         </div>
         <form action="/change" method="post" class="form-horizontal post-content ">
             {{csrf_field()}}
             <div class="form-group">
-                <label class="control-label col-md-4">@lang('new password')</label>
-                <div class="col-md-8">
+                <label class="control-label col-md-3">@lang('new password')</label>
+                <div class="col-md-9">
                     <input type="password" name="newPassword" placeholder=@lang("Enter new password") class="form-control">
                 </div>
             </div>
             <div class="form-group">
-                <label class="control-label col-md-4">@lang('confirm password')</label>
-                <div class="col-md-8">
+                <label class="control-label col-md-3">@lang('confirm password')</label>
+                <div class="col-md-9">
                     <input type="password" name="confirmPassword" placeholder=@lang("Enter the password agin") class="form-control">
                 </div>
             </div>

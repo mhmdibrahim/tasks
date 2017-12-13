@@ -18,17 +18,18 @@
                 <form name="auth-form" action="{{ route('login') }}" method="POST">
                     {{ csrf_field() }}
                     <div class="fieldset">
-                        <input id="email" name="email" type="text" required>
                         <label for="email">
                             @lang('E-Mail Address')
                         </label>
-                        <div class="highlighter"></div>
+                        <input id="email" name="email" type="text" required>
+                    
                     </div>
                     <div class="fieldset">
-                        <input id="password" name="password" type="password" required>
-                        <label for="password">
+                           <label for="password">
                             @lang('Password')
                         </label>
+                        <input id="password" name="password" type="password" required>
+                    
                         <div class="highlighter"></div>
                     </div>
                     <div class="fieldset button-set">
