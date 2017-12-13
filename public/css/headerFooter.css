@@ -9,7 +9,7 @@ body{
 }
 html,
 main {
-  min-height: 52pc;
+  min-height: 74vh;
   margin: 0;
   padding: 0;
 }
@@ -17,7 +17,7 @@ main {
 main {
   align-items: center;
   justify-content: center;
-  margin-top: 38px;
+  margin-top: 94px;
 }
 * {
   -moz-box-sizing: border-box;
@@ -30,14 +30,16 @@ h1 {
 }
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus{
     background: transparent;
-    border-bottom: 3px solid #ffd90b;
-    color: white;
+    border-bottom: 1px solid #ffcc01;
+    color: #ffd90b;
+    width: -6px;
+    padding: 15px 12px 4px;
 }
 .topnav{
-    background: #4b77f3;
+    background: #616161;
     color: white;
     min-height: 30px;
-    padding: 19px;
+    padding: 4px;
 }
 .navbar-default .navbar-nav>li>a{
     color: white;
@@ -65,14 +67,14 @@ html #footer {
   text-align: center;
   width: 100%;
   line-height: 3;
-  margin-top: 45px;
+  /* margin-top: 45px; */
   right: 0;
   font-size: 24px;
   right: 0;
   color: #ffd90b;
   /* position: absolute; */
   /* height: 60px; */
-  background-color: #4b77f3;
+  background-color: #616161;
 }
 html #footer .footer-block {
   /* margin: 20px 0; */
@@ -108,6 +110,8 @@ html #footer .footer-block {
 .btn-primary {
     border-radius: 4px;
     float: right;
+    /* text-align: center; */
+    min-width: 97px;
 }
 .btn-primary:hover {
     border: 1px solid gold;

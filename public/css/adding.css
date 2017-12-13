@@ -14,7 +14,7 @@ time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
+  font-size: 13px;
   vertical-align: baseline;
 }
 
@@ -72,7 +72,7 @@ a {
 }
 
 header, form {
-  margin-top: 27px;
+  /* margin-top: 27px; */
 }
 
 .form-group {
@@ -80,15 +80,17 @@ header, form {
 }
 
 h2.heading {
-  font-size: 33px;
+  font-size: 20px;
   text-transform: capitalize;
   /* font-weight: 300; */
-  padding-left: 13px;
+  /* padding-left: 13px; */
   font-family: 'Raleway';
   /* text-align: left; */
-  color: #4b77f3;
-  border-bottom: 1px solid #4b77f3;
-  padding-bottom: 3px;
+  color: white;
+  border-radius: 12px 2px;
+  /* border-bottom: 1px solid #4b77f3; */
+  padding: 15px 10px;
+  background: #428bca;
   margin-bottom: 20px;
 }
 
@@ -104,7 +106,7 @@ h2.heading {
 .controls textarea,
 .controls button,
 .controls select {
-  padding: 12px;
+  padding: 4px;
   font-size: 14px;
   border: 1px solid #c6c6c6;
   width: 100%;
@@ -136,7 +138,7 @@ h2.heading {
 .controls select:focus,
 .controls select:hover {
   outline: none;
-  border-color: #9FB1C1;
+  border-color: deepskyblue;
 }
 .controls input[type="text"]:focus + label, .controls input[type="text"]:hover + label,
 .controls input[type="email"]:focus + label,
@@ -159,7 +161,7 @@ h2.heading {
 .controls .fa-sort {
   position: absolute;
   right: 10px;
-  top: 17px;
+  top: 34px;
   color: #999;
 }
 .controls select {
@@ -168,15 +170,15 @@ h2.heading {
   cursor: pointer;
 }
 .controls label {
-  position: absolute;
+  /* position: absolute; */
   /* left: 8px; */
-  top: 12px;
+  /* top: 12px; */
   text-transform: capitalize;
-  width: 60%;
+  width: 100%;
   color: #999;
-  font-size: 16px;
+  font-size: 14px;
   display: inline-block;
-  padding: 4px 10px;
+  /* padding: 4px 10px; */
   font-family: 'Raleway';
   font-weight: 600;
   background-color: rgba(255, 255, 255, 0);
@@ -187,10 +189,10 @@ h2.heading {
   background-color: white;
 }
 .controls label.active {
-  top: -11px;
   color: #555;
   background-color: white;
   width: auto;
+  
 }
 .controls textarea {
   resize: none;
@@ -202,8 +204,6 @@ h2.heading {
   background-color: transparent;
   border: none;
   color: #fff;
-  /* width: 96px; */
-  /* padding: 12px 0; */
   float: right;
 }
 .delete-btn:hover {
@@ -230,9 +230,9 @@ h2.heading {
 .grid .col-md-6,.grid .col-md-4,.grid .col-md-3,.controls{
     padding: 2px;
 }
-main aside:first-child {
+main aside:first-child{
     /* padding: 2.5em 10%; */
-    border-right: 1px solid gainsboro;
+     border-right: 1px solid gainsboro; 
 }
 .department .notification {
     /* min-width: 49%; */
@@ -292,8 +292,8 @@ main aside:first-child {
 .container .notification:nth-child(even){background: #00e7ff30;}
 .container .notification:nth-child(even):after{
      content: "";
-  display: table;
-  clear: both; 
+     display: table;
+     clear: both; 
 
 }
 
@@ -321,25 +321,16 @@ main aside:first-child {
 .custom-counter1 {
   margin: 0;
   padding: 0;
-  list-style-type: none;
+  list-style-type: disc;
 }
 
 .custom-counter1 ul {
-  counter-increment: step-counter;
   margin-bottom: 10px;
   color: gray;
 }
 
 .custom-counter1 ul::before {
-  content: counter(step-counter);
-  /* margin-left: 5px; */
-  font-size: 80%;
-  background-color: rgb(75, 119, 243);
-  color: white;
-  font-weight: bold;
-  padding: 3px 9px;
-  border-radius: 3px;
-    display: inline-block;
+
 }
 .custom-counter1 .Emp-Name{color: #ff8100;font-weight: 700;font-size: 18px;vertical-align: middle;border-bottom: 1px solid;/* margin-bottom: 8px; */}
 .custom-counter1 .title{
@@ -362,18 +353,11 @@ main aside:first-child {
       box-shadow: 1px 1px 2px white; 
 }
 .task .notification{
-      counter-increment: step-counter;
+
       width: 100%;
 }
 .task .notification::before{
-  content: counter(step-counter);
-  margin-right: 5px;
-  font-size: 80%;
-  background-color: rgb(75, 119, 243);
-  color: white;
-  font-weight: bold;
-  padding: 3px 8px;
-  border-radius: 3px;
+
 }
 
 .task .notification .notification-title {
@@ -385,7 +369,7 @@ main aside:first-child {
     margin: 2px;
 }
 .enter-task,.addSec{
-    margin-top: 60px;
+    margin-top: 20px;
 }
 .margin-top{
     margin-top: 5em;
@@ -412,7 +396,7 @@ main aside:first-child {
 ::-webkit-scrollbar-thumb {
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    background:#4b77f3; 
+    background: #428bca;
 }
 @media screen and (max-width: 768px) {
    .department .notification {
@@ -426,3 +410,46 @@ main aside:first-child {
         margin: 6px;
     }
 }
+.post{
+   width: 50%;
+   margin: 0 auto;
+   margin-top: 9%;
+   text-transform:  capitalize;
+   border-radius: 9px;
+   background: #fcfcfc;
+   /* padding: 22px 45px; */
+}
+.post h1{
+    color: #0089ff;
+    padding: 17px 10px;
+    margin: 0;
+    font-family:  inherit;
+    border-radius: 11px 2px;
+    font-size: 21px;
+    background: #dddddd;
+}
+.changeBtn{
+    float: right;
+}
+.post .form-group:last-child{
+    border-top: 1px solid #dddcdc;
+    padding-top: 10px;
+}
+.post-header{
+    padding: 0;
+    /* border-radius: 3px; */
+}
+.post-content{
+    
+padding: 40px 31px 15px;
+}
+.addSec form{
+    
+}
+.breadcrumb {
+    /* background-color: white; */
+    /* width: 50%; */
+    /* border-radius: 0; */
+    /* margin: auto; */
+    /* border-bottom:  1px solid gainsboro; */
+    }
