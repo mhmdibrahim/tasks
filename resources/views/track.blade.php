@@ -2,14 +2,15 @@
 @section('content')
     <main class="container">
         <!--        added departments     -->
-        <div>
+        
+        <section class="row department">
+            <br>
+            <h2 class="heading">@lang('Departments')</h2>
+            <div>
             <ul class="breadcrumb">
                 <li class="active">@lang('Home')</li>
             </ul>
         </div>
-        <section class="row department">
-            <br>
-            <h2 class="heading">@lang('Departments')</h2>
             <div class="container">
                 @forelse($departments as $department)
                     <div class="notification  col-md-6">

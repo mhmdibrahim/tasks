@@ -6,31 +6,30 @@
 @endsection
 @section('content')
     <main class="container @if($tasks <1) default @endif">
-        <div>
-            <ul class="breadcrumb">
-                <li><a href="/">@lang('Home')</a></li>
-                <li class="active">@lang('Show Department Tasks')</li>
-            </ul>
-        </div>
+        
         <!--        employee details     -->
-        <section class="row addSec">
-            <form id="form" method="GET">
-                <div class="form-group">
-                    <div class="grid">
-                        <div class="row">
-                            <div class="controls">
-                                <input type="date" id="arrive" class="floatLabel" name="date" value="{{$date}}">
-                                <label for="arrive" class="label-date"><i class="fa fa-calendar"></i>&nbsp;&nbsp;@lang('Date')</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </section>
-        <section class="row department margin-top">
+        
+        <section class="row department ">
             <h2 class="heading">@lang('Department Tasks')</h2>
+            <div>
+                <ul class="breadcrumb">
+                    <li><a href="/">@lang('Home')</a></li>
+                    <li class="active">@lang('Show Department Tasks')</li>
+                </ul>
+            </div>
+            <section class="addSec">
+                <form id="form" method="GET">
+                    <div class="form-group">
+                                <div class="controls DateControl">
+                                    <label for="arrive" class="label-date">&nbsp;&nbsp;@lang('Choose date')</label>
+<!--                                <input type="date" id="arrive" class="floatLabel" name="date" value="{{$date}}">-->
+                                    <input class="form-control" type="date" id="arrive" class="floatLabel" name="date" value="{{$date}}">
+                                </div>
+                    </div>
+                </form>
+            </section>
             <div class="container">
-                <div class="notification  col-md-6">
+                <div class="notification  col-md-12">
                     <h3 class="notification-title">{{$department->name}}</h3>
                     <ol class="custom-counter auto-height">
                         @foreach($department->employees as $employee)
@@ -38,7 +37,7 @@
                                 <li>{{$task->content}}</li>
                             @endforeach
                         @endforeach
-                        @if($tasks <1)
+                        @if($tasks<1)
                                 <div class="icon text-center">
                                     <div class="block">
                                         <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
@@ -47,13 +46,14 @@
                                 </div>
                         @endif
                     </ol>
-                    <div class="footer">
-                        <a href="/moreDetails/{{$department->id}}" class="btn btn-default">@lang('Details')</a>
-                    </div>
+                    
                 </div>
             </div>
         </section>
     </main>
+    <div class="footer">
+        <a href="/moreDetails/{{$department->id}}" class="btn btn-default">@lang('Details')</a>
+    </div>
 @endsection
 @section('scripts')
     <script>

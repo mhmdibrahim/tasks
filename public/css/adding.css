@@ -80,7 +80,6 @@ header, form {
 }
 
 h2.heading {
-<<<<<<< HEAD
   font-size: 27px;
     text-transform: capitalize;
     /* font-weight: 300; */
@@ -92,20 +91,7 @@ h2.heading {
     padding-bottom: 3px;
     margin-bottom: 19px;
     font-weight: 600;
-=======
-  font-size: 20px;
-  text-transform: capitalize;
-  /* font-weight: 300; */
-  /* padding-left: 13px; */
-  font-family: 'Raleway';
-  /* text-align: left; */
-  color: white;
-  border-radius: 12px 2px;
-  /* border-bottom: 1px solid #4b77f3; */
-  padding: 15px 10px;
-  background: #428bca;
-  margin-bottom: 20px;
->>>>>>> 4f95ac1a5347d593e629e8c1af212315f79cc73e
+
 }
 
 .controls {
@@ -120,7 +106,7 @@ h2.heading {
 .controls textarea,
 .controls button,
 .controls select {
-  padding: 4px;
+  padding: 25px 0 25px 10px;
   font-size: 14px;
   border: 1px solid #c6c6c6;
   width: 100%;
@@ -202,6 +188,18 @@ h2.heading {
   transition: color 0.3s, top 0.3s, background-color 0.8s;
   background-color: white;
 }
+.DateControl label{
+    
+    
+    text-transform: capitalize;
+    color: #4b77f3;
+    font-size: 17px;
+    display: inline-block;
+    padding: 8px 0 11px 0;
+    font-family: 'Raleway'; 
+    font-weight: 600;
+    background-color: transparent;
+}
 .controls label.active {
   color: #555;
   background-color: white;
@@ -225,7 +223,7 @@ h2.heading {
 }
 
 .grid {
-  background: white;
+/*  background: white;*/
 }
 .grid:after {
   /* Or @extend clearfix */
@@ -255,8 +253,7 @@ main aside:first-child{
     /* overflow: auto; */
     }
 .notification {
-  /* max-width: 400px; */
-  width: 49%;
+ 
   border-radius: 6px;
   box-shadow: 0.0625rem 0.0625rem 0.0925rem gray;
   margin: 10px auto;
@@ -420,6 +417,8 @@ main aside:first-child{
 }
 .enter-task,.addSec{
     margin-top: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 .margin-top{
     margin-top: 5em;
@@ -497,7 +496,7 @@ padding: 40px 31px 15px;
     
 }
 .breadcrumb {
-    /* background-color: white; */
+     background-color: #e4e8f4;
     /* width: 50%; */
     /* border-radius: 0; */
     /* margin: auto; */
