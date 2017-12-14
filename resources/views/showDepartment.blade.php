@@ -1,42 +1,41 @@
 @extends('layouts.master')
 @section('content')
     <main class="container">
-        <div>
-            <ul class="breadcrumb">
-                <li><a href="/">@lang('Home')</a></li>
-                <li><a href="/track/{{$department->id}}">@lang('Show Department Tasks')</a></li>
-                <li class="active">@lang('Show Department Employees Tasks')</li>
-            </ul>
-        </div>
-        <section class="row addSec">
-            <form id="form" method="GET">
-                <div class="form-group">
-                    <div class="grid">
-                        <div class="row">
-                            <div class="controls">
-                                <input type="date" id="arrive" class="floatLabel" name="date" value="{{$date}}">
-                                <label for="arrive" class="label-date"><i class="fa fa-calendar"></i>&nbsp;&nbsp;Date</label>
-                            </div>
+        <section class="row department">
+            <h2 class="heading">@lang('Department Employees Tasks')</h2>
+            <div>
+                <ul class="breadcrumb">
+                    <li><a href="/">@lang('Home')</a></li>
+                    <li><a href="/track/{{$department->id}}">@lang('Show Department Tasks')</a></li>
+                    <li class="active">@lang('Show Department Employees Tasks')</li>
+                </ul>
+            </div>
+            <section class="addSec">
+                <form id="form" method="GET">
+                    <div class="form-group date-form">
+                        <div class="controls DateControl">
+                            <label for="arrive" class="label-date">&nbsp;&nbsp;@lang('Choose date')</label>
+                            <input type="date" id="arrive" class="floatLabel form-control" name="date" value="{{$date}}">
                         </div>
                     </div>
+                </form>
+            </section>
+            <section>
+                <div class="container tasks">
+                    @forelse($department->employees as $employee)
+                        <div class="notification ">
+                            <h3 class="notification-title"><img alt="" class="img-circle"  src="/images/Blank_Avatar.png" width="30" height="30">{{$employee->first_name}} {{$employee->last_name}}</h3>
+                            <ol class="">
+                                @forelse($employee->tasks as $task)
+                                    <li class="task">{{$task->content}}</li>
+                                @empty<div class="task">@lang('No Tasks')</div> 
+                                @endforelse
+                            </ol>
+                        </div>
+                    @empty @lang('No Employees')
+                    @endforelse
                 </div>
-            </form>
-        </section>
-        <section class="row ">
-            <div class="container tasks">
-                @forelse($department->employees as $employee)
-                    <div class="notification ">
-                    <h3 class="notification-title">{{$employee->first_name}} {{$employee->last_name}}</h3>
-                    <ol class="custom-counter ">
-                        @forelse($employee->tasks as $task)
-                            <li>{{$task->content}}</li>
-                        @empty @lang('No Tasks')
-                        @endforelse
-                    </ol>
-                </div>
-                @empty @lang('No Employees')
-                @endforelse
-            </div>
+            </section>
         </section>
     </main>
 @endsection
