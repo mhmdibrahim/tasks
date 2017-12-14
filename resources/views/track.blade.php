@@ -7,154 +7,72 @@
             <br>
             <h2 class="heading">@lang('Departments')</h2>
             <div>
-            <ul class="breadcrumb">
-                <li class="active">@lang('Home')</li>
-            </ul>
-        </div>
+                <ul class="breadcrumb">
+                    <li class="active">@lang('Home')</li>
+                </ul>
+            </div>
             <div class="container">
-                @forelse($departments as $department)
                 <div class="row">
-                <div class="col-lg-4">
-                    <div class="ibox">
-                        <div class="ibox-title">
-                           
-                            <h3 class="left">{{$department->name}} </h3><br/>
-                        </div>
-                        
-                           
-                        <div class="ibox-content auto-height">
-<!--
-                            <div class="emp-title">
-                                 <h5 class="pull-left">Department Employees</h5>
-                             <span class=" pull-right">View All Employess </span>
+                    @forelse($departments as $department)
+                    <div class="col-lg-6">
+                        <div class=" department-box">
+                            <div class="dep-title">
+                                <h3 class="left">{{$department->name}} </h3><br/>
                             </div>
--->
-                           
-                            <div class="feed-activity-list">
-                                 <ol>
-                                    <div class="feed-element">
-                                        <div class="media-body ">
-                                            @forelse($department->employees as $employee)
-                                            <ul>
-                                            <strong>{{$employee->first_name}} {{$employee->last_name}}</strong><br>
-                                            <li>
-                                                <a href="profile.html" class="pull-left">
-                                                    <img alt="" class="img-circle" src="/images/Blank_Avatar.png" >
-                                                </a>
-                                            </li>
-                                            <small class="text-muted">{{$employee->job_title}}</small>-
-                                            <small class="text-muted">{{$employee->phone}}</small>
-                                            </ul>
-                                            @empty @lang('No Employees')
-                                            @endforelse
+                            <div class="dep-box-content auto-height">
+                                <!--<div class="emp-title">
+                                     <h5 class="pull-left">Department Employees</h5>
+                                 <span class=" pull-right">View All Employess </span>
+                                </div>-->
+                                <div class="employees-list">
+                                    @forelse($department->employees as $employee)
+                                    <div class="col-md-12 list-element">
+                                        <div class="col-md-2">
+                                            <a href="profile.html" class="pull-left"><img alt="" class="img-circle"  src="/images/Blank_Avatar.png" ></a>
                                         </div>
-                                     </div>
-                                    </ol>
-                                </div>
-
-                                <div class="feed-element">
-                                    <a href="profile.html" class="pull-left">
-                                        <img alt="" class="img-circle" src="/images/Blank_Avatar.png" >
-                                    </a>
-                                    <div class="media-body ">
-                                        <strong>Employee Name</strong><br>
-                                        <small class="text-muted">Job Title</small>
-                                        <small class="text-muted">Phone Number</small>
+                                        <div class="col-md-10">
+                                            <strong class=" col-xs-12 name">{{$employee->first_name}} {{$employee->last_name}}</strong>
+                                            <div class="col-md-12 emp-info">
+                                                <p class="col-md-6 col-xs-12  job-title">{{$employee->job_title}}</p>
+                                                <p class="col-md-6 col-xs-12 phone">{{$employee->phone}}</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-
-                                <div class="feed-element">
-                                    <a href="profile.html" class="pull-left">
-                                        <img alt="" class="img-circle" src="/images/Blank_Avatar.png" >
-                                    </a>
-                                    <div class="media-body ">
-                                        <strong>Employee Name</strong><br>
-                                        <small class="text-muted">Job Title</small>
-                                        <small class="text-muted">Phone Number</small>
-                                    </div>
-                                </div>
-                                <div class="feed-element">
-                                    <a href="profile.html" class="pull-left">
-                                        <img alt="" class="img-circle" src="/images/Blank_Avatar.png" >
-                                    </a>
-                                    <div class="media-body ">
-                                        <strong>Employee Name</strong><br>
-                                        <small class="text-muted">Job Title</small>
-                                        <small class="text-muted">Phone Number</small>
-                                    </div>
+                                    @empty @lang('No Employees')
+                                    @endforelse
                                 </div>
                             </div>
-                            
-                            <div class="row  card-footer">
-                                <div class="col-sm-6">
+                            <div class="card-footer">
+                                <div class="col-md-6 col-xs-6">
                                     <div class="font-bold">TASKS NUMBER</div>
-                                    12
+                                    <strong>12</strong>
                                 </div>
-                                
-                                <div class="col-sm-6 text-right ">
-                                    <button class="btn btn-primary btn-block m-t"> All Tasks</button>
+                                <div class="col-md-6 col-xs-6 text-right ">
+                                    <a href="/track/{{$department->id}}" class="btn btn-primary">@lang('View All Tasks')</a>
                                 </div>
                             </div>
-
                         </div>
                     </div>
-                  
-                   
-                
-             
-                   
+<!--
+                <div class="notification  col-md-6">
+                <h3 class="notification-title"> {{$department->name}}</h3>
+                <ol class="custom-counter1 auto-height">
+                    @forelse($department->employees as $employee)
+                        <ul> <span class="Emp-Name">{{$employee->first_name}} {{$employee->last_name}}</span>
+                        <li><span class="title">@lang('Job Title'):</span><p class="description">{{$employee->job_title}}</p></li>
+                        <li><span class="title">@lang('Tel'):</span><p class="description">{{$employee->phone}}</p></li>
+                    </ul>
+                    @empty @lang('No Employees')
+                    @endforelse
+                </ol>
+                <div class="footer">
+                    <a href="/track/{{$department->id}}" class="btn btn-default">@lang('Details')</a>
                 </div>
             </div>
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                    <div class="notification  col-md-6">
-                    <h3 class="notification-title"> {{$department->name}}</h3>
-                    <ol class="custom-counter1 auto-height">
-                        @forelse($department->employees as $employee)
-                            <ul> <span class="Emp-Name">{{$employee->first_name}} {{$employee->last_name}}</span>
-                            <li><span class="title">@lang('Job Title'):</span><p class="description">{{$employee->job_title}}</p></li>
-                            <li><span class="title">@lang('Tel'):</span><p class="description">{{$employee->phone}}</p></li>
-                        </ul>
-                        @empty @lang('No Employees')
-                        @endforelse
-                    </ol>
-                    <div class="footer">
-                        <a href="/track/{{$department->id}}" class="btn btn-default">@lang('Details')</a>
-                    </div>
+-->
+                    @empty @lang('No Departments')
+                    @endforelse
                 </div>
-                @empty @lang('No Departments')
-                @endforelse
             </div>
         </section>
     </main>

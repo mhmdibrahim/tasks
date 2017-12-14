@@ -1,32 +1,127 @@
-.ibox-title {
-    -moz-border-bottom-colors: none;
-    -moz-border-left-colors: none;
-    -moz-border-right-colors: none;
-    -moz-border-top-colors: none;
-    background-color: #ffffff;
-    border-color: #e7eaec;
-    border-image: none;
-    border-style: solid solid none;
-    border-width: 2px 0 0;
-    color: inherit;
-    margin-bottom: 0;
-    padding: 15px 15px 7px;
+/****** Departments Boxes Style ********/
+
+.dep-title {
+    background-color: #1f69a8;
+    padding: 25px 0px 25px 16px;
     min-height: 48px;
+    border-bottom: 1px solid #ccc;
+    border-radius: 14px 0 13px 0px;
 }
 
-.ibox-content {
+.dep-box-content {
     background-color: #ffffff;
-    color: inherit;
     padding: 15px 20px 20px 20px;
-    border-color: #e7eaec;
-    border-image: none;
-    border-style: solid solid none;
-    border-width: 1px 0;
 }
-.ibox {
-    clear: both;
+.department-box {
     margin-bottom: 25px;
     margin-top: 0;
     padding: 0;
+    background-color: #fff;
+    border:1px solid #ccc;
+    border-radius: 15px 0 0 0;
+    -webkit-box-shadow: 0px 1px 7px 1px rgba(168,168,168,0.39);
+    -moz-box-shadow: 0px 1px 7px 1px rgba(168,168,168,0.39);
+    box-shadow: 0px 1px 7px 1px rgba(168,168,168,0.39);
+}
+.dep-title h3 {
+    display: inline-block;
+    font-size: 18px;
+    margin: 0 0 7px;
+    padding: 0;
+    text-overflow: ellipsis;
+    float: left;
+    font-weight: 700;
+    color: #fff;
+}
+.employees-list  {
+    border-bottom: 1px solid #e7eaec;
+}
+
+.employees-list a img{
+    margin-right: 15px;
+    width: 50px;
+    height: 50px;
+    display: block;
+}
+.list-element{
+    border-bottom: 1px solid #e7eaec;
+    padding-bottom: 15px;
+    margin-top: 15px;
+    overflow: hidden;
     
 }
+.list-element .name{
+    color: #1b41ae;
+    font-size: 17px;
+}
+.list-element .job-title{
+    color:#000;
+    font-size: 14px;
+    float:left;
+    line-height: 2em;
+}
+.list-element .phone{
+    color:#0f7bd8;
+    font-size: 16px;
+    float: left;
+    font-family: arial;
+}
+.emp-info{
+    padding: 6px 0;
+}
+.card-footer{
+    margin-top: 18px;
+    padding: 14px 0 58px 0;
+    border-top: 1px solid #ccc;
+}
+.card-footer strong{
+    font-size: 20px;
+}
+/*View all employee style*/
+/*.dep-box-content .emp-title{
+    padding: 0px 0 30px 0;
+    border-bottom: 1px solid #ccc;
+}
+.dep-box-content .emp-title span {
+    color: #40a6ff;
+    font-weight: 600;
+    background-color: #616161;
+    width: 100%;
+    }*/
+
+.department .heading,.default .heading{
+   border-bottom: 1px solid #428bca;
+   color: #428bca;
+   font-size: 23px;
+   padding-bottom: 5px;
+   margin-bottom: 11px;
+   font-family: 'Raleway';
+}
+
+@media (max-width:499px){
+    .list-element .emp-info{
+        float: left;
+        margin-left: 45px;
+        margin-top: -20px;
+    }
+    .employees-list a img {
+        width: 50px;
+        height: 50px;
+        margin-left: -22px;
+    }
+    .list-element .phone {
+    font-size: 15px;
+    }
+}
+@media  (min-device-width : 768px) and (max-device-width : 1024px) {
+     .list-element .emp-info{
+        margin-left: 65px;
+    }
+}
+
+@media (min-device-width: 1024px) and (max-device-width: 1366px) {
+ .list-element .emp-info{
+        margin-left: 0px;
+    }
+}
+

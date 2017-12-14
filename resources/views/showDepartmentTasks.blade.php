@@ -28,6 +28,9 @@
                     </div>
                 </form>
             </section>
+            
+            
+
             <div class="container">
                 <div class="notification  col-md-12">
                     <h3 class="notification-title">{{$department->name}}</h3>
@@ -49,6 +52,7 @@
                     
                 </div>
             </div>
+
         </section>
     </main>
     <div class="footer">

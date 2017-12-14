@@ -116,9 +116,14 @@ html #footer .footer-block {
     float: right;
     /* text-align: center; */
     min-width: 97px;
+    padding: 8px 24px;
 }
 .btn-primary:hover {
     border: 1px solid gold;
+    background-color: #fac840;
+    color: #1b41ae;
+    font-weight: 700;
+}
 
 }
 .container>.navbar-header{
