@@ -12,7 +12,7 @@
 @endsection
 @section('content')
     <main class="container ">
-       <div class="post">
+       
         <div class="col-md-12 ">
             @if ($errors->any())
                 <div class="alert alert-danger">
@@ -27,6 +27,7 @@
                 <div class="alert alert-success">{{session('status')}}</div>
             @endif
         </div>
+        <div class="post">
         <div class="post-header">
             <h1>@lang('Change Password')</h1>
         </div>

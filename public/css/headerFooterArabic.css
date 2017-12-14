@@ -1,20 +1,19 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:600,400,300);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
-@import url(https://fonts.googleapis.com/css?family=Raleway);
-@font-face {
-    font-family: myFirstFont;
-    src: url(../fonts/CoconR%20Next%20Arabic-Light.otf);
+@import url(https://fonts.googleapis.com/css?family=Cairo);
+*{
+    font-family: 'cairo';
+    text-align: right;
+    direction: rtl;
 }
 body{
-	 font-family: myFirstFont;
-     /* display: flex; */
-     width: 100%;
-    direction: rtl;
-    text-align: right;
+      
+      width: 100%;
+      text-align: left;
+      background-color: #f2f2f2;
 }
 html,
 main {
-  min-height: 52pc;
+  min-height: 74vh;
   margin: 0;
   padding: 0;
 }
@@ -22,7 +21,7 @@ main {
 main {
   align-items: center;
   justify-content: center;
-  margin-top: 38px;
+  margin-top: 94px;
 }
 * {
   -moz-box-sizing: border-box;
@@ -35,14 +34,16 @@ h1 {
 }
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus{
     background: transparent;
-    border-bottom: 3px solid #ffd90b;
-    color: white;
+    border-bottom: 1px solid #ffcc01;
+    color: #ffd90b;
+    width: -6px;
+    padding: 15px 12px 4px;
 }
 .topnav{
-    background: #4b77f3;
+    background: #616161;
     color: white;
     min-height: 30px;
-    padding: 19px;
+    padding: 4px;
 }
 .navbar-default .navbar-nav>li>a{
     color: white;
@@ -70,14 +71,14 @@ html #footer {
   text-align: center;
   width: 100%;
   line-height: 3;
-  margin-top: 45px;
+  /* margin-top: 45px; */
   right: 0;
   font-size: 24px;
   right: 0;
   color: #ffd90b;
   /* position: absolute; */
   /* height: 60px; */
-  background-color: #4b77f3;
+  background-color: #616161;
 }
 html #footer .footer-block {
   /* margin: 20px 0; */
@@ -114,15 +115,15 @@ html #footer .footer-block {
     border-radius: 4px;
     float: left;
     /* text-align: center; */
-    width: 97px;
+    min-width: 97px;
 }
 .btn-primary:hover {
     border: 1px solid gold;
 
 }
 .container>.navbar-header{
+    float:  right;
     display: inline-block;
-    float: right;
 }
 .navbar-toggler{
     margin-top: 10px;
@@ -143,50 +144,65 @@ html #footer .footer-block {
     color: white;
     /* cursor: pointer; */
 }
-.custom-counter li::before {
-    float: right;
-    margin-left: 8px;
-}
 .notification .notification-close {
     /* top: 10px; */
-    left: 24px;
+    right: 24px;
+        
 }
-.custom-counter li {
-padding-right: 2px;
+.custom-counter li::before {
+    margin-right: 8px;
 }
 .navbar-toggler{
-    float: left;
+    float: right;
 }
 .controls label{
-    right: 8px;
-    text-align: right;
+    left: 8px;
 }
-.navbar-default .navbar-collapse, .navbar-default .navbar-form {
-    float: left!important;
-}
-.container .notification:nth-child(odd ) {
-    background: #00e7ff30;
+.container .notification:nth-child(odd) {
     content: "";
     display: table;
     clear: both;
 }
 .custom-counter1 li {
-    margin-right: 40px;
-    list-style-type: disc;
+    margin: 15px 4px;
 }
 .notification .footer .btn{
-    float: left;
+    /* float: right; */
 }
+
 @media screen and (min-width: 768px) {
       .navbar-toggler{
        display: none;
     }
 }
 @media screen and (max-width: 768px) {
-      main aside {
+
+    main aside {
         width: 100%;
     }
-     .navbar-default .navbar-nav .open .dropdown-menu>li>a{
-       color: white;
+    main{
+        
     }
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: #e6e6e6;
+    float: left!important;
+}
+ form label{
+    font-size: 13px;
+}
+.navbar-nav>li {
+    float: right;
+}
+.addSec h2.heading,.department .heading, .default .heading,.controls label{
+    font-family: 'cairo'!important;
+}
+
+main aside:first-child{
+    border-left: 1px solid gainsboro;
+    border-right: 0!important;
+}
+.controls .fa-sort {
+     right: auto; 
+     left: 11px; 
 }

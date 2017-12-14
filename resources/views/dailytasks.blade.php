@@ -33,8 +33,9 @@
                 <div class="form-group">
                     <h2 class="heading">@lang('New Task')</h2>
                     <div class="controls">
-                        <input type="text" id="task" class="floatLabel" name="task">
                         <label for="task">@lang('Enter Your Task Here')</label>
+                        <input type="text"  id="myID" class="form-control floatLabel" name="task">
+  
                     </div>
                     <button type="submit" class="btn btn-primary">@lang('ADD')</button>
                 </div>
@@ -56,6 +57,7 @@
                 </div>
             @endforelse
         </section>
+      
     </main>
 
 @endsection
