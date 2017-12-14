@@ -12,7 +12,7 @@
     background-color: #ffffff;
     padding: 15px 20px 20px 20px;
 }
-.department-box {
+.department-box ,.tasks-box {
     margin-bottom: 25px;
     margin-top: 0;
     padding: 0;
@@ -22,6 +22,9 @@
     -webkit-box-shadow: 0px 1px 7px 1px rgba(168,168,168,0.39);
     -moz-box-shadow: 0px 1px 7px 1px rgba(168,168,168,0.39);
     box-shadow: 0px 1px 7px 1px rgba(168,168,168,0.39);
+}
+.tasks-list {
+    height: 30em;
 }
 .dep-title h3 {
     display: inline-block;
@@ -125,3 +128,29 @@
     }
 }
 
+
+/****** Tasks List Style ********/
+
+.tasks-list .task{
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    font-size: 16px;
+    line-height: 2em;
+}
+.task{
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    font-size: 16px;
+    line-height: 2em;
+}
+
+.date-form{
+    margin: 0;
+    padding: 0;
+}
+.date-form label{
+    padding: 0px 0 5px 0;
+}
+.notification-title img{
+    margin-right:5px;
+}
