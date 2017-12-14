@@ -32,7 +32,7 @@
                     
                         <div class="highlighter"></div>
                     </div>
-                    <div class="fieldset button-set">
+                    <div class="fieldset button-set text-center">
                         <input type="submit" value="@lang('login')">
                     </div>
                 </form>

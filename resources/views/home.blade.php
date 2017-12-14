@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('content')
-    <main class="container addSec">
+    <main class="container ">
         <div>
             <ul class="breadcrumb">
                 <li class="active"><a>@lang('Home')</a></li>
@@ -24,7 +24,7 @@
                 </div>
             </div>
         </section>
-        <section class="row ">
+        <section class="row addSec">
             <aside class="col-md-6">
                 <h2 class="heading">@lang('Add Employee')</h2>
                 <form method="post" action="/addemp">
@@ -114,12 +114,13 @@
                 @foreach($departments as $department)
                 <div class="notification  col-md-6">
                     @if($department->employees->count() < 1)
-                        <span  data-id="{{$department->id}}"  class="notification-close">
+                        <span  data-id="{{$department->id}}"  class="notifi
+                           cation-close">
                             <i class="fa fa-trash-o" aria-hidden="true"></i>
                         </span>
                     @endif
                     <h3 class="notification-title">{{$department->name}}</h3>
-                    <ol class="custom-counter">
+                    <ol class="custom-counter auto-height">
                         @foreach($department->employees as $employee)
                         <li>{{$employee->first_name}} {{$employee->last_name}}</li>
                         @endforeach

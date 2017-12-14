@@ -21,7 +21,7 @@ main {
 main {
   align-items: center;
   justify-content: center;
-  margin-top: 94px;
+  margin-top: 78px;
 }
 * {
   -moz-box-sizing: border-box;
@@ -71,12 +71,12 @@ html #footer {
   text-align: center;
   width: 100%;
   line-height: 3;
-  /* margin-top: 45px; */
+  margin-top: 16px;
   right: 0;
   font-size: 24px;
   right: 0;
   color: #ffd90b;
-  /* position: absolute; */
+  position: relative;
   /* height: 60px; */
   background-color: #616161;
 }
@@ -105,7 +105,7 @@ html #footer .footer-block {
   font-size: 16px;
 }
 .container .info span a {
-  color: #ffccb1;
+  color: #ffd90b;
   text-decoration: none;
 }
 .container .info span .fa {

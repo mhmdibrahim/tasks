@@ -113,7 +113,7 @@ html #footer .footer-block {
 }
 .btn-primary {
     border-radius: 4px;
-    float: right;
+    float: left;
     /* text-align: center; */
     min-width: 97px;
 }
@@ -194,13 +194,15 @@ html #footer .footer-block {
 .navbar-nav>li {
     float: right;
 }
-.addSec h2.heading{
+.addSec h2.heading,.department .heading, .default .heading,.controls label{
     font-family: 'cairo'!important;
 }
-.controls label{
-    font-family: 'cairo'!important;
-}
+
 main aside:first-child{
     border-left: 1px solid gainsboro;
     border-right: 0!important;
+}
+.controls .fa-sort {
+     right: auto; 
+     left: 11px; 
 }

@@ -38,6 +38,7 @@
         @endif
         <link rel="stylesheet" href="/css/adding.css">
         <link rel="stylesheet" href="/css/extra.css">
+        <link  rel="stylesheet"  href="/css/datePicker.css">
 
     @endauth
     @yield('styles')
@@ -63,6 +64,7 @@
 <!-- Bootstrap jQuery -->
 <script type="text/javascript" src="/js/bootstrap.min.js"></script>
 @auth
+<script src="/js/flatpickr.min.js"></script>
 <script src="/js/adding.js" type="text/javascript"></script>
 @endauth
 @yield('scripts')
