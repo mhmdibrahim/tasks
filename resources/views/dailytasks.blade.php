@@ -33,7 +33,7 @@
                 <div class="form-group">
                     <h2 class="heading">@lang('New Task')</h2>
                     <div class="controls">
-                       <div class="col-md-2 text-right">
+                       <div class="col-md-2 ">
                             <label for="task" >@lang('Enter Your Task Here')</label>
                         </div>
                         <div class="col-md-10">

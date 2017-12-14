@@ -31,7 +31,32 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-
+select{
+    
+-webkit-appearance:none 
+}
+.select:after {
+  content: "\f0dc";
+  font-family: FontAwesome;
+  color: #000;
+  padding:8px;
+  position:relative;
+  right:35px;
+  top:0px;
+  background:red;
+  z-index:-1;
+  width:10%;
+  line-height:10%;
+}
+    .select {
+    position:relative;   
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: middle;
+    zoom: 1;
+    *display: inline;
+    margin-top:40px;
+}
 caption, th, td {
   text-align: left;
   font-weight: normal;
@@ -81,11 +106,34 @@ header, form {
   /* color: #699cf8; */
 }
 
-.addSec h2.heading,.default .heading {
-<<<<<<<HEAD
-  font-size: 27px;padding-left: 13px;padding-bottom: 3px;/* font-weight: 600; */font-size: 20px;text-transform: capitalize;font-family: 'Raleway';color: white;border-radius: 12px 2px;padding: 15px 10px;background: #428bca;/* margin-bottom: 20px; */
->>>>>>> 4f95ac1a5347d593e629e8c1af212315f79cc73e}
 
+h2.heading,.default .heading  {
+  font-size: 27px;
+  text-transform: capitalize;
+  /* font-weight: 300; */
+  padding-left: 13px;
+  font-family: 'Raleway';
+  /* text-align: left; */
+  color: #428bca;
+  /* border-bottom: 1px solid #4b77f3; */
+  padding-bottom: 3px;
+  margin-bottom: 19px;
+  font-weight: 600;
+}
+.addSec h2.heading, .enter-task .heading, .task .heading{
+  font-size: 27px;
+  padding-left: 13px;
+  padding-bottom: 3px;
+  /* font-weight: 600; */
+  font-size: 20px;
+  text-transform: capitalize;
+  font-family: 'Raleway';
+  color: white;
+  border-radius: 12px 2px;
+  padding: 15px 10px;
+  background: #49baf0;
+  /* margin-bottom: 20px; */
+}
 .controls {
   text-align: left;
   position: relative;
@@ -98,7 +146,7 @@ header, form {
 .controls textarea,
 .controls button,
 .controls select {
-  padding: 4px;
+  padding: 16px 0 25px 10px;
   font-size: 14px;
   border: 1px solid #c6c6c6;
   width: 100%;
@@ -154,7 +202,7 @@ header, form {
 .controls .fa-sort {
   position: absolute;
   right: 31px;
-  top: 44px;
+  top: 49px;
   color: #999;
 }
 .controls select {
@@ -176,6 +224,18 @@ header, form {
   -o-transition: color 0.3s, top 0.3s, background-color 0.8s;
   -webkit-transition: color 0.3s, top 0.3s, background-color 0.8s;
   transition: color 0.3s, top 0.3s, background-color 0.8s;
+}
+.DateControl label{
+    
+    
+    text-transform: capitalize;
+    color: #4b77f3;
+    font-size: 17px;
+    display: inline-block;
+    padding: 8px 0 11px 0;
+    font-family: 'Raleway'; 
+    font-weight: 600;
+    background-color: transparent;
 }
 .controls label.active {
   color: #555;
@@ -199,7 +259,10 @@ header, form {
   background-color: #224c60;
 }
 
-
+.grid {
+/*  background: white;*/
+}
+    
 .grid:after {
   content: "";
   display: table;
@@ -207,7 +270,6 @@ header, form {
 }
 
 [class*='col-'] {
-    
 }
 .grid [class*='col-']:last-of-type {
   padding-right: 0;
@@ -218,9 +280,15 @@ header, form {
 main aside:first-child{
 }
 .department .notification {
-    margin-left: 3px;
+    /* min-width: 49%; */
+    /* height: 27em; */
+    /* overflow: auto; */
     }
+    
+    
 .notification {
+margin-left: 3px;
+ 
   width: 49%;
   border-radius: 6px;
   box-shadow: 0.0625rem 0.0625rem 0.0925rem gray;
@@ -373,7 +441,9 @@ main aside:first-child{
     border-radius: 12px 0 0;
     margin: 0;
     padding: 0 0px 15px;
-}
+
+    margin-left: 0px;
+    margin-right: 0px;}
 .margin-top{
     margin-top: 5em;
 }
@@ -385,6 +455,12 @@ main aside:first-child{
     height: 12em;
     overflow: auto;
     margin-bottom: 16px;
+}
+.auto-height{
+   
+    height: 22em;
+    overflow: auto;
+   
 }
 ::-webkit-scrollbar {
     width: 10px;
@@ -447,7 +523,7 @@ main aside:first-child{
 form label{
     font-size: 
 }
-.department .heading,.default .heading{
+.department .heading{
    font-size: 23px;
    padding-bottom: 5px;
    border-bottom: 1px solid #428bca;
@@ -458,8 +534,9 @@ form label{
     text-align: right;
 }
 @media screen and (max-width: 768px) {
-    [class*='col-'] {
-         padding: 0; 
+    .list-element {
+         padding: 0;
+         overflow: initial!important;
         }
    .department .notification {
       width: 100%;
@@ -470,9 +547,13 @@ form label{
     .navbar-nav {
         margin: 7.5px 0px;
     }
+.breadcrumb>.active {
+    color: #f0d90b;
 }
-.controls input[type="tel"]{
-    font-family: serif;
+input::-webkit-calendar-picker-indicator{
+    display: none;
 }
-.breadcrumb > .active {
-    color: #eecb24;
+[opinput[type="date"]::-webkit-input-placeholder{ 
+    visibility: hidden !important;
+}
+
