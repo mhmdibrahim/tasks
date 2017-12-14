@@ -113,7 +113,7 @@
                     </select>
                 </div>
             </div>
-            <div class="form-group" >
+            <div class="btn-right" >
                 <button type="submit" class="btn btn-primary">@lang('Edit')</button>
             </div>
             </div>

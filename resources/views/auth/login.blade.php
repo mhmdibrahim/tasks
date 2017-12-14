@@ -30,9 +30,9 @@
                         </label>
                         <input id="password" name="password" type="password" required>
                     
-                        <div class="highlighter"></div>
+                  
                     </div>
-                    <div class="fieldset button-set text-center">
+                    <div class="fieldset button-set text-right">
                         <input type="submit" value="@lang('login')">
                     </div>
                 </form>

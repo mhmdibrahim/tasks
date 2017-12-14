@@ -13,6 +13,7 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
   margin: 0;
   padding: 0;
+  text-transform:  capitalize;
   border: 0;
   font-size: 13px;
   vertical-align: baseline;
@@ -61,13 +62,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* Colors */
 /* ---------------------------------------- */
 
-
 a {
   text-decoration: none;
   color:  white;
 }
-
-a {}
 
 .info-text {
   text-align: left;
@@ -79,13 +77,13 @@ header, form {
 
 .form-group {
   margin-bottom: 20px;
-  padding: 0 15px;
+  padding: 0 0 14px;
+  /* color: #699cf8; */
 }
 
-.addSec h2.heading {
+.addSec h2.heading,.default .heading {
 <<<<<<<HEAD
-  font-size: 27px;padding-left: 13px;padding-bottom: 3px;font-weight: 600;
-=======font-size: 20px;text-transform: capitalize;font-family: 'Raleway';color: white;border-radius: 12px 2px;padding: 15px 10px;background: #428bca;margin-bottom: 20px;
+  font-size: 27px;padding-left: 13px;padding-bottom: 3px;/* font-weight: 600; */font-size: 20px;text-transform: capitalize;font-family: 'Raleway';color: white;border-radius: 12px 2px;padding: 15px 10px;background: #428bca;/* margin-bottom: 20px; */
 >>>>>>> 4f95ac1a5347d593e629e8c1af212315f79cc73e}
 
 .controls {
@@ -104,7 +102,7 @@ header, form {
   font-size: 14px;
   border: 1px solid #c6c6c6;
   width: 100%;
-  margin-bottom: 18px;
+  margin-bottom: 10px;
   cursor:  pointer;
   color: #888;
   font-size: 16px;
@@ -155,8 +153,8 @@ header, form {
 }
 .controls .fa-sort {
   position: absolute;
-  right: 10px;
-  top: 38px;
+  right: 31px;
+  top: 44px;
   color: #999;
 }
 .controls select {
@@ -201,9 +199,7 @@ header, form {
   background-color: #224c60;
 }
 
-.grid {
-  background: white;
-}
+
 .grid:after {
   content: "";
   display: table;
@@ -211,15 +207,15 @@ header, form {
 }
 
 [class*='col-'] {
+    
 }
 .grid [class*='col-']:last-of-type {
   padding-right: 0;
 }
 .grid .col-md-6,.grid .col-md-4,.grid .col-md-3,.controls{
-    padding: 2px;
+    padding: 8px 18px 0;
 }
 main aside:first-child{
-     border-right: 1px solid gainsboro; 
 }
 .department .notification {
     margin-left: 3px;
@@ -262,11 +258,8 @@ main aside:first-child{
   font-size: 14px;
 }
 
-.notification-close {
-  /* border: 1px solid #ffffff; */
-}
+
 .grid:after {
-  /* Or @extend clearfix */
   content: "";
   display: table;
   clear: both;
@@ -294,7 +287,6 @@ main aside:first-child{
 
 .custom-counter li::before {
   content: counter(step-counter);
-  /* margin-left: 5px; */
   font-size: 80%;
   background-color: rgb(75, 119, 243);
   color: white;
@@ -316,9 +308,7 @@ main aside:first-child{
 }
 
 .custom-counter1 ul::before {
-  content: counter(step-counter);
-    /* margin-left: 5px; */
-    /* font-size: 80%; */
+      content: counter(step-counter);
     background-color: rgb(255, 217, 78);
     color: white;
     font-weight: bold;
@@ -367,9 +357,6 @@ main aside:first-child{
 
       width: 100%;
 }
-.task .notification::before{
-
-}
 
 .task .notification .notification-title {
     display: inline-block;
@@ -378,9 +365,14 @@ main aside:first-child{
 .task{
     margin-bottom: 30px;
     margin: 2px;
+    background:  white;
+    border-radius: 12px 0 0;
 }
 .enter-task,.addSec{
     margin-top: 20px;
+    border-radius: 12px 0 0;
+    margin: 0;
+    padding: 0 0px 15px;
 }
 .margin-top{
     margin-top: 5em;
@@ -409,22 +401,10 @@ main aside:first-child{
     border-radius: 10px;
     background: #428bca;
 }
-@media screen and (max-width: 768px) {
-   .department .notification {
-  /* max-width: 400px; */
-  width: 100%;
-  margin: 0;
-  margin-left: 0;
-  margin-bottom: 12px;
-  }
-    .form-group{
-        margin: 6px;
-    }
-}
+
 .post{
    width: 50%;
-   margin: 0 auto;
-   /* margin-top: 0%; */
+   margin: 15px auto;
    text-transform:  capitalize;
    border-radius: 9px;
    background: white;
@@ -432,13 +412,13 @@ main aside:first-child{
    padding-top: 2px;
 }
 .post h1{
-    color: #000000;
+    color: #ffffff;
     padding: 20px 10px;
     margin: -3px 0;
     font-family:  inherit;
     border-radius: 11px 2px;
     font-size: 19px;
-    background: #dddbdb;
+    background: #49baf0;
 }
 .changeBtn{
     float: right;
@@ -449,34 +429,50 @@ main aside:first-child{
 }
 .post-header{
     padding: 0px;
-    /* border-radius: 3px; */
 }
 .post-content{
-    
-padding: 40px 31px 15px;
+    padding: 40px 31px 15px;
 }
-.addSec form{
-    
+.addSec form{       
+    box-shadow: 0.0625rem 0.0625rem 0.0925rem grey;  
+    border-radius: 11px 0 0;   
+    background:  white;
 }
+
 .breadcrumb {
     background-color: #616161;
     width: 100%;
+    margin: 20px 0;
     }
 form label{
     font-size: 
 }
 .department .heading,.default .heading{
-   border-bottom: 1px solid #428bca;
-   color: #428bca;
    font-size: 23px;
    padding-bottom: 5px;
+   border-bottom: 1px solid #428bca;
    margin-bottom: 11px;
    font-family: 'Raleway';
 }
-.breadcrumb>li{
-    color: white;
+.btn-right{
+    text-align: right;
 }
-.breadcrumb>.active {
-    color: #ffd90b;
-    cursor:  pointer;
+@media screen and (max-width: 768px) {
+    [class*='col-'] {
+         padding: 0; 
+        }
+   .department .notification {
+      width: 100%;
+      margin: 0;
+      margin-left: 0;
+      margin-bottom: 12px;
+      }
+    .navbar-nav {
+        margin: 7.5px 0px;
+    }
 }
+.controls input[type="tel"]{
+    font-family: serif;
+}
+.breadcrumb > .active {
+    color: #eecb24;

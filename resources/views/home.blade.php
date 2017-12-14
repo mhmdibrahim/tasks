@@ -26,12 +26,12 @@
         </section>
         <section class="row addSec">
             <aside class="col-md-6">
-                <h2 class="heading">@lang('Add Employee')</h2>
+              
                 <form method="post" action="/addemp">
                 {{csrf_field()}}
                 <!--  General -->
                     <div class="form-group">
-                       
+                         <h2 class="heading">@lang('Add Employee')</h2>
                         <div class="controls">
                            <label for="firstName">@lang('First Name')</label>
                             <input type="text" id="firstName" class="floatLabel form-control" name="firstName" value="{{old('firstName')}}">
@@ -81,7 +81,9 @@
                             </select>
                             
                         </div>
-                        <button type="submit" class="btn btn-primary">@lang("Add Emplyee")</button>
+                        <div class="btn-right">
+                            <button type="submit" class="btn btn-primary">@lang("Add Emplyee")</button>
+                        </div>
                     </div>
                 </form>
             </aside>
@@ -98,7 +100,9 @@
                                 <input type="text" id="department" class="floatLabel" name="department">
                               
                             </div>
+                          <div class="btn-right">
                             <button type="submit" class="btn btn-primary">@lang("Add Department")</button>
+                            </div>
                         </form>
 
 
@@ -108,14 +112,13 @@
         </section>
         <hr>
         <!--        added departments     -->
-        <section class="row department">
+        <section class="row container department">
             <h2 class="heading">@lang('Departments')</h2>
-            <div class="container">
+            <div class="">
                 @foreach($departments as $department)
                 <div class="notification  col-md-6">
                     @if($department->employees->count() < 1)
-                        <span  data-id="{{$department->id}}"  class="notifi
-                           cation-close">
+                        <span  data-id="{{$department->id}}"  class="notification-close">
                             <i class="fa fa-trash-o" aria-hidden="true"></i>
                         </span>
                     @endif
