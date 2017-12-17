@@ -31,6 +31,12 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+.list-element:last-child{
+    border:0;
+}
+.employees-list:last-child{
+     border:0;   
+}
 select{
     
 -webkit-appearance:none 
@@ -110,7 +116,7 @@ h2.heading,.default .heading  {
   text-transform: capitalize;
   /* font-weight: 300; */
   padding-left: 13px;
-  font-family: 'Raleway';
+  /* font-family: 'Raleway'; */
   /* text-align: left; */
   color: #428bca;
   /* border-bottom: 1px solid #4b77f3; */
@@ -122,10 +128,10 @@ h2.heading,.default .heading  {
   font-size: 27px;
   padding-left: 13px;
   padding-bottom: 3px;
-  /* font-weight: 600; */
+  font-weight: 100;
   font-size: 20px;
   text-transform: capitalize;
-  font-family: 'Raleway';
+  /* font-family: 'Raleway'; */
   color: white;
   border-radius: 12px 2px;
   padding: 15px 10px;
@@ -215,8 +221,8 @@ h2.heading,.default .heading  {
   color: #000;
   font-size: 14px;
   display: inline-block;
-  font-family: 'Raleway';
-  font-weight: 600;
+  /* font-family: 'Raleway'; */
+  /* font-weight: 600; */
   background-color: rgba(255, 255, 255, 0);
   -moz-transition: color 0.3s, top 0.3s, background-color 0.8s;
   -o-transition: color 0.3s, top 0.3s, background-color 0.8s;
@@ -526,12 +532,14 @@ form label{
    padding-bottom: 5px;
    border-bottom: 1px solid #428bca;
    margin-bottom: 11px;
-   font-family: 'Raleway';
+   /* font-family: 'Raleway'; */
 }
 .btn-right{
     text-align: right;
 }
 @media screen and (max-width: 768px) {
+    .post {
+        width: 100%;}
     .list-element {
          padding: 0;
          overflow: initial!important;
