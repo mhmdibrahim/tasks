@@ -214,3 +214,9 @@ label,.heading{
 .navbar-toggler {
     float: left;
 }
+.dep-title h3 {
+    padding-left: auto!important;
+    padding-right: 20px!important;
+}
+.form-horizontal .control-label{
+    margin-bottom: 12px;}

@@ -35,7 +35,7 @@
             <div class="form-group">
             <div class="form-group">
                 <div class="col-md-10">
-                    <input autofocus="autofocus" class="form-control" type="text" name="task" placeholder= @lang('Enter Your Task Here')>
+                    <input autofocus="autofocus" class="form-control" id="myID" type="text" name="task" placeholder= @lang('Enter Your Task Here')>
                 </div>
                 <div class="col-md-2">
                     <input type="submit" class="btn btn-success" value= @lang("ADD")>
