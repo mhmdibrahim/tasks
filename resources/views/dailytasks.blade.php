@@ -37,7 +37,7 @@
                             <label for="task" >@lang('Enter Your Task Here')</label>
                         </div>
                         <div class="col-md-10">
-                            <input type="text"  id="myID" class="form-control floatLabel " name="task">
+                            <input type="text"  class="myID" class="form-control floatLabel " name="task">
                         </div>
   
                     </div>

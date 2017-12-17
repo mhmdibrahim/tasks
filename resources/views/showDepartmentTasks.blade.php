@@ -46,7 +46,7 @@
                     @endif
                 </ol>
             </div>
-            <div class="footer text-right">
+            <div class="footer">
                 <a href="/moreDetails/{{$department->id}}" class="btn btn-primary">@lang('View Employees Tasks')</a>
             </div>
         </section>
@@ -55,7 +55,7 @@
 @endsection
 @section('scripts')
     <script>
-        var date = document.getElementById('arrive');
+        var date = document.getElementById('myID');
         var form = document.getElementById('form');
         date.addEventListener('change',function () {
             form.submit();

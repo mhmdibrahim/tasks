@@ -11,7 +11,7 @@
     <div class="container">
         <div class="row">
             <form  id="form" method="GET">
-                <input name="date" type="date" id="date" value="{{$date}}">
+                <input name="date" type="date" id="myID" value="{{$date}}">
             </form>
         </div>
         <br>
@@ -36,7 +36,7 @@
 @endsection
 @section('script')
     <script>
-        var date = document.getElementById('date');
+        var date = document.getElementById('myID');
         var form = document.getElementById('form');
         date.addEventListener('change',function () {
             form.submit();
