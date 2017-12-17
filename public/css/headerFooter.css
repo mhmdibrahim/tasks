@@ -108,9 +108,8 @@ html #footer {
 }
 .btn-primary {
     border-radius: 4px;
-    margin-right: 22px;
+    /* margin-right: 22px; */
     min-width: 97px;
-  
 }
 .btn-primary:hover {
     border: 1px solid gold;
@@ -160,12 +159,14 @@ html #footer {
 .custom-counter1 li {
     margin: 15px 4px;
 }
-
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: 'Raleway';}
 @media screen and (min-width: 768px) {
       .navbar-toggler{
        display: none;
     }
 }
+
 @media screen and (max-width: 768px) {
     main aside {
         width: 100%;
@@ -174,6 +175,4 @@ html #footer {
         
     }
      .navbar-default .navbar-nav .open .dropdown-menu>li>a{
-       color: white;
-    }
-}
+ 

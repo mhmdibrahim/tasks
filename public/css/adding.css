@@ -109,7 +109,9 @@ header, form {
   padding: 0 0 14px;
   /* color: #699cf8; */
 }
-
+.breadcrumb>.active {
+    color: #ffe201;
+}
 
 h2.heading,.default .heading  {
   font-size: 27px;
@@ -231,15 +233,21 @@ h2.heading,.default .heading  {
 }
 .DateControl label{
     
+text-transform: capitalize;
     
-    text-transform: capitalize;
-    color: #4b77f3;
-    font-size: 17px;
-    display: inline-block;
-    padding: 8px 0 11px 0;
-    font-family: 'Raleway'; 
-    font-weight: 600;
-    background-color: transparent;
+color: #4b77f3;
+    
+font-size: 17px;
+    
+display: inline-block;
+    
+padding: 8px 0 11px 0;
+    
+font-family: 'Raleway';
+    
+font-weight: 600;
+    
+background-color: transparent;
 }
 .controls label.active {
   color: #555;
@@ -289,7 +297,10 @@ main aside:first-child{
     /* overflow: auto; */
     }
     
-    
+ 
+.tasks{
+        padding: 0;
+    }   
 .notification {
 margin-left: 3px;
  
@@ -298,6 +309,12 @@ margin-left: 3px;
   box-shadow: 0.0625rem 0.0625rem 0.0925rem gray;
   margin: 10px auto;
   position: relative;
+}
+.notification-title span{
+    
+vertical-align: text-top;
+    
+font-size: 16px;
 }
 .notification .notification-close {
   position: absolute;
@@ -556,10 +573,9 @@ form label{
 .breadcrumb>.active {
     color: #f0d90b;
 }
-input::-webkit-calendar-picker-indicator{
+input::-webkit-calendar-picker-indicator,.controls input[type="date"]{
     display: none;
 }
-[opinput[type="date"]::-webkit-input-placeholder{ 
+[opinput[type="date"]::-webkit-input-placeholder,.controls input[type="date"]{ 
     visibility: hidden !important;
 }
-
