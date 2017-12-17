@@ -6,6 +6,7 @@
 @endsection
 @section('content')
     <main class="container @if($tasks <1) default @endif">
+       
         <!--        employee details     -->
         <section class="row department">
             <h2 class="heading">@lang('Department Tasks')</h2>
@@ -18,8 +19,9 @@
             <section class="addSec">
                 <form id="form" method="GET">
                     <div class="form-group date-form">
+                       <h2 for="arrive" class="heading">&nbsp;&nbsp;@lang('Choose date')</h2>
                         <div class="controls DateControl">
-                            <label for="arrive" class="label-date">&nbsp;&nbsp;@lang('Choose date')</label>
+                            
 <!--                                <input type="date" id="arrive" class="floatLabel" name="date" value="{{$date}}">-->
                             <input class="form-control" type="date" id="myID" class="floatLabel" name="date" value="{{$date}}">
                         </div>

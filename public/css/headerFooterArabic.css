@@ -35,6 +35,7 @@ main {
     background: transparent;
     border-bottom: 1px solid #ffcc01;
     color: #ffd90b;
+    width: 100%;
     width: -6px;
     padding: 15px 12px 4px;
 }
@@ -202,15 +203,7 @@ label,.heading{
     position: relative;
     right: 31px;
 }
-.navbar-nav>li {
-    float: right;
-}
-.navbar-right {
-    float: left!important;
-}
-.navbar-header {
-	float: right;
-}
+
 .navbar-toggler {
     float: left;
 }
@@ -220,3 +213,22 @@ label,.heading{
 }
 .form-horizontal .control-label{
     margin-bottom: 12px;}
+.col-xs-10 {
+    position: relative;
+    right: 38px;
+}
+    
+@media (min-width: 768px)
+{
+.container>.navbar-header, .container>.navbar-collapse {
+        float: right;
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .navbar-right {
+    float: left!important;
+    }
+    .navbar-nav>li {
+    float: right;
+    }
+}

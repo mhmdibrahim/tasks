@@ -2,6 +2,7 @@
 @section('content')
     <main class="container">
         <section class="row department">
+           
             <h2 class="heading">@lang('Department Employees Tasks')</h2>
             <div>
                 <ul class="breadcrumb">
@@ -21,6 +22,7 @@
                 </form>
             </section>
             <section>
+              
                 <div class="container tasks">
                     @forelse($department->employees as $employee)
                         <div class="notification ">

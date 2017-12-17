@@ -3,6 +3,7 @@
 @section('nav')
     <div>
         <ul class="breadcrumb">
+           
             <li><a href="/">@lang('Home')</a></li>
             <li><a href="/track/{{$department->id}}">@lang('Show Department Tasks')</a></li>
             <li class="active">@lang('Show Department Employees Tasks')</li>
@@ -17,8 +18,10 @@
             </form>
         </div>
         <br>
+        
         @forelse($department->employees as $employee)
             <div class="col-md-6">
+        
                 <div class="panel panel-primary">
                     <div class="panel-heading">
                         {{$employee->first_name}}
