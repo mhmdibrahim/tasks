@@ -297,7 +297,9 @@ main aside:first-child{
     /* overflow: auto; */
     }
     
- 
+.date-form .controls {
+     padding: 0; 
+    }
 .tasks{
         padding: 0;
     }   
@@ -576,6 +578,6 @@ form label{
 input::-webkit-calendar-picker-indicator,.controls input[type="date"]{
     display: none;
 }
-[opinput[type="date"]::-webkit-input-placeholder,.controls input[type="date"]{ 
+input[type="date"]::-webkit-input-placeholder,.controls input[type="date"]{ 
     visibility: hidden !important;
 }

@@ -15,7 +15,7 @@
                     <div class="form-group date-form">
                         <div class="controls DateControl">
                             <label for="arrive" class="label-date">&nbsp;&nbsp;@lang('Choose date')</label>
-                            <input type="date" id="arrive myID" class="floatLabel form-control" name="date" value="{{$date}}">
+                            <input type="date" id="myID " class=" floatLabel form-control" name="date" value="{{$date}}">
                         </div>
                     </div>
                 </form>
@@ -41,7 +41,7 @@
 @endsection
 @section('scripts')
     <script>
-        var date = document.getElementById('arrive');
+        var date = document.getElementById('myID');
         var form = document.getElementById('form');
         date.addEventListener('change',function () {
             form.submit();

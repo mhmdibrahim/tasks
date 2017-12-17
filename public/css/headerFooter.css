@@ -13,7 +13,7 @@ body{
 }
 html,
 main {
-  min-height: 77.6vh;
+  min-height: 78.6vh;
   margin: 0;
   padding: 0;
 }
@@ -21,7 +21,7 @@ main {
 main {
   align-items: center;
   justify-content: center;
-  margin-top: 10vh;
+  margin-top: 13vh;
 }
 * {
   -moz-box-sizing: border-box;
