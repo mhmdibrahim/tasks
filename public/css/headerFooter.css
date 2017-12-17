@@ -108,7 +108,7 @@ html #footer {
 }
 .btn-primary {
     border-radius: 4px;
-    /* margin-right: 22px; */
+    margin-right: 22px; 
     min-width: 97px;
 }
 .btn-primary:hover {

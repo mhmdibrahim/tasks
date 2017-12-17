@@ -220,3 +220,13 @@ label,.heading{
 }
 .form-horizontal .control-label{
     margin-bottom: 12px;}
+
+.flatpickr-calendar{
+    top: 269.094px;
+    right: 280.5px !important;
+    left: auto !important;
+}
+.flatpickr-calendar:before, .flatpickr-calendar:after{
+    right: 22px !important;
+    left: auto !important;
+}

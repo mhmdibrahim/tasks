@@ -15,7 +15,7 @@
                     <div class="form-group date-form">
                         <div class="controls DateControl">
                             <label for="arrive" class="label-date">&nbsp;&nbsp;@lang('Choose date')</label>
-                            <input type="date" id="myID " class=" floatLabel form-control" name="date" value="{{$date}}">
+                            <input class="form-control " type="date" id="myID" class="floatLabel" name="date" value="{{$date}}">
                         </div>
                     </div>
                 </form>
