@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="/css/font-awesome.min.css">
     @auth
         @if(app()->getLocale() == 'ar')
-            <link rel="stylesheet" href="css/headerFooterArabic.css">
+            <link rel="stylesheet" href="/css/headerFooterArabic.css">
         @else
             <link rel="stylesheet" href="/css/headerFooter.css">
         @endif

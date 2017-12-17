@@ -6,11 +6,6 @@
         <section class="row department">
             <br>
             <h2 class="heading">@lang('Departments')</h2>
-            <div>
-                <ul class="breadcrumb">
-                    <li class="active">@lang('Home')</li>
-                </ul>
-            </div>
             <div class="container">
                 <div class="row">
                     @forelse($departments as $department)
@@ -26,15 +21,15 @@
                                 </div>-->
                                 <div class="employees-list">
                                     @forelse($department->employees as $employee)
-                                    <div class="col-md-12 list-element">
-                                        <div class="col-md-2">
-                                            <a href="profile.html" class="pull-left"><img alt="" class="img-circle"  src="/images/Blank_Avatar.png" ></a>
+                                    <div class="row col-md-12 col-xs-12 list-element">
+                                        <div class="col-md-2 col-xs-2">
+                                            <a href="profile.html" ><img alt="" class="img-circle"  src="/images/Blank_Avatar.png" ></a>
                                         </div>
-                                        <div class="col-md-10">
-                                            <strong class=" col-xs-12 name">{{$employee->first_name}} {{$employee->last_name}}</strong>
-                                            <div class="col-md-12 emp-info">
-                                                <p class="col-md-6 col-xs-12  job-title">{{$employee->job_title}}</p>
-                                                <p class="col-md-6 col-xs-12 phone">{{$employee->phone}}</p>
+                                        <div class="col-md-10 col-xs-10">
+                                            <strong class=" name">{{$employee->first_name}} {{$employee->last_name}}</strong>
+                                            <div class=" col-md-12 col-xs-12 emp-info">
+                                                <p class="  job-title">{{$employee->job_title}}</p>
+                                                <p class= "phone">{{$employee->phone}}</p>
                                             </div>
                                         </div>
                                     </div>
