@@ -23,7 +23,7 @@
                         <div class="controls DateControl">
                             
 <!--                                <input type="date" id="arrive" class="floatLabel" name="date" value="{{$date}}">-->
-                            <input class="form-control" type="date" id="myID" class="floatLabel" name="date" value="{{$date}}">
+                            <input class="form-control " type="date" id="myID" class="floatLabel" name="date" value="{{$date}}">
                         </div>
                     </div>
                 </form>
@@ -48,7 +48,7 @@
                     @endif
                 </ol>
             </div>
-            <div class="footer">
+            <div class="footer text-right">
                 <a href="/moreDetails/{{$department->id}}" class="btn btn-primary">@lang('View Employees Tasks')</a>
             </div>
         </section>

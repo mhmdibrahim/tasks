@@ -43,7 +43,6 @@ main {
     background: #616161;
     color: white;
     min-height: 7vh;
-    /* padding: 1em; */
 }
 .navbar-default .navbar-nav>li>a{
     color: white;
@@ -58,10 +57,12 @@ main {
 .navbar-default .navbar-nav>.dropdown>a .caret {
     border-top-color: #fff;
     border-bottom-color: #fff;
+    margin-right:5px
 }
 .navbar-default .navbar-brand {
     color: #ffd90b;
     font-size: 32px;
+    line-height: normal;
 }
 .navbar-default .navbar-brand:hover {
     color: #fff;
@@ -213,6 +214,16 @@ label,.heading{
 }
 .form-horizontal .control-label{
     margin-bottom: 12px;}
+
+.flatpickr-calendar{
+    top: 269.094px;
+    right: 280.5px !important;
+    left: auto !important;
+}
+.flatpickr-calendar:before, .flatpickr-calendar:after{
+    right: 22px !important;
+    left: auto !important;
+}
 .col-xs-10 {
     position: relative;
     right: 38px;

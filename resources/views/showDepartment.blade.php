@@ -16,8 +16,8 @@
                     <div class="form-group date-form">
                        <h2 for="arrive" class="heading">&nbsp;&nbsp;@lang('Choose date')</h2>
                         <div class="controls DateControl">
-                            
-                            <input type="date" id="myID" class=" floatLabel form-control" name="date" value="{{$date}}">
+                            <label for="arrive" class="label-date">&nbsp;&nbsp;@lang('Choose date')</label>
+                            <input class="form-control " type="date" id="myID" class="floatLabel" name="date" value="{{$date}}">
                         </div>
                     </div>
                 </form>
@@ -28,7 +28,7 @@
                     @forelse($department->employees as $employee)
                         <div class="notification ">
                             <h3 class="notification-title"><img alt="" class="img-circle"  src="/images/Blank_Avatar.png" width="30" height="30"><span>{{$employee->first_name}} {{$employee->last_name}}</span></h3>
-                            <ol class="">
+                            <ol class="emp-tasks">
                                 @forelse($employee->tasks as $task)
                                     <li class="task">{{$task->content}}</li>
                                 @empty<div class="task">@lang('No Tasks')</div> 

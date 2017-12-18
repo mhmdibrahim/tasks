@@ -109,6 +109,10 @@ header, form {
   transform: translateZ(0);
   /* color: #699cf8; */
 }
+.breadcrumb a:hover{
+    color: #ffe201;
+    text-decoration: none;
+}
 
 .breadcrumb>.active {
     color: #ffe201;
@@ -147,7 +151,7 @@ h2.heading,.default .heading  {
 .controls textarea,
 .controls button,
 .controls select {
-  padding: 16px 0 25px 10px;
+  /* padding: 25px 0 25px 0; */
   font-size: 14px;
   border: 1px solid #c6c6c6;
   width: 100%;
@@ -204,7 +208,7 @@ h2.heading,.default .heading  {
 .controls .fa-sort {
   position: absolute;
   right: 31px;
-  top: 49px;
+  top: 55px;
   color: #999;
 }
 .controls select {
@@ -548,10 +552,9 @@ input::-webkit-calendar-picker-indicator,.controls input[type="date"]{
 input[type="date"]::-webkit-input-placeholder,.controls input[type="date"]{ 
     visibility: hidden !important;
 }
-.tasks-list .task:nth-child(even) {       
-    background: #616161;       
+.tasks-list .task:nth-child(even), .emp-tasks .task:nth-child(even){       
+    background: #e3e3e3;       
     border-radius: 0;
-    color: #f5f5f5;
     }
 
 .list-element {
@@ -591,4 +594,6 @@ main aside{
         color: goldenrod;
     }
 }
-   
+.enter-task .form-group{background-color: #fff;}
+.navbar>.container .navbar-brand {
+       margin-top: 11px;}
