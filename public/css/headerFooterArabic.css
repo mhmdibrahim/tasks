@@ -43,7 +43,7 @@ main {
     background: #616161;
     color: white;
     min-height: 7vh;
-    padding: 1em;
+    /* padding: 1em; */
 }
 .navbar-default .navbar-nav>li>a{
     color: white;
@@ -217,9 +217,22 @@ label,.heading{
     position: relative;
     right: 38px;
 }
-    
+main aside:first-child {
+    padding-left: 10px!important;
+    padding-right: 0;
+}  
+main aside:last-child {
+    padding-right: 10px!important;
+    padding-left: 0;
+} 
+
+.navbar>.container .navbar-brand {
+    margin-left: -15px;
+    margin-top: 15px;
+}
 @media (min-width: 768px)
 {
+    
 .container>.navbar-header, .container>.navbar-collapse {
         float: right;
         margin-right: 0;

@@ -14,9 +14,10 @@
             <section class="addSec">
                 <form id="form" method="GET">
                     <div class="form-group date-form">
+                       <h2 for="arrive" class="heading">&nbsp;&nbsp;@lang('Choose date')</h2>
                         <div class="controls DateControl">
-                            <label for="arrive" class="label-date">&nbsp;&nbsp;@lang('Choose date')</label>
-                            <input type="date" id="myID " class=" floatLabel form-control" name="date" value="{{$date}}">
+                            
+                            <input type="date" id="myID" class=" floatLabel form-control" name="date" value="{{$date}}">
                         </div>
                     </div>
                 </form>

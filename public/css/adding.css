@@ -321,7 +321,7 @@ font-size: 16px;
     font-weight: 600;
     text-transform: capitalize;
     padding: 18px;
-    margin-bottom: 18px;
+    /* margin-bottom: 18px; */
     border-bottom: 1px solid white;
     background-color: #e5e5e5;
     border-radius: 5px 5px 0 0;
