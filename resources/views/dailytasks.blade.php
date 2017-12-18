@@ -28,7 +28,7 @@
             @endif
             </div>
         </div>
-        <section class="row enter-task">
+        <section class=" enter-task">
             <form action="/task" method="post" >
                 {{csrf_field()}}
                 <div class="form-group">

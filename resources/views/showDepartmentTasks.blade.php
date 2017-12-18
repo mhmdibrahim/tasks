@@ -8,7 +8,7 @@
     <main class="container @if($tasks <1) default @endif">
        
         <!--        employee details     -->
-        <section class="row department">
+        <section class=" department">
             <h2 class="heading">@lang('Department Tasks')</h2>
             <div>
                 <ul class="breadcrumb">

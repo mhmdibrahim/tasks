@@ -8,7 +8,7 @@
 @endsection
 @section('content')
     <div class="container">
-        <div class="row">
+        <div class="">
             <div class="col-md-12">
                 @if ($errors->any())
                     <div class="alert alert-danger">
@@ -24,7 +24,7 @@
                 @endif
             </div>
         </div>
-        <div class="row">
+        <div class="">
             <div class="col-md-12">
                 <h1>@lang('New Task')  </h1>
             </div>
@@ -43,7 +43,7 @@
             </div>
         </form>
         <hr>
-        <div class="row">
+        <div class="">
             <div class="col-md-12"><h1>@lang("Today's Tasks")</h1></div>
             <div class="col-md-10">
                 <div class="list-group" >

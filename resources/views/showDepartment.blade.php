@@ -1,7 +1,8 @@
 @extends('layouts.master')
+
 @section('content')
-    <main class="container">
-        <section class="row department">
+    <main class="container ">
+        <section class=" department">
            
             <h2 class="heading">@lang('Department Employees Tasks')</h2>
             <div>

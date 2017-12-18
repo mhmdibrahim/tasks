@@ -14,7 +14,7 @@ body{
 }
 html,
 main {
-  min-height: 77.6vh;
+  min-height: 83.3vh;
   margin: 0;
   padding: 0;
 }
@@ -42,7 +42,7 @@ main {
 .topnav{
     background: #616161;
     color: white;
-    min-height: 7vh;
+    min-height: 0vh;
 }
 .navbar-default .navbar-nav>li>a{
     color: white;
@@ -217,7 +217,7 @@ label,.heading{
 
 .flatpickr-calendar{
     top: 269.094px;
-    right: 280.5px !important;
+    right: 389.5px !important;
     left: auto !important;
 }
 .flatpickr-calendar:before, .flatpickr-calendar:after{
@@ -240,10 +240,12 @@ main aside:last-child {
 .navbar>.container .navbar-brand {
     margin-left: -15px;
     margin-top: 15px;
+    float:  none;
 }
 @media (min-width: 768px)
 {
-    
+.department .heading {
+     font-size: 17px;}  
 .container>.navbar-header, .container>.navbar-collapse {
         float: right;
         margin-right: 0;
