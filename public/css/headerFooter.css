@@ -1,9 +1,11 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:600,400,300);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
-@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
 *{
-     font-family: 'Raleway';
+    font-family:'Lato', sans-serif;
 }
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+       font-family:'Lato', sans-serif;}
 body{
      
      /* display: flex; */
@@ -13,7 +15,7 @@ body{
 }
 html,
 main {
-  min-height: 78.6vh;
+  min-height: 74.4vh;
   margin: 0;
   padding: 0;
 }
@@ -21,16 +23,15 @@ main {
 main {
   align-items: center;
   justify-content: center;
-  margin-top: 13vh;
+  margin-top: 13.2vh;
 }
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-h1 {
-  font-family: 'Open Sans Condensed', sans-serif;
-
+h1 { 
+    font-family: Arial, Helvetica, sans-serif;
 }
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus{
     background: transparent;
@@ -42,8 +43,8 @@ h1 {
 .topnav{
     background: #616161;
     color: white;
-    min-height: 7vh;
-    padding: 1em;
+    min-height: 5vh;
+    padding: 0em;
 }
 .navbar-default .navbar-nav>li>a{
     color: white;
@@ -67,17 +68,16 @@ h1 {
     color: #fff;
 }
 html #footer {
-  bottom: 0;
-  text-align: center;
-  width: 100%;
-  line-height: 3;
-  margin-top: 16px;
-  right: 0;
-  font-size: 24px;
-  right: 0;
-  color: #ffd90b;
-  /*! position: absolute; */
-  background-color: #616161;
+      bottom: 0;
+      text-align: center;
+      width: 100%;
+      line-height: 3;
+      margin-top: 16px;
+      right: 0;
+      font-size: 24px;
+      right: 0;
+      color: #ffd90b;
+      background-color: #616161;
 }
 
 .clear:after {
@@ -121,9 +121,10 @@ html #footer {
 
 .container>.navbar-header{
     display: inline-block;
+    margin-top: 5px;
 }
 .navbar-toggler{
-    margin-top: 10px;
+    margin-top: 16px;
     border-bottom: 1px solid #9c9999;
     color: gold;
     border-radius: 2px;
@@ -159,8 +160,7 @@ html #footer {
 .custom-counter1 li {
     margin: 15px 4px;
 }
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-    font-family: 'Raleway';}
+
 @media screen and (min-width: 768px) {
       .navbar-toggler{
        display: none;
@@ -171,8 +171,5 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     main aside {
         width: 100%;
     }
-    main{
-        
-    }
-     .navbar-default .navbar-nav .open .dropdown-menu>li>a{
+}
  

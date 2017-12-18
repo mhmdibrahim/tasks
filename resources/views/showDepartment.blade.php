@@ -2,6 +2,7 @@
 @section('content')
     <main class="container">
         <section class="row department">
+           
             <h2 class="heading">@lang('Department Employees Tasks')</h2>
             <div>
                 <ul class="breadcrumb">
@@ -21,11 +22,12 @@
                 </form>
             </section>
             <section>
+              
                 <div class="container tasks">
                     @forelse($department->employees as $employee)
                         <div class="notification ">
                             <h3 class="notification-title"><img alt="" class="img-circle"  src="/images/Blank_Avatar.png" width="30" height="30"><span>{{$employee->first_name}} {{$employee->last_name}}</span></h3>
-                            <ol class="">
+                            <ol class="emp-tasks">
                                 @forelse($employee->tasks as $task)
                                     <li class="task">{{$task->content}}</li>
                                 @empty<div class="task">@lang('No Tasks')</div> 
