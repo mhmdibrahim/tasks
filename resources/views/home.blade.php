@@ -126,7 +126,8 @@
                     <div class="col-lg-6">
                         <div class=" department-box">
                             <div class="dep-title">
-                                <h3 class="left">{{$department->name}} </h3><br/>
+                                <h3 class="left">{{$department->name}} </h3>
+                                <a class="close-icon btn pull-right"><i class="fa fa-close"></i>Delete</a>
                             </div>
                             <div class="dep-box-content auto-height">
                                 <!--<div class="emp-title">
