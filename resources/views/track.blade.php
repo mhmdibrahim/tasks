@@ -38,9 +38,11 @@
                                     <div class="font-bold">TASKS NUMBER</div>
                                     <strong>{{$department->tasks->count()}}</strong>
                                 </div>
-                                <div class="col-md-6 col-xs-6 text-right ">
-                                    <a href="/track/{{$department->id}}" class="btn btn-primary">@lang('View All Tasks')</a>
-                                </div>
+                                @if($department->tasks->count() >= 1)
+                                    <div class="col-md-6 col-xs-6 text-right ">
+                                        <a href="/track/{{$department->id}}" class="btn btn-primary">@lang('View All Tasks')</a>
+                                    </div>
+                                @endif
                             </div>
                         </div>
                     </div>
