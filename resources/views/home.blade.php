@@ -126,7 +126,7 @@
                                     @if($department->employees->count() == 0)
                                         <form action="/deleteDepartment" id="form" method="post">
                                             {{csrf_field()}}
-                                            <a id="delete" class="close-icon btn pull-right"><i class="fa fa-close"></i>Delete</a>
+                                            <a class="delete close-icon btn pull-right"><i class="fa fa-close"></i>Delete</a>
                                             <input type="hidden" name="id" value="{{$department->id}}">
                                         </form>
                                     @endif
@@ -168,9 +168,12 @@
         </section>
     </main>
     <script>
-        var a = document.getElementById('delete');
-        a.addEventListener('click',function () {
-            a.parentElement.submit();
-        });
+        var a = document.getElementsByClassName('delete');
+        for(var i=0 ; i<a.length ; i++){
+            a[i].addEventListener('click',function () {
+                this.parentElement.submit();
+            });
+        }
+
     </script>
 @endsection
