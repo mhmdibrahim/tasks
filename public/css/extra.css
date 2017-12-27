@@ -40,6 +40,21 @@
     /* font-weight: 700; */
     color: #fff;
 }
+.dep-title a {
+    margin: -30px 10px;
+    border: 1px solid #3c9ecd;
+    padding: 6px 20px 6px 10px;
+    border-radius: 5px;
+    color: firebrick;
+}
+.dep-title a:hover{
+    background-color: #7fd6ff;
+    color: red;
+    text-decoration: none;
+}
+.dep-title a i{
+    margin: 0 10px;
+}
 
 .employees-list  {
     border-bottom: 1px solid #e7eaec;
