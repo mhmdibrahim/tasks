@@ -15,10 +15,6 @@
                                 <h3 class="left">{{$department->name}} </h3><br/>
                             </div>
                             <div class="dep-box-content auto-height">
-                                <!--<div class="emp-title">
-                                     <h5 class="pull-left">Department Employees</h5>
-                                 <span class=" pull-right">View All Employess </span>
-                                </div>-->
                                 <div class="employees-list">
                                     @forelse($department->employees as $employee)
                                     <div class="row col-md-12 col-xs-12 list-element">
@@ -40,7 +36,7 @@
                             <div class="card-footer">
                                 <div class="col-md-6 col-xs-6">
                                     <div class="font-bold">TASKS NUMBER</div>
-                                    <strong>12</strong>
+                                    <strong>{{$department->tasks->count()}}</strong>
                                 </div>
                                 <div class="col-md-6 col-xs-6 text-right ">
                                     <a href="/track/{{$department->id}}" class="btn btn-primary">@lang('View All Tasks')</a>
@@ -48,23 +44,7 @@
                             </div>
                         </div>
                     </div>
-<!--
-                <div class="notification  col-md-6">
-                <h3 class="notification-title"> {{$department->name}}</h3>
-                <ol class="custom-counter1 auto-height">
-                    @forelse($department->employees as $employee)
-                        <ul> <span class="Emp-Name">{{$employee->first_name}} {{$employee->last_name}}</span>
-                        <li><span class="title">@lang('Job Title'):</span><p class="description">{{$employee->job_title}}</p></li>
-                        <li><span class="title">@lang('Tel'):</span><p class="description">{{$employee->phone}}</p></li>
-                    </ul>
-                    @empty @lang('No Employees')
-                    @endforelse
-                </ol>
-                <div class="footer">
-                    <a href="/track/{{$department->id}}" class="btn btn-default">@lang('Details')</a>
-                </div>
-            </div>
--->
+
                     @empty @lang('No Departments')
                     @endforelse
                 </div>
