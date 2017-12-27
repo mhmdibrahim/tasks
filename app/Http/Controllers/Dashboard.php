@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use App\Department;
+
 class Dashboard extends Controller
 {
     public function index(){
@@ -35,6 +36,7 @@ class Dashboard extends Controller
         $user->save();
         return back()->with('status','Employee Added');
     }
+
     public function createDepartment(Request $request){
         $request->validate([
             'department'=>'required|unique:departments,name'
@@ -44,6 +46,7 @@ class Dashboard extends Controller
         $department->save();
         return back()->with('status','Department Added');
     }
+
     public function deleteDepartment(Request $request){
         Department::destroy($request->id);
         return back()->with('status','Department Deleted');
