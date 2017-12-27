@@ -31,7 +31,7 @@ Route::post('addemp', 'Dashboard@createUser')
 Route::post('d-department', 'Dashboard@createDepartment')
     ->middleware('auth')
     ->middleware('admin');
-Route::post('deletDepartment', 'Dashboard@deleteDepartment')
+Route::post('deleteDepartment', 'Dashboard@deleteDepartment')
     ->middleware('auth')
     ->middleware('admin');
 Route::get('task', 'TasksController@index')
