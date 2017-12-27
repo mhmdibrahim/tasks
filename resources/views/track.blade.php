@@ -44,7 +44,6 @@
                             </div>
                         </div>
                     </div>
-
                     @empty @lang('No Departments')
                     @endforelse
                 </div>
