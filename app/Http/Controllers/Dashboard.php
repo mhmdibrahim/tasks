@@ -9,7 +9,8 @@ use App\Department;
 class Dashboard extends Controller
 {
     public function index(){
-        return view('home')->with('departments',Department::all());
+        return view('home')
+            ->with('departments',Department::all());
     }
 
     public function createUser(Request $request){
