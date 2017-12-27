@@ -1,4 +1,7 @@
 @extends('layouts.master')
+<br>
+<br>
+<br>
 @section('nav')
     <div>
         <ul class="breadcrumb">
@@ -8,8 +11,9 @@
     </div>
 @endsection
 @section('content')
-    <div class="container">
-        <div class="col-md-12">
+    <main class="container ">
+       
+        <div class="col-md-12 ">
             @if ($errors->any())
                 <div class="alert alert-danger">
                     <ul>
@@ -23,26 +27,30 @@
                 <div class="alert alert-success">{{session('status')}}</div>
             @endif
         </div>
-        <h1>@lang('Change Password')</h1>
-        <form action="/change" method="post" class="form-horizontal">
+        <div class="post">
+        <div class="post-header">
+            <h1>@lang('Change Password')</h1>
+        </div>
+        <form action="/change" method="post" class="form-horizontal post-content ">
             {{csrf_field()}}
             <div class="form-group">
-                <label class="control-label col-md-3">@lang('new password')</label>
-                <div class="col-md-4">
+                <label class="control-label col-md-4 col-xs-3">@lang('new password')</label>
+                <div class="col-md-8 col-xs-9">
                     <input type="password" name="newPassword" placeholder=@lang("Enter new password") class="form-control">
                 </div>
             </div>
             <div class="form-group">
-                <label class="control-label col-md-3">@lang('confirm password')</label>
-                <div class="col-md-4">
+                <label class="control-label col-md-4 col-xs-3">@lang('confirm password')</label>
+                <div class="col-md-8 col-xs-9">
                     <input type="password" name="confirmPassword" placeholder=@lang("Enter the password agin") class="form-control">
                 </div>
             </div>
             <div class="form-group">
-                <div class="col-md-4 col-md-offset-3">
+                <div class="changeBtn">
                     <button type="submit" class="btn btn-primary")>@lang('Change')</button>
                 </div>
             </div>
         </form>
-    </div>
+        </div>
+    </main>
 @endsection

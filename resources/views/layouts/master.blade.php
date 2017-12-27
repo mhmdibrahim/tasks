@@ -32,11 +32,14 @@
     <link rel="stylesheet" href="/css/font-awesome.min.css">
     @auth
         @if(app()->getLocale() == 'ar')
-            <link rel="stylesheet" href="css/headerFooterArabic.css">
+            <link rel="stylesheet" href="/css/headerFooterArabic.css">
         @else
             <link rel="stylesheet" href="/css/headerFooter.css">
         @endif
         <link rel="stylesheet" href="/css/adding.css">
+        <link rel="stylesheet" href="/css/extra.css">
+        <link  rel="stylesheet"  href="/css/datePicker.css">
+
     @endauth
     @yield('styles')
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
@@ -61,6 +64,7 @@
 <!-- Bootstrap jQuery -->
 <script type="text/javascript" src="/js/bootstrap.min.js"></script>
 @auth
+<script src="/js/flatpickr.min.js"></script>
 <script src="/js/adding.js" type="text/javascript"></script>
 @endauth
 @yield('scripts')

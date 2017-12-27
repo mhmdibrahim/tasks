@@ -8,7 +8,7 @@
 @endsection
 @section('content')
     <div class="container">
-        <div class="row">
+        <div class="">
             <div class="col-md-12">
                 @if ($errors->any())
                     <div class="alert alert-danger">
@@ -24,7 +24,7 @@
                 @endif
             </div>
         </div>
-        <div class="row">
+        <div class="">
             <div class="col-md-12">
                 <h1>@lang('New Task')  </h1>
             </div>
@@ -35,7 +35,7 @@
             <div class="form-group">
             <div class="form-group">
                 <div class="col-md-10">
-                    <input autofocus="autofocus" class="form-control" type="text" name="task" placeholder= @lang('Enter Your Task Here')>
+                    <input autofocus="autofocus" class="form-control "id="myID" type="text" name="task" placeholder= @lang('Enter Your Task Here')>
                 </div>
                 <div class="col-md-2">
                     <input type="submit" class="btn btn-success" value= @lang("ADD")>
@@ -43,7 +43,7 @@
             </div>
         </form>
         <hr>
-        <div class="row">
+        <div class="">
             <div class="col-md-12"><h1>@lang("Today's Tasks")</h1></div>
             <div class="col-md-10">
                 <div class="list-group" >

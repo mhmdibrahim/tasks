@@ -1,4 +1,7 @@
 @extends('layouts.master')
+<br>
+<br>
+<br>
 @section('nav')
     <div>
         <ul class="breadcrumb">
@@ -8,7 +11,7 @@
     </div>
 @endsection
 @section('content')
-    <div class="container">
+    <main class="container ">
         <div class="col-md-12">
             @if ($errors->any())
                 <div class="alert alert-danger">
@@ -23,11 +26,15 @@
                 <div class="alert alert-success">{{session('status')}}</div>
             @endif
         </div>
-        <form method="post" action="/edit" class="form-horizontal">
+        
+        <form method="post" action="/edit" class="form-horizontal post">
+       
+                   <h1 class="heading">@lang("Edit Profile")</h1>
             {{csrf_field()}}
-            <div class="form-group">
-                <label class="control-label col-md-4">@lang('First Name')</label>
-                <div class="col-md-4">
+            <div class="post-content ">
+            <div class="form-group ">
+                <label class="control-label col-md-3 col-xs-3">@lang('First Name')</label>
+                <div class="col-md-9 col-xs-9">
                     @if($errors->any())
                         <input class="form-control" type="text" name="firstName"
                                placeholder=@lang("Enter First Name") value="{{old('firstName')}}">
@@ -38,8 +45,8 @@
                 </div>
             </div>
             <div class="form-group">
-                <label class="control-label col-md-4">@lang('Last Name')</label>
-                <div class="col-md-4">
+                <label class="control-label col-md-3 col-xs-3">@lang('Last Name')</label>
+                <div class="col-md-9 col-xs-9">
                     @if($errors->any())
                         <input class="form-control" type="text" name="lastName"
                                placeholder=@lang("Enter Last Name") value="{{old('lastName')}}">
@@ -50,8 +57,8 @@
                 </div>
             </div>
             <div class="form-group">
-                <label class="control-label col-md-4">@lang('Email')</label>
-                <div class="col-md-4">
+                <label class="control-label col-md-3 col-xs-3">@lang('Email')</label>
+                <div class="col-md-9 col-xs-9">
                     @if($errors->any())
                         <input class="form-control" type="email" name="email"
                                placeholder=@lang("Enter Email") value="{{old('email')}}">
@@ -62,8 +69,8 @@
                 </div>
             </div>
             <div class="form-group">
-                <label class="control-label col-md-4">@lang('Job Title')</label>
-                <div class="col-md-4">
+                <label class="control-label col-md-3 col-xs-3">@lang('Job Title')</label>
+                <div class="col-md-9 col-xs-9">
                     @if($errors->any())
                         <input class="form-control" type="text" name="jobTitle"
                                placeholder=@lang("Enter Job Title") value="{{old('jobTitle')}}">
@@ -74,8 +81,8 @@
                 </div>
             </div>
             <div class="form-group">
-                <label class="control-label col-md-4">@lang('Phone Number')</label>
-                <div class="col-md-4">
+                <label class="control-label col-md-3 col-xs-3">@lang('Phone Number')</label>
+                <div class="col-md-9 col-xs-9">
                     @if($errors->any())
                         <input class="form-control" type="text" name="phoneNumber"
                                placeholder=@lang("Enter Phone Number") value="{{old('phoneNumber')}}">
@@ -86,8 +93,8 @@
                 </div>
             </div>
             <div class="form-group">
-                <label class="control-label col-md-4">@lang('Department')</label>
-                <div class="col-md-4">
+                <label class="control-label col-md-3 col-xs-3">@lang('Department')</label>
+                <div class="col-md-9 col-xs-9">
                     <select class="form-control" name="department">
                         @if(old('department') == null && auth()->user()->department_id == null)
                             <option disabled selected>@lang('-Select Department-')</option>
@@ -106,9 +113,10 @@
                     </select>
                 </div>
             </div>
-            <div class="form-group" >
+            <div class="btn-right" >
                 <button type="submit" class="btn btn-primary">@lang('Edit')</button>
             </div>
+            </div>
         </form>
-    </div>
+    </main>
 @endsection

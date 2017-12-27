@@ -1,0 +1,148 @@
+/****** Departments Boxes Style ********/
+
+.dep-title {
+    background-color: #49baf0;
+    padding: 25px 0px 25px 16px;
+    min-height: 48px;
+    border-bottom: 1px solid #ccc;
+    border-radius: 14px 0 13px 0px;
+}
+
+.dep-box-content {
+    background-color: #ffffff;
+    padding: 15px 0;
+}
+.department-box ,.tasks-box {
+    margin-bottom: 25px;
+    margin-top: 0;
+    padding: 0;
+    background-color: #fff;
+    border:1px solid #ccc;
+    border-radius: 15px 0 0 0;
+    box-shadow: rgba(45,45,45,0.05) 0px 2px 2px, rgba(49,49,49,0.05) 0px 4px 4px, rgba(42,42,42,0.05) 0px 8px 8px, rgba(32,32,32,0.05) 0px 16px 16px, rgba(49,49,49,0.05) 0px 32px 32px, rgba(35,35,35,0.05) 0px 64px 64px;
+    transition: box-shadow .3s ease-out, transform .3s ease-out, opacity .2s ease-out;
+    transition-delay: .1s;
+    transform: translateZ(0);
+}
+
+.tasks-list {
+    height: 30em;
+}
+.dep-title h3 {
+    display: inline-block;
+    font-size: 20px;
+    margin: 0 0 7px;
+    font-weight:  lighter;
+    padding: 0;
+    text-overflow: ellipsis;
+    /* padding-left: 20px; */
+    /* float: left; */
+    /* font-weight: 700; */
+    color: #fff;
+}
+.employees-list  {
+    border-bottom: 1px solid #e7eaec;
+}
+
+.employees-list a img{
+    margin-right: 15px;
+    width: 50px;
+    height: 50px;
+    display: block;
+}
+.list-element{
+    border-bottom: 1px solid #e7eaec;
+    padding-bottom: 15px;
+    margin-top: 15px;
+    margin-left: 0;
+    margin-right: 0;
+    overflow: hidden;
+}
+.list-element .name{
+    color: #1b41ae;
+    font-size: 17px;
+}
+.list-element .job-title{
+    color:#000;
+    font-size: 14px;
+    /* float:left; */
+    padding: 0;
+    line-height: 2em;
+}
+.list-element .phone{
+    color:#0f7bd8;
+    font-size: 16px;
+    /* float: left; */
+    padding: 0;
+    font-family: arial;
+}
+.emp-info{
+    padding: 6px 0;
+}
+.card-footer{
+    margin-top: 18px;
+    padding: 14px 0 58px 0;
+    border-top: 1px solid #ccc;
+}
+.card-footer strong{
+    font-size: 20px;
+}
+
+@media (max-width:499px){
+    .list-element .emp-info{
+        /* float: left; */
+        /* margin-left: 45px; */
+        overflow:  visible;
+        margin-top: -10px;
+    }
+    .employees-list a img {
+        width: 50px;
+        height: 50px;
+    }
+    .list-element .phone {
+    font-size: 15px;
+    }
+}
+@media  (min-device-width : 768px) and (max-device-width : 1024px) {
+     .list-element .emp-info{
+        margin-left: 65px;
+    }
+}
+
+@media (min-device-width: 1024px) and (max-device-width: 1366px) {
+ .list-element .emp-info{
+        margin-left: 0px;
+    }
+}
+
+
+/****** Tasks List Style ********/
+
+.tasks-list .task{
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    font-size: 17px;
+    line-height: 2em;
+}
+.task{
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    font-size: 16px;
+    line-height: 2em;
+    margin: 0;
+}
+.task:nth-last-child(1){
+    border-bottom: none;
+}
+
+
+.date-form label{
+    /* padding: 0px 0 5px 0; */
+    background: #49baf0;
+    font-weight:  lighter;
+    color:  white;
+    border-radius: 12px 0;
+}
+.notification-title img{
+    margin:0 13px;
+}

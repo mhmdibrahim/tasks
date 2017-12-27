@@ -6,6 +6,7 @@
 @endsection
 @section('content')
     <main class="container @if($tasks->count() == 0) default @endif">
+        <h2 class="heading">@lang('Tasks')</h2>
         <div>
             <ul class="breadcrumb">
                 <li class="active">@lang('Home')</li>
@@ -27,16 +28,22 @@
             @endif
             </div>
         </div>
-        <section class="row enter-task">
+        <section class=" enter-task">
             <form action="/task" method="post" >
                 {{csrf_field()}}
                 <div class="form-group">
                     <h2 class="heading">@lang('New Task')</h2>
                     <div class="controls">
-                        <input type="text" id="task" class="floatLabel" name="task">
-                        <label for="task">@lang('Enter Your Task Here')</label>
+                       <div class="col-md-2 col-xs-3 pad-0">
+                            <label for="task" >@lang('Enter Your Task Here')</label>
+                        </div>
+                        <div class="col-md-10 col-xs-9">
+                            <input type="text"  id="" class="form-control floatLabel " name="task">
+                        </div>
+  
                     </div>
-                    <button type="submit" class="btn btn-primary">@lang('ADD')</button>
+                    <div class="btn-right">
+                    <button type="submit" class="btn btn-primary">@lang('ADD')</button></div>
                 </div>
             </form>
         </section>
@@ -45,7 +52,7 @@
             <h2 class="heading">@lang("Today's Tasks")</h2>
             @forelse($tasks as $task)
             <div class="notification">
-                <h3 class="notification-title">{{$task->content}}</h3>
+                <h3 class="task">{{$task->content}}</h3>
             </div>
             @empty
                 <div class="icon text-center">
@@ -56,6 +63,7 @@
                 </div>
             @endforelse
         </section>
+      
     </main>
 
 @endsection

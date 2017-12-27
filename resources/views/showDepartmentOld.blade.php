@@ -3,6 +3,7 @@
 @section('nav')
     <div>
         <ul class="breadcrumb">
+           
             <li><a href="/">@lang('Home')</a></li>
             <li><a href="/track/{{$department->id}}">@lang('Show Department Tasks')</a></li>
             <li class="active">@lang('Show Department Employees Tasks')</li>
@@ -13,12 +14,14 @@
     <div class="container">
         <div class="row">
             <form  id="form" method="GET">
-                <input name="date" type="date" id="date" value="{{$date}}">
+                <input name="date" type="date"  id="myID" value="{{$date}}">
             </form>
         </div>
         <br>
+        
         @forelse($department->employees as $employee)
             <div class="col-md-6">
+        
                 <div class="panel panel-primary">
                     <div class="panel-heading">
                         {{$employee->first_name}}
@@ -39,7 +42,7 @@
 @endsection
 @section('script')
     <script>
-        var date = document.getElementById('date');
+        var date = document.getElementById('myID');
         var form = document.getElementById('form');
         date.addEventListener('change',function () {
             form.submit();

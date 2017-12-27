@@ -6,58 +6,58 @@
 @endsection
 @section('content')
     <main class="container @if($tasks <1) default @endif">
-        <div>
-            <ul class="breadcrumb">
-                <li><a href="/">@lang('Home')</a></li>
-                <li class="active">@lang('Show Department Tasks')</li>
-            </ul>
-        </div>
+       
         <!--        employee details     -->
-        <section class="row addSec">
-            <form id="form" method="GET">
-                <div class="form-group">
-                    <div class="grid">
-                        <div class="row">
-                            <div class="controls">
-                                <input type="date" id="arrive" class="floatLabel" name="date" value="{{$date}}">
-                                <label for="arrive" class="label-date"><i class="fa fa-calendar"></i>&nbsp;&nbsp;Date</label>
-                            </div>
+        <section class=" department">
+            <h2 class="heading">@lang('Department Tasks')</h2>
+            <div>
+                <ul class="breadcrumb">
+                    <li><a href="/">@lang('Home')</a></li>
+                    <li class="active">@lang('Show Department Tasks')</li>
+                </ul>
+            </div>
+            <section class="addSec">
+                <form id="form" method="GET">
+                    <div class="form-group date-form">
+                       <h2 for="arrive" class="heading">&nbsp;&nbsp;@lang('Choose date')</h2>
+                        <div class="controls DateControl">
+                            
+<!--                                <input type="date" id="arrive" class="floatLabel" name="date" value="{{$date}}">-->
+                            <input class="form-control " type="date" id="myID" class="floatLabel" name="date" value="{{$date}}">
                         </div>
                     </div>
+                </form>
+            </section>
+            <div class="tasks-box col-md-12">
+                <div class="dep-title">
+                    <h3 class="left">{{$department->name}} </h3><br/>
                 </div>
-            </form>
-        </section>
-        <section class="row department margin-top">
-            <h2 class="heading">department tasks</h2>
-            <div class="container">
-                <div class="notification  col-md-6">
-                    <h3 class="notification-title">{{$department->name}}</h3>
-                    <ol class="custom-counter auto-height">
-                        @foreach($department->employees as $employee)
-                            @foreach($employee->tasks as $task)
-                                <li>{{$task->content}}</li>
-                            @endforeach
+                <ol class="tasks-list auto-height">
+                    @foreach($department->employees as $employee)
+                        @foreach($employee->tasks as $task)
+                            <li class="task">{{$task->content}}</li>
                         @endforeach
-                        @if($tasks <1)
-                                <div class="icon text-center">
-                                    <div class="block">
-                                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                    </div>
-                                    <p>No Tasks ..</p>
+                    @endforeach
+                    @if($tasks<1)
+                            <div class="icon text-center">
+                                <div class="block">
+                                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                 </div>
-                        @endif
-                    </ol>
-                    <div class="footer">
-                        <a href="/moreDetails/{{$department->id}}" class="btn btn-default">@lang('Details')</a>
-                    </div>
-                </div>
+                                <p>@lang('No Tasks')</p>
+                            </div>
+                    @endif
+                </ol>
+            </div>
+            <div class="footer text-right">
+                <a href="/moreDetails/{{$department->id}}" class="btn btn-primary">@lang('View Employees Tasks')</a>
             </div>
         </section>
     </main>
+    
 @endsection
 @section('scripts')
     <script>
-        var date = document.getElementById('arrive');
+        var date = document.getElementById('myID');
         var form = document.getElementById('form');
         date.addEventListener('change',function () {
             form.submit();

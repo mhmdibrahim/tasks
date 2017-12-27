@@ -18,7 +18,7 @@
   "Today's Tasks":"المهام اليوميه",
   "You Have No Tasks":"ليس لديك مهام",
   "New Task":"مهمه جديده",
-  "Enter Your Task Here":"إدخل ",
+  "Enter Your Task Here":"إدخل المهمات ",
   "ADD":"اضف",
   "Add Employee":"إضافه موظف",
   "First Name":"الاسم الاول",
@@ -55,5 +55,10 @@
   "Language" : "اللغة",
   "menu":"القائمه",
   "Change":"تغيير",
-  "Edit":"تعديل"
+  "Edit":"تعديل",
+  "Department Tasks": "مهام القسم" ,
+  "Profile Edited":"تم تعديل الملف الشخصى" ,
+  "Departments":"الاقسام" ,
+  "Department Deleted" : "تم اضافه القسم" ,
+  "Date":"التاريخ"
 }

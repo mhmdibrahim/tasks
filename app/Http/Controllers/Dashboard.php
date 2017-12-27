@@ -51,4 +51,5 @@ class Dashboard extends Controller
         Department::destroy($request->id);
         return back()->with('status','Department Deleted');
     }
+
 }
