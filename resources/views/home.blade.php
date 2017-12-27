@@ -129,10 +129,7 @@
                                 <h3 class="left">{{$department->name}} </h3><br/>
                             </div>
                             <div class="dep-box-content auto-height">
-                                <!--<div class="emp-title">
-                                     <h5 class="pull-left">Department Employees</h5>
-                                 <span class=" pull-right">View All Employess </span>
-                                </div>-->
+
                                 <div class="employees-list">
                                     @forelse($department->employees as $employee)
                                     <div class="row col-md-12 col-xs-12 list-element">
@@ -156,51 +153,15 @@
                                     <div class="font-bold">Employees Count</div>
                                     <strong>{{$department->employees->count()}}</strong>
                                 </div>
-
                             </div>
                         </div>
                     </div>
-
                     @empty @lang('No Departments')
                     @endforelse
                 </div>
             </div>
         </section>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-<!--
 
-
-
-        <section class="row department">
-            <h2 class="heading">@lang('Departments')</h2>
-            <div class="">
-                @foreach($departments as $department)
-                <div class="notification  col-md-6">
-                    @if($department->employees->count() < 1)
-                        <span  data-id="{{$department->id}}"  class="notification-close">
-                            <i class="fa fa-trash-o" aria-hidden="true"></i>
-                        </span>
-                    @endif
-                    <h3 class="notification-title">{{$department->name}}</h3>
-                    <ol class="custom-counter auto-height">
-                        @foreach($department->employees as $employee)
-                        <li>{{$employee->first_name}} {{$employee->last_name}}</li>
-                        @endforeach
-                    </ol>
-                </div>
-                @endforeach
-            </div>
-        </section>
--->
         <form action="/deletDepartment" id="form-delete" method="post">
             {{csrf_field()}}
             <input type="hidden" id="inputId" name="id">
