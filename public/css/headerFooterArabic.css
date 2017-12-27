@@ -177,19 +177,15 @@ html #footer {
     main aside {
         width: 100%;
     }
-    main{
-        
-    }
-     .navbar-default .navbar-nav .open .dropdown-menu>li>a{
-       color: white;
+     .navbar-default .navbar-nav .open .dropdown-menu>li>a{    color: #616161;
     }
 }
 .changeBtn {
     float: left!important;
 }
 .btn-right {
-    position:  relative;
-    left: 15px;
+
+    margin-left: 15px;
     text-align: left!important;
 }
 label,.heading{
@@ -198,11 +194,6 @@ label,.heading{
 }
 .text-right{
     text-align: left;
-}
-
-.col-xs-10 {
-    position: relative;
-    right: 31px;
 }
 
 .navbar-toggler {
@@ -223,10 +214,6 @@ label,.heading{
 .flatpickr-calendar:before, .flatpickr-calendar:after{
     right: 22px !important;
     left: auto !important;
-}
-.col-xs-10 {
-    position: relative;
-    right: 38px;
 }
 main aside:first-child {
     padding-left: 10px!important;
@@ -257,4 +244,7 @@ main aside:last-child {
     .navbar-nav>li {
     float: right;
     }
+}
+.form-horizontal .control-label{
+    text-align: left;
 }

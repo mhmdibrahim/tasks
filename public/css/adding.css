@@ -433,9 +433,7 @@ margin-left: 3px;
     background:  white;
     border-radius: 12px 0 0;
 }
-..addSec .right-btn{
-    
-}
+
 .enter-task,.addSec{
     margin-top: 20px;
     border-radius: 12px 0 0;
@@ -490,7 +488,6 @@ margin-left: 3px;
    text-transform:  capitalize;
    border-radius: 9px;
    background: white;
-   min-height: -5px;
    padding-top: 2px;
 }
 .post h1{
@@ -530,9 +527,7 @@ margin-left: 3px;
     width: 100%;
     margin: 20px 0;
     }
-form label{
-    font-size: 
-}
+
 .department .heading{
    font-size: 23px;
    font-weight:  lighter;
@@ -570,8 +565,12 @@ input[type="date"]::-webkit-input-placeholder,.controls input[type="date"]{
 .enter-task .form-group{background-color: #fff;}
 .navbar>.container .navbar-brand {
        margin-top: 11px;}
-
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1024px) {
+    .post {
+        margin: auto;
+        width: 83%;}
+}
+@media screen and (max-width: 767px) {
     .post {
         width: 100%;}
 }
@@ -598,6 +597,7 @@ input[type="date"]::-webkit-input-placeholder,.controls input[type="date"]{
     }
     .form-horizontal .control-label{
         margin-bottom: 10px;
+        padding: 0;
     }
     .controls input[type="text"], .controls input[type="email"], .controls input[type="number"], .controls input[type="date"], .controls input[type="tel"], .controls textarea, .controls button, .controls select {
         padding: 16px 0 15px 10px;
@@ -612,4 +612,10 @@ input[type="date"]::-webkit-input-placeholder,.controls input[type="date"]{
     .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover, .navbar-default .navbar-nav .open .dropdown-menu>li>a:focus{
         color: goldenrod;
     }
+}
+@media (min-width: 768px){
+    .form-horizontal .control-label {
+        padding: 8px 0;}}
+.list-element .col-md-10{
+    padding: 0 38px;
 }

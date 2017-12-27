@@ -10,7 +10,7 @@
 
 .dep-box-content {
     background-color: #ffffff;
-    padding: 15px 34px;
+    padding: 15px 0;
 }
 .department-box ,.tasks-box {
     margin-bottom: 25px;
@@ -54,6 +54,8 @@
     border-bottom: 1px solid #e7eaec;
     padding-bottom: 15px;
     margin-top: 15px;
+    margin-left: 0;
+    margin-right: 0;
     overflow: hidden;
 }
 .list-element .name{
@@ -96,7 +98,6 @@
     .employees-list a img {
         width: 50px;
         height: 50px;
-        margin-left: -22px;
     }
     .list-element .phone {
     font-size: 15px;
@@ -135,7 +136,6 @@
 }
 
 
-}
 .date-form label{
     /* padding: 0px 0 5px 0; */
     background: #49baf0;

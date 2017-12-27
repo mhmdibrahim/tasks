@@ -34,14 +34,14 @@
         <form action="/change" method="post" class="form-horizontal post-content ">
             {{csrf_field()}}
             <div class="form-group">
-                <label class="control-label col-md-4 col-xs-12">@lang('new password')</label>
-                <div class="col-md-8 col-xs-12">
+                <label class="control-label col-md-4 col-xs-3">@lang('new password')</label>
+                <div class="col-md-8 col-xs-9">
                     <input type="password" name="newPassword" placeholder=@lang("Enter new password") class="form-control">
                 </div>
             </div>
             <div class="form-group">
-                <label class="control-label col-md-4 col-xs-12">@lang('confirm password')</label>
-                <div class="col-md-8 col-xs-12">
+                <label class="control-label col-md-4 col-xs-3">@lang('confirm password')</label>
+                <div class="col-md-8 col-xs-9">
                     <input type="password" name="confirmPassword" placeholder=@lang("Enter the password agin") class="form-control">
                 </div>
             </div>

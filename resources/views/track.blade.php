@@ -2,7 +2,7 @@
 @section('content')
     <main class="container">
         <!--        added departments     -->
-        
+
         <section class="row department">
             <br>
             <h2 class="heading">@lang('Departments')</h2>
