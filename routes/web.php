@@ -34,6 +34,12 @@ Route::post('d-department', 'Dashboard@createDepartment')
 Route::post('deleteDepartment', 'Dashboard@deleteDepartment')
     ->middleware('auth')
     ->middleware('admin');
+Route::get('admin/edit/user/{id}', 'Dashboard@editUser')
+    ->middleware('auth')
+    ->middleware('admin');
+Route::delete('delete/user', 'Dashboard@deleteUser')
+    ->middleware('auth')
+    ->middleware('admin');
 Route::get('task', 'TasksController@index')
     ->middleware('auth');
 Route::post('task', 'TasksController@addTask')

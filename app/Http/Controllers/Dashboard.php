@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use ClassesWithParents\D;
 use Illuminate\Http\Request;
 use App\User;
 use App\Department;
+use Illuminate\Validation\Rule;
 
 class Dashboard extends Controller
 {
@@ -20,6 +22,7 @@ class Dashboard extends Controller
             'email'=>'required|max:255|email|unique:users,email',
             'password'=>'required|max:255',
             'department'=>'required|exists:departments,id',
+            'gender'=>'required|exists:users,gender',
             'jobTitle'=>'required|max:255',
             'phoneNumber'=>[
                 'required',
@@ -34,6 +37,7 @@ class Dashboard extends Controller
         $user->password =bcrypt($request->password);
         $user->job_title = $request->jobTitle;
         $user->phone = $request->phoneNumber;
+        $user->gender = $request->gender;
         $user->save();
         return back()->with('status','Employee Added');
     }
@@ -51,6 +55,17 @@ class Dashboard extends Controller
     public function deleteDepartment(Request $request){
         Department::destroy($request->id);
         return back()->with('status','Department Deleted');
+    }
+
+    public function editUSer($id){
+        return view('editProfile')
+            ->with('departments',Department::all())
+            ->with('user',User::find($id));
+    }
+
+    public function deleteUser(Request $request){
+        User::destroy($request->id);
+        return redirect('/');
     }
 
 }

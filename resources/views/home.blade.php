@@ -70,6 +70,15 @@
                                    value="{{old('phoneNumber')}}">
                         </div>
                         <div class="controls">
+                            <label for="gender">@lang('gender')</label>
+                            <select name="gender" class="floatLabel form-control">
+                                <option value="male" @if(old('gender') == 'male') selected @endif>@lang('male')</option>
+                                <option value="female"
+                                        @if(old('gender') == 'female') selected @endif>@lang('female')</option>
+                            </select>
+                        </div>
+
+                        <div class="controls">
                             <i class="fa fa-sort"></i>
                             <label>@lang('Department')</label>
                             <select class="floatLabel form-control" name="department">
@@ -143,11 +152,13 @@
                                             @forelse($department->employees as $employee)
                                                 <div class="row col-md-12 col-xs-12 list-element">
                                                     <div class="col-md-2 col-xs-2 pad-0">
-                                                        <a href="profile.html"><img alt="" class="img-circle"
-                                                                                    src="/images/Blank_Avatar.png"></a>
+                                                        <a href="admin/edit/user/{{$employee->id}}"><img alt="" class="img-circle"
+                                                                                                         src="/images/Blank_Avatar.png"></a>
                                                     </div>
                                                     <div class="col-md-10 col-xs-10">
-                                                        <strong class=" name">{{$employee->first_name}} {{$employee->last_name}}</strong>
+                                                        <a href="admin/edit/user/{{$employee->id}}">
+                                                            <strong class=" name">{{$employee->first_name}} {{$employee->last_name}}</strong>
+                                                        </a>
                                                         <div class=" col-md-12 col-xs-12 emp-info">
                                                             <p class="  job-title">{{$employee->job_title}}</p>
                                                             <p class="phone">{{$employee->phone}}</p>

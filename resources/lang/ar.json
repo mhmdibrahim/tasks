@@ -67,5 +67,12 @@
   "TASKS NUMBER":"عدد مهام القسم",
   "View Employees Tasks":"عرض مهام الموظفين بالقسم",
   "Choose date":"إختر تاريخ",
-  "Department Employees Tasks":"مهام الموظفين بالقسم"
+  "Department Employees Tasks":"مهام الموظفين بالقسم",
+  "delete":"حذف",
+  "added":"تم الإضافة",
+  "deleted":"تم الحذف",
+  "gender":"النوع",
+  "male":"ذكر",
+  "female":"أنثي"
+
 }
