@@ -15,7 +15,7 @@ use Faker\Generator as Faker;
 
 $factory->define(App\User::class, function (Faker $faker) {
     static $password;
-
+    $gender = ['male','female'];
     return [
         'first_name' => $faker->firstName,
         'last_name' => $faker->lastName,
@@ -26,6 +26,7 @@ $factory->define(App\User::class, function (Faker $faker) {
         'department_id' => rand(1,15),
         'job_title' => $faker->jobTitle,
         'phone' => $faker->phoneNumber,
+        'gender'=>$gender[rand(0,1)],
 
     ];
 });

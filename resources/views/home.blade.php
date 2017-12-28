@@ -57,6 +57,13 @@
                             <input type="tel" id="phoneNumber" class="floatLabel form-control" placeholder= "@lang('Enter') @lang('Phone Number')" name="phoneNumber" value="{{old('phoneNumber')}}">
                         </div>
                         <div class="controls">
+                            <label for="phoneNumber">@lang('gender')</label>
+                            <select name="gender" class="floatLabel form-control">
+                                <option value="male" @if(old('gender') == 'male') selected @endif>@lang('male')</option>
+                                <option value="female" @if(old('gender') == 'female') selected @endif>@lang('female')</option>
+                            </select>
+                        </div>
+                        <div class="controls">
                             <i class="fa fa-sort"></i>
                             <label>@lang('Department')</label>
                             <select class="floatLabel form-control" name="department">
@@ -130,7 +137,9 @@
                                                 <a href="profile.html" ><img alt="" class="img-circle"  src="/images/Blank_Avatar.png" ></a>
                                             </div>
                                             <div class="col-md-10 col-xs-10">
-                                                <strong class=" name">{{$employee->first_name}} {{$employee->last_name}}</strong>
+                                                <a href="admin/edit/user/{{$employee->id}}">
+                                                    <strong class=" name">{{$employee->first_name}} {{$employee->last_name}}</strong>
+                                                </a>
                                                 <div class=" col-md-12 col-xs-12 emp-info">
                                                     <p class="  job-title">{{$employee->job_title}}</p>
                                                     <p class= "phone">{{$employee->phone}}</p>
