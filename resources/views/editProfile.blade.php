@@ -45,8 +45,8 @@
             {{csrf_field()}}
             <div class="post-content ">
             <div class="form-group ">
-                <label class="control-label col-md-3 col-xs-3">@lang('First Name')</label>
-                <div class="col-md-9 col-xs-9">
+                <label class="control-label col-md-3 col-xs-12">@lang('First Name')</label>
+                <div class="col-md-9 col-xs-12">
                     @if($errors->any())
                         <input class="form-control" type="text" name="firstName"
                                placeholder=@lang("Enter First Name") value="{{old('firstName')}}">
@@ -57,8 +57,8 @@
                 </div>
             </div>
             <div class="form-group">
-                <label class="control-label col-md-3 col-xs-3">@lang('Last Name')</label>
-                <div class="col-md-9 col-xs-9">
+                <label class="control-label col-md-3 col-xs-12">@lang('Last Name')</label>
+                <div class="col-md-9 col-xs-12">
                     @if($errors->any())
                         <input class="form-control" type="text" name="lastName"
                                placeholder=@lang("Enter Last Name") value="{{old('lastName')}}">
@@ -69,8 +69,8 @@
                 </div>
             </div>
             <div class="form-group">
-                <label class="control-label col-md-3 col-xs-3">@lang('Email')</label>
-                <div class="col-md-9 col-xs-9">
+                <label class="control-label col-md-3 col-xs-12">@lang('Email')</label>
+                <div class="col-md-9 col-xs-12">
                     @if($errors->any())
                         <input class="form-control" type="email" name="email"
                                placeholder=@lang("Enter Email") value="{{old('email')}}">
@@ -81,8 +81,8 @@
                 </div>
             </div>
             <div class="form-group">
-                <label class="control-label col-md-3 col-xs-3">@lang('Job Title')</label>
-                <div class="col-md-9 col-xs-9">
+                <label class="control-label col-md-3 col-xs-12">@lang('Job Title')</label>
+                <div class="col-md-9 col-xs-12">
                     @if($errors->any())
                         <input class="form-control" type="text" name="jobTitle"
                                placeholder=@lang("Enter Job Title") value="{{old('jobTitle')}}">
@@ -93,8 +93,8 @@
                 </div>
             </div>
             <div class="form-group">
-                <label class="control-label col-md-3 col-xs-3">@lang('Phone Number')</label>
-                <div class="col-md-9 col-xs-9">
+                <label class="control-label col-md-3 col-xs-12">@lang('Phone Number')</label>
+                <div class="col-md-9 col-xs-12">
                     @if($errors->any())
                         <input class="form-control" type="text" name="phoneNumber"
                                placeholder=@lang("Enter Phone Number") value="{{old('phoneNumber')}}">
@@ -105,8 +105,8 @@
                 </div>
             </div>
             <div class="form-group">
-                <label class="control-label col-md-3 col-xs-3">@lang('gender')</label>
-                <div class="col-md-9 col-xs-9">
+                <label class="control-label col-md-3 col-xs-12">@lang('gender')</label>
+                <div class="col-md-9 col-xs-12">
                     <select name="gender" class="form-control" @if(auth()->user()->role == 'admin' && !$errors->any())disabled @endif>
                         @if($errors->any())
                             <option value="male" @if(old('gender')=='male')selected @endif>@lang('male')</option>
@@ -121,8 +121,8 @@
                 </div>
             </div>
             <div class="form-group">
-                <label class="control-label col-md-3 col-xs-3">@lang('Department')</label>
-                <div class="col-md-9 col-xs-9">
+                <label class="control-label col-md-3 col-xs-12">@lang('Department')</label>
+                <div class="col-md-9 col-xs-12">
                     <select class="form-control" name="department" @if(auth()->user()->role == 'admin' && !$errors->any())disabled @endif>
                         @if(old('department') == null && $user->department_id == null)
                             <option disabled id="holder" selected>@lang('-Select Department-')</option>

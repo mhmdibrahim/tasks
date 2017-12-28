@@ -108,8 +108,10 @@ html #footer {
 }
 .btn-primary {
     border-radius: 4px;
-    margin-right: 22px; 
     min-width: 97px;
+}
+.department  .btn-primary {
+    margin-right: 22px;
 }
 .btn-primary:hover {
     border: 1px solid gold;

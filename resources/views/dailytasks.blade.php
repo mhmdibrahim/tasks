@@ -36,10 +36,10 @@
                 <div class="form-group">
                     <h2 class="heading">@lang('New Task')</h2>
                     <div class="controls">
-                       <div class="col-md-2 col-xs-3 pad-0">
-                            <label for="task" >@lang('Enter Your Task Here')</label>
+                       <div class="col-md-1 col-xs-12 pad-0">
+                            <label for="task" >@lang('Your Task')</label>
                         </div>
-                        <div class="col-md-10 col-xs-9">
+                        <div class="col-md-11 col-xs-12 pad-0">
                             <input type="text"  id="" class="form-control floatLabel " name="task">
                         </div>
   

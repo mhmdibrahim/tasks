@@ -31,14 +31,15 @@
     <!-- FontAwesome -->
     <link rel="stylesheet" href="/css/font-awesome.min.css">
     @auth
+
+        <link rel="stylesheet" href="/css/adding.css">
+        <link rel="stylesheet" href="/css/extra.css">
+        <link  rel="stylesheet"  href="/css/datePicker.css">
         @if(app()->getLocale() == 'ar')
             <link rel="stylesheet" href="/css/headerFooterArabic.css">
         @else
             <link rel="stylesheet" href="/css/headerFooter.css">
         @endif
-        <link rel="stylesheet" href="/css/adding.css">
-        <link rel="stylesheet" href="/css/extra.css">
-        <link  rel="stylesheet"  href="/css/datePicker.css">
 
     @endauth
     @yield('styles')
