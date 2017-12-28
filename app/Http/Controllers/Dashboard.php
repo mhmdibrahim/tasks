@@ -63,4 +63,9 @@ class Dashboard extends Controller
             ->with('user',User::find($id));
     }
 
+    public function deleteUser(Request $request){
+        User::destroy($request->id);
+        return redirect('/');
+    }
+
 }

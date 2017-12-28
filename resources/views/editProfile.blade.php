@@ -36,6 +36,7 @@
             @if(auth()->user()->role == 'admin')
                 <h1 class="heading">
                     {{$user->first_name}} {{$user->last_name}}
+                    <button type="button" class="btn btn-danger pull-right" id="delete">@lang('delete')</button>
                     <button type="button" class="btn btn-primary pull-right" id="edit">@lang('Edit')</button>
                 </h1>
             @else
@@ -148,17 +149,27 @@
                 <input type="hidden" name="id" value="{{$user->id}}">
             </div>
         </form>
+        <form action="/delete/user" method="POST" id="form-delete">
+            {{csrf_field()}}
+            {{method_field('delete')}}
+            <input type="hidden" name="id" value="{{$user->id}}">
+        </form>
     </main>
     <script>
         var edit = document.getElementById('edit');
         var inputs = document.getElementsByClassName('form-control');
         var btn = document.getElementById('submit');
+        var btn2 = document.getElementById('delete');
+        var form = document.getElementById('form-delete');
         edit.addEventListener('click',function(){
             for(var i=0 ; i<inputs.length ; i++){
                 inputs[i].readOnly = false;
                 inputs[i].disabled = false
             }
             btn.style.display = 'block';
+        });
+        btn2.addEventListener('click',function(){
+           form.submit();
         });
     </script>
 @endsection
