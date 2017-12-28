@@ -1,4 +1,7 @@
 @extends('layouts.master')
+@section('styles')
+    <link rel="stylesheet" href="/css/default.css">
+@endsection
 @section('content')
     <main class="container">
         <!--        added departments     -->
@@ -29,16 +32,22 @@
                                             </div>
                                         </div>
                                     </div>
-                                    @empty @lang('No Employees')
+                                    @empty
+                                        <div class="icon text-center">
+                                            <div class="block">
+                                                <i class="fa fa-user-times" aria-hidden="true"></i>
+                                                <p>@lang('No Employees')</p>
+                                            </div>
+                                        </div>
                                     @endforelse
                                 </div>
                             </div>
                             <div class="card-footer">
                                 <div class="col-md-6 col-xs-6">
-                                    <div class="font-bold">TASKS NUMBER</div>
+                                    <div class="font-bold">@lang('TASKS NUMBER')</div>
                                     <strong>{{$department->tasks->count()}}</strong>
                                 </div>
-                                @if($department->employees->count() >= 1)
+                                @if($department->employees->count() >= 1 && $department->tasks->count() >=1 )
                                     <div class="col-md-6 col-xs-6 text-right ">
                                         <a href="/track/{{$department->id}}" class="btn btn-primary">@lang('View All Tasks')</a>
                                     </div>
