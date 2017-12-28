@@ -166,7 +166,7 @@
                 inputs[i].readOnly = false;
                 inputs[i].disabled = false
             }
-            btn.style.display = 'block';
+            btn.style.display = 'inline';
         });
         btn2.addEventListener('click',function(){
            form.submit();
