@@ -38,6 +38,8 @@ Route::get('task', 'TasksController@index')
     ->middleware('auth');
 Route::post('task', 'TasksController@addTask')
     ->middleware('auth');
+Route::delete('task/delete', 'TasksController@delete')
+    ->middleware('auth');
 Route::get('track', 'TrackController@index')
     ->middleware('auth')
     ->middleware('tracker');

@@ -23,8 +23,10 @@
                     </ul>
                 </div>
             @endif
-            @if(session('status') != null)
-                <div class="alert alert-success">{{__(session('status'))}}</div>
+            @if(session('status') == 1)
+                <div class="alert alert-success">@lang('added')</div>
+            @elseif(session('status') == 2)
+                <div class="alert alert-success">@lang('deleted')</div>
             @endif
             </div>
         </div>
@@ -52,7 +54,15 @@
             <h2 class="heading">@lang("Today's Tasks")</h2>
             @forelse($tasks as $task)
             <div class="notification">
-                <h3 class="task">{{$task->content}}</h3>
+                <h3 class="task">
+                    {{$task->content}}
+                    <form action="/task/delete" method="POST">
+                        {{csrf_field()}}
+                        {{method_field('delete')}}
+                        <input type="hidden" name="id" value="{{$task->id}}">
+                        <button type="submit" class="btn btn-danger pull-right">@lang('delete')</button>
+                    </form>
+                </h3>
             </div>
             @empty
                 <div class="icon text-center">

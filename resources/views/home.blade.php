@@ -26,7 +26,6 @@
         </section>
         <section class="row addSec">
             <aside class="col-md-6">
-              
                 <form method="post" action="/addemp">
                 {{csrf_field()}}
                 <!--  General -->
@@ -35,7 +34,6 @@
                         <div class="controls">
                            <label for="firstName">@lang('First Name')</label>
                             <input type="text" id="firstName" class="floatLabel form-control" placeholder= "@lang('Enter') @lang('First Name')" name="firstName" value="{{old('firstName')}}">
-                            
                         </div>
                         <div class="controls">
                            <label for="lastName" >@lang('Last Name')</label>
@@ -45,22 +43,18 @@
                         <div class="controls">
                              <label for="email">@lang('Email')</label>
                             <input type="text" id="email" class="floatLabel form-control" placeholder= "@lang('Enter') @lang('Email')"  name="email" value="{{old('email')}}">
-                          
                         </div>
                         <div class="controls">
                             <label for="password">@lang('Password')</label>
                             <input type="text" id="password" class="floatLabel form-control" placeholder= "@lang('Enter') @lang('Password')"  name="password">
-                         
                         </div>
                         <div class="controls">
                             <label for="jobTitle">@lang('Job Title')</label>
                             <input type="text" id="jobTitle" class="floatLabel form-control" placeholder= "@lang('Enter') @lang('Job Title')"  name="jobTitle" value="{{old('jobTitle')}}">
-                           
                         </div>
                         <div class="controls">
                             <label for="phoneNumber">@lang('Phone Number')</label>
                             <input type="tel" id="phoneNumber" class="floatLabel form-control" placeholder= "@lang('Enter') @lang('Phone Number')" name="phoneNumber" value="{{old('phoneNumber')}}">
-                 
                         </div>
                         <div class="controls">
                             <i class="fa fa-sort"></i>
@@ -79,7 +73,6 @@
                                     @endif
                                 @endforeach
                             </select>
-                            
                         </div>
                         <div class="btn-right">
                             <button type="submit" class="btn btn-primary">@lang("Add Emplyee")</button>
@@ -87,7 +80,6 @@
                     </div>
                 </form>
             </aside>
-
             <aside class="col-md-6">
                 <form action="/d-department" method="post">
                     <!--  Details -->
@@ -98,14 +90,11 @@
                             <div class="controls">
                                  <label for="department">@lang('Department Name')</label>
                                 <input type="text" id="department"  placeholder= "  @lang('Enter') @lang('Department Name')"  class="floatLabel" name="department">
-                              
                             </div>
                           <div class="btn-right">
                             <button type="submit" class="btn btn-primary">@lang("Add Department")</button>
                             </div>
                         </form>
-
-
                     </div> <!-- /.form-group -->
                 </form>
             </aside>
@@ -126,7 +115,7 @@
                                     @if($department->employees->count() == 0)
                                         <form action="/deleteDepartment" id="form" method="post">
                                             {{csrf_field()}}
-                                            <a class="delete close-icon btn pull-right"><i class="fa fa-close"></i>Delete</a>
+                                            <a class="delete close-icon btn pull-right"><i class="fa fa-close"></i>@lang('delete')</a>
                                             <input type="hidden" name="id" value="{{$department->id}}">
                                         </form>
                                     @endif
@@ -174,6 +163,5 @@
                 this.parentElement.submit();
             });
         }
-
     </script>
 @endsection

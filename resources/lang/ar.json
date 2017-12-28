@@ -4,7 +4,6 @@
   "Syal":"سيال",
   "Login": "تسجيل الدخول",
   "E-Mail Address" : "البريد الإلكتروني",
-  "Password" : " كلمه المرور " ,
   "Remember Me" : "ذكرنى" ,
   "login":"الدخول" ,
   "Details":"التفاصيل" ,
@@ -29,7 +28,6 @@
   "Enter Email":"إدخل",
   "Password":"كلمه المرور",
   "Enter Password":"إدخل",
-  "Job Title":"المسمى الوظيفى",
   "Enter Job Title":"إدخل",
   "Phone Number":"رقم الهاتف",
   "Enter Phone Number":"إدخل",
@@ -64,5 +62,8 @@
   "Select":"إختار",
   "Employees Count":"عدد الموظفين بالقسم",
   "change":"تغيير",
-  "password":"كلمه المرور"
+  "password":"كلمه المرور",
+  "delete":"حذف",
+  "added":"تم الإضافة",
+  "deleted":"تم الحذف"
 }
