@@ -49,10 +49,10 @@
                 <div class="col-md-9 col-xs-12">
                     @if($errors->any())
                         <input class="form-control" type="text" name="firstName"
-                               placeholder=@lang("Enter First Name") value="{{old('firstName')}}">
+                               placeholder="@lang('Enter')@lang('First Name')" value="{{old('firstName')}}">
                     @else
                         <input class="form-control" type="text" name="firstName" @if(auth()->user()->role == 'admin')readonly @endif
-                               placeholder="Enter First Name" value="{{$user->first_name}}">
+                               placeholder="@lang('Enter') @lang('First Name')" value="{{$user->first_name}}">
                     @endif
                 </div>
             </div>
@@ -61,10 +61,10 @@
                 <div class="col-md-9 col-xs-12">
                     @if($errors->any())
                         <input class="form-control" type="text" name="lastName"
-                               placeholder=@lang("Enter Last Name") value="{{old('lastName')}}">
+                               placeholder="@lang('Enter')@lang('Last Name')" value="{{old('lastName')}}">
                     @else
                         <input class="form-control" type="text" name="lastName" @if(auth()->user()->role == 'admin')readonly @endif
-                               placeholder=@lang("Enter Last Name") value="{{$user->last_name}}">
+                               placeholder="@lang('Enter') @lang('Last Name')") value="{{$user->last_name}}">
                     @endif
                 </div>
             </div>
@@ -73,10 +73,10 @@
                 <div class="col-md-9 col-xs-12">
                     @if($errors->any())
                         <input class="form-control" type="email" name="email"
-                               placeholder=@lang("Enter Email") value="{{old('email')}}">
+                               placeholder="@lang('Enter') @lang('Email')" value="{{old('email')}}">
                     @else
                         <input class="form-control" type="email" name="email" @if(auth()->user()->role == 'admin')readonly @endif
-                               placeholder=@lang("Enter Email") value="{{$user->email}}">
+                               placeholder="@lang('Enter') @lang('Email')" value="{{$user->email}}">
                     @endif
                 </div>
             </div>
@@ -85,10 +85,10 @@
                 <div class="col-md-9 col-xs-12">
                     @if($errors->any())
                         <input class="form-control" type="text" name="jobTitle"
-                               placeholder=@lang("Enter Job Title") value="{{old('jobTitle')}}">
+                               placeholder="@lang('Enter') @lang('Job Title')" value="{{old('jobTitle')}}">
                     @else
                         <input class="form-control" type="text" name="jobTitle" @if(auth()->user()->role == 'admin')readonly @endif
-                               placeholder=@lang("Enter Job Title") value="{{$user->job_title}}">
+                               placeholder="@lang('Enter') @lang('Job Title')" value="{{$user->job_title}}">
                     @endif
                 </div>
             </div>
@@ -97,10 +97,10 @@
                 <div class="col-md-9 col-xs-12">
                     @if($errors->any())
                         <input class="form-control" type="text" name="phoneNumber"
-                               placeholder=@lang("Enter Phone Number") value="{{old('phoneNumber')}}">
+                               placeholder="@lang('Enter') @lang('Phone Number')" value="{{old('phoneNumber')}}">
                     @else
                         <input class="form-control" type="text" name="phoneNumber" @if(auth()->user()->role == 'admin')readonly @endif
-                               placeholder=@lang("Enter Phone Number") value="{{$user->phone}}">
+                               placeholder="@lang('Enter') @lang('Phone Number')" value="{{$user->phone}}">
                     @endif
                 </div>
             </div>
