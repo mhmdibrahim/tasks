@@ -131,7 +131,7 @@
                                             <form action="/deleteDepartment" id="form" method="post">
                                                 {{csrf_field()}}
                                                 <a class="delete close-icon  pull-right"><i
-                                                            class="fa fa-trash"></i> @lang('delete')</a>
+                                                            class="fa fa-trash"></i> @lang('Delete')</a>
                                                 <input type="hidden" name="id" value="{{$department->id}}">
                                             </form>
                                         @endif

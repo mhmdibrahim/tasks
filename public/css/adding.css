@@ -104,8 +104,7 @@ a {
     width: 100%;
 }
 
-header, form {
-}
+.dep-title form {display:  inline;}
 
 .form-group {
     margin-bottom: 8px;
