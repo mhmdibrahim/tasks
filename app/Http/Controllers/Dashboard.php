@@ -12,7 +12,7 @@ class Dashboard extends Controller
 {
     public function index(){
         return view('home')
-            ->with('departments',Department::latest()->get());
+            ->with('departments',Department::with('employees')->latest()->get());
     }
 
     public function createUser(Request $request){

@@ -12,7 +12,7 @@ class TasksController extends Controller
     {
         $tasks = auth()->user()->tasks()->where('created_at', '>=', Carbon::today())
             ->where('created_at', '<', Carbon::tomorrow())
-            ->get();
+            ->latest()->get();
         return view('dailytasks')->with('tasks', $tasks)
             ->with('id', auth()->user()->id);
     }

@@ -8,7 +8,6 @@ class Department extends Model
 {
     protected $table = 'departments';
 
-    public $timestamps = false ;
     public function employees (){
         return $this->hasMany('App\User');
     }

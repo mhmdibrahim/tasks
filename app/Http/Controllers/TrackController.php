@@ -12,7 +12,7 @@ class TrackController extends Controller
     public function index()
     {
         return view('track')
-            ->with('departments', Department::all());
+            ->with('departments', Department::latest()->get());
     }
 
     public function showDepartment(Request $request,$id)
