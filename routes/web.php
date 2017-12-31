@@ -40,6 +40,12 @@ Route::get('admin/edit/user/{id}', 'Dashboard@editUser')
 Route::delete('delete/user', 'Dashboard@deleteUser')
     ->middleware('auth')
     ->middleware('admin');
+Route::get('/show/trackers','Dashboard@showTrackers')
+    ->middleware('auth')
+    ->middleware('admin');
+Route::delete('/delete/tracker','Dashboard@deleteTracker')
+    ->middleware('auth')
+    ->middleware('admin');
 Route::get('task', 'TasksController@index')
     ->middleware('auth');
 Route::post('task', 'TasksController@addTask')

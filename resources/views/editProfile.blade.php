@@ -28,7 +28,7 @@
                 </div>
             @endif
             @if(session('status') != null)
-                <div class="alert alert-success">{{session('status')}}</div>
+                <div class="alert alert-success">@lang('Profile Edited')</div>
             @endif
         </div>
 
@@ -169,7 +169,11 @@
             btn.style.display = 'inline';
         });
         btn2.addEventListener('click',function(){
-           form.submit();
+            var confirmed = deleteConfirm();
+           if(confirmed)form.submit();
         });
+        function deleteConfirm(){
+            return confirm('are you sure you want to delete this department');
+        }
     </script>
 @endsection

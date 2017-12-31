@@ -73,6 +73,12 @@
   "deleted":"تم الحذف",
   "gender":"النوع",
   "male":"ذكر",
-  "female":"أنثي"
+  "female":"أنثي",
+  "Role":"الصلاحية",
+  "regular":"موظف",
+  "tracker":"مشرف",
+  "Trackers":"المشرفين",
+  "No Trackers":"لا يوجد مشرفين",
+  "Tracker Deleted":"تم حذف المشرف"
 
 }

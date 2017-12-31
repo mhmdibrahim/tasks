@@ -60,7 +60,7 @@
                         {{csrf_field()}}
                         {{method_field('delete')}}
                         <input type="hidden" name="id" value="{{$task->id}}">
-                        <button type="submit" class="btn btn-danger pull-right">@lang('delete')</button>
+                        <button type="button" class="btn btn-danger pull-right">@lang('delete')</button>
                     </form>
                 </h3>
             </div>
@@ -73,7 +73,18 @@
                 </div>
             @endforelse
         </section>
-      
     </main>
+    <script>
+        var buttons = document.getElementsByClassName('btn-danger');
+        for(var i=0 ; i<buttons.length ; i++){
+            buttons[i].addEventListener('click',function(){
+                var confirmed = deleteConfirm();
+                if(confirmed)this.parentElement.submit();
+            });
+        }
+        function deleteConfirm(){
+            return confirm('are you sure you want to delete this tracker');
+        }
+    </script>
 
 @endsection

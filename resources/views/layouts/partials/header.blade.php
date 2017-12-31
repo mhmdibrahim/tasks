@@ -21,6 +21,9 @@
                                 @if(auth()->user()->role == "regular")
                                     <li><a href="/edit">@lang('Edit Profile')</a></li>
                                 @endif
+                                @if(auth()->user()->role == "admin")
+                                    <li><a href="/show/trackers">@lang('Trackers')</a></li>
+                                @endif
                                 <li><a href="/changePassword">@lang('change password')</a></li>
                                 <li>
                                     <a href="{{ route('logout') }}"
@@ -28,7 +31,6 @@
                                                      document.getElementById('logout-form').submit();">
                                         @lang('Logout')
                                     </a>
-
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST"
                                           style="display: none;">
                                         {{ csrf_field() }}

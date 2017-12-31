@@ -21,11 +21,14 @@ class EditProfileController extends Controller
             'lastName'=>'required|max:255',
             'email' => ['required','max:255','email',Rule::unique('users','email')->ignore($request->email,'email')],
             'department'=>'required|exists:departments,id',
-            'gender'=>'required|exists:users,gender',
+            'gender'=>[
+                'required',
+                Rule::in(['male','female'])
+            ],
             'jobTitle'=>'required|max:255',
             'phoneNumber'=>[
                 'required',
-                'regex:/^01[0124]\d{8}$/'
+                'regex:/^(\d+\-?\s*\d+)+$/'
             ]
         ]);
 

@@ -58,18 +58,7 @@
                                    placeholder="@lang('Enter') @lang('Password')" name="password">
                         </div>
                         <div class="controls">
-                            <label for="jobTitle">@lang('Job Title')</label>
-                            <input type="text" id="jobTitle" class="floatLabel form-control"
-                                   placeholder="@lang('Enter') @lang('Job Title')" name="jobTitle"
-                                   value="{{old('jobTitle')}}">
-                        </div>
-                        <div class="controls">
-                            <label for="phoneNumber">@lang('Phone Number')</label>
-                            <input type="tel" id="phoneNumber" class="floatLabel form-control"
-                                   placeholder="@lang('Enter') @lang('Phone Number')" name="phoneNumber"
-                                   value="{{old('phoneNumber')}}">
-                        </div>
-                        <div class="controls">
+                            <i class="fa fa-sort"></i>
                             <label for="gender">@lang('gender')</label>
                             <select name="gender" class="floatLabel form-control">
                                 <option value="male" @if(old('gender') == 'male') selected @endif>@lang('male')</option>
@@ -77,11 +66,30 @@
                                         @if(old('gender') == 'female') selected @endif>@lang('female')</option>
                             </select>
                         </div>
-
                         <div class="controls">
                             <i class="fa fa-sort"></i>
-                            <label>@lang('Department')</label>
-                            <select class="floatLabel form-control" name="department">
+                            <label for="role">@lang('Role')</label>
+                            <select name="role" id="role" class="floatLabel form-control">
+                                <option value="regular" selected>@lang('regular')</option>
+                                <option value="tracker">@lang('tracker')</option>
+                            </select>
+                        </div>
+                        <div class="controls">
+                            <label for="jobTitle" class="optional">@lang('Job Title')</label>
+                            <input type="text" id="jobTitle" class="floatLabel form-control optional"
+                                   placeholder="@lang('Enter') @lang('Job Title')" name="jobTitle"
+                                   value="{{old('jobTitle')}}">
+                        </div>
+                        <div class="controls">
+                            <label for="phoneNumber" class="optional">@lang('Phone Number')</label>
+                            <input type="tel" id="phoneNumber" class="floatLabel form-control optional"
+                                   placeholder="@lang('Enter') @lang('Phone Number')" name="phoneNumber"
+                                   value="{{old('phoneNumber')}}">
+                        </div>
+                        <div class="controls">
+                            <i class="fa fa-sort optional"></i>
+                            <label class="optional">@lang('Department')</label>
+                            <select class="floatLabel form-control optional" name="department">
                                 @if(old('department') == null)
                                     <option disabled selected>@lang('-Select Department-')</option>
                                 @else
@@ -147,13 +155,13 @@
 
                                     </div>
                                     <div class="dep-box-content auto-height">
-
                                         <div class="employees-list">
                                             @forelse($department->employees as $employee)
                                                 <div class="row col-md-12 col-xs-12 list-element">
                                                     <div class="col-md-2 col-xs-2 pad-0">
-                                                        <a href="admin/edit/user/{{$employee->id}}"><img alt="" class="img-circle"
-                                                                                                         src="/images/Blank_Avatar.png"></a>
+                                                        <a href="admin/edit/user/{{$employee->id}}">
+                                                            <img alt="" class="img-circle" src="/images/Blank_Avatar.png">
+                                                        </a>
                                                     </div>
                                                     <div class="col-md-10 col-xs-10">
                                                         <a href="admin/edit/user/{{$employee->id}}">
@@ -194,8 +202,29 @@
         var a = document.getElementsByClassName('delete');
         for (var i = 0; i < a.length; i++) {
             a[i].addEventListener('click', function () {
-                this.parentElement.submit();
+                var confirmed = deleteConfirm();
+                if(confirmed)this.parentElement.submit();
             });
+        }
+        var selectRole = document.getElementById('role');
+        var optionalFields = document.getElementsByClassName('optional');
+        selectRole.addEventListener('change',function(){
+            switchOptionalFields();
+        });
+        function switchOptionalFields(){
+            console.log('function');
+            for(var i=0 ; i<optionalFields.length ; i++){
+                if(selectRole.value === 'regular'){
+                    console.log('first');
+                    optionalFields[i].style.display = 'block';
+                }else if(selectRole.value === 'tracker'){
+                    console.log('second');
+                    optionalFields[i].style.display = 'none';
+                }
+            }
+        }
+        function deleteConfirm(){
+            return confirm('are you sure you want to delete this department');
         }
     </script>
 @endsection
