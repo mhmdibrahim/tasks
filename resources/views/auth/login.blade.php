@@ -18,17 +18,25 @@
                 <form name="auth-form" action="{{ route('login') }}" method="POST">
                     {{ csrf_field() }}
                     <div class="fieldset">
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
                         <label for="email">
                             @lang('E-Mail Address')
                         </label>
-                        <input id="email" name="email" type="text" required>
-                    
+                        <input id="email" name="email" type="text">
                     </div>
                     <div class="fieldset">
                            <label for="password">
                             @lang('Password')
                         </label>
-                        <input id="password" name="password" type="password" required>
+                        <input id="password" name="password" type="password">
                     
                   
                     </div>

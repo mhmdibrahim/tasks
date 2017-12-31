@@ -23,8 +23,10 @@
                     </ul>
                 </div>
             @endif
-            @if(session('status') != null)
-                <div class="alert alert-success">{{__(session('status'))}}</div>
+            @if(session('status') == 1)
+                <div class="alert alert-success">@lang('added')</div>
+            @elseif(session('status') == 2)
+                <div class="alert alert-success">@lang('deleted')</div>
             @endif
             </div>
         </div>
@@ -34,10 +36,10 @@
                 <div class="form-group">
                     <h2 class="heading">@lang('New Task')</h2>
                     <div class="controls">
-                       <div class="col-md-2 col-xs-3 pad-0">
-                            <label for="task" >@lang('Enter Your Task Here')</label>
+                       <div class="col-md-1 col-xs-12 pad-0">
+                            <label for="task" >@lang('Your Task')</label>
                         </div>
-                        <div class="col-md-10 col-xs-9">
+                        <div class="col-md-11 col-xs-12 pad-0">
                             <input type="text"  id="" class="form-control floatLabel " name="task">
                         </div>
   
@@ -52,7 +54,15 @@
             <h2 class="heading">@lang("Today's Tasks")</h2>
             @forelse($tasks as $task)
             <div class="notification">
-                <h3 class="task">{{$task->content}}</h3>
+                <h3 class="task">
+                    {{$task->content}}
+                    <form action="/task/delete" method="POST">
+                        {{csrf_field()}}
+                        {{method_field('delete')}}
+                        <input type="hidden" name="id" value="{{$task->id}}">
+                        <button type="button" class="btn btn-danger pull-right">@lang('delete')</button>
+                    </form>
+                </h3>
             </div>
             @empty
                 <div class="icon text-center">
@@ -63,7 +73,18 @@
                 </div>
             @endforelse
         </section>
-      
     </main>
+    <script>
+        var buttons = document.getElementsByClassName('btn-danger');
+        for(var i=0 ; i<buttons.length ; i++){
+            buttons[i].addEventListener('click',function(){
+                var confirmed = deleteConfirm();
+                if(confirmed)this.parentElement.submit();
+            });
+        }
+        function deleteConfirm(){
+            return confirm('are you sure you want to delete this tracker');
+        }
+    </script>
 
 @endsection

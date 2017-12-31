@@ -12,7 +12,7 @@ class TasksController extends Controller
     {
         $tasks = auth()->user()->tasks()->where('created_at', '>=', Carbon::today())
             ->where('created_at', '<', Carbon::tomorrow())
-            ->get();
+            ->latest()->get();
         return view('dailytasks')->with('tasks', $tasks)
             ->with('id', auth()->user()->id);
     }
@@ -26,6 +26,11 @@ class TasksController extends Controller
         $task->content = $request->task;
         $task->user_id = auth()->user()->id;
         $task->save();
-        return back()->with('status', 'Task Added');
+        return back()->with('status',1);
+    }
+
+    public function delete(Request $request){
+        Task::destroy($request->id);
+        return back()->with('status',2);
     }
 }

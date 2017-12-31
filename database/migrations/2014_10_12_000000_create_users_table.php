@@ -22,6 +22,7 @@ class CreateUsersTable extends Migration
             $table->integer('department_id')->nullable();
             $table->string('job_title')->nullable();
             $table->string('phone')->nullable();
+            $table->enum('gender',['male','female'])->default('male');
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();

@@ -48,9 +48,11 @@
                     @endif
                 </ol>
             </div>
+            @if($tasks >=1 )
             <div class="footer text-right">
                 <a href="/moreDetails/{{$department->id}}" class="btn btn-primary">@lang('View Employees Tasks')</a>
             </div>
+             @endif
         </section>
     </main>
     
