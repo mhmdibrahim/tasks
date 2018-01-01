@@ -48,16 +48,16 @@
     <script src="/js/html5shiv.js"></script>
     <script src="/js/respond.min.js"></script>
     <![endif]-->
-    @yield('head_scripts')
+@yield('head_scripts')
 </head>
 
 <body>
 @auth
-@include('layouts.partials.header')
+    @include('layouts.partials.header')
 @endauth
 @yield('content')
 @auth
-@include('layouts.partials.footer')
+    @include('layouts.partials.footer')
 @endauth
 
 <!-- initialize jQuery Library -->
@@ -65,8 +65,8 @@
 <!-- Bootstrap jQuery -->
 <script type="text/javascript" src="/js/bootstrap.min.js"></script>
 @auth
-<script src="/js/flatpickr.min.js"></script>
-<script src="/js/adding.js" type="text/javascript"></script>
+    <script src="/js/flatpickr.min.js"></script>
+    <script src="/js/adding.js" type="text/javascript"></script>
 @endauth
 @yield('scripts')
 </body>
