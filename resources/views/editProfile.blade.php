@@ -35,9 +35,12 @@
         <form method="POST" action="/edit" class="form-horizontal post" readonly>
             @if(auth()->user()->role == 'admin')
                 <h1 class="heading">
-                    {{$user->first_name}} {{$user->last_name}}
-                    <button type="button" class="btn btn-danger pull-right" id="delete">@lang('delete')</button>
-                    <button type="button" class="btn btn-primary pull-right" id="edit">@lang('Edit')</button>
+                    <div class="col-md-6 col-xs-6 user-name">
+                        <span class="">{{$user->first_name}} {{$user->last_name}}</span></div>
+                    <div class="col-md-6 col-xs-6">
+                        <button type="button" class="btn btn-danger pull-right" id="delete">@lang('delete')</button>
+                        <button type="button" class="btn btn-primary pull-right" id="edit">@lang('Edit')</button>
+                    </div>
                 </h1>
             @else
                 <h1 class="heading">@lang("Edit Profile") </h1>

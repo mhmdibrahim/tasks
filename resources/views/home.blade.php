@@ -184,10 +184,8 @@
                                         </div>
                                     </div>
                                     <div class="card-footer">
-                                        <div class="col-md-6 col-xs-6">
                                             <div class="font-bold">@lang ('Employees Count')</div>
                                             <strong>{{$department->employees->count()}}</strong>
-                                        </div>
                                     </div>
                                 </div>
                             </div>

@@ -496,6 +496,8 @@ main aside:first-child{padding: 4px;}
     color: #ffffff;
     padding: 20px 10px;
     margin: -3px 0;
+    vertical-align:  middle;
+    min-height: 70px;
     font-family:  inherit;
     border-radius: 11px 2px;
     font-size: 19px;
@@ -660,4 +662,36 @@ select option{
 }
 .pad-0{
     padding: 0;
+}
+.heading .user-name {
+    margin-top: 10px;
+}
+.user-name span{
+    font-size:18px;
+    font-weight: 900;
+}
+.form-horizontal #delete,.form-horizontal #edit{
+
+    min-width: auto;
+
+    border-radius: 4px;
+
+    margin-left: 2px;
+}
+@media screen and (min-width: 700px) {
+    .list-element .col-md-2{
+        padding: 0 21px;
+    }}
+.list-element form .btn{
+    float: right;
+    border-radius: 3px;
+    min-width: 60px;
+}
+@media screen and (max-width: 360px) {
+    .list-element .col-md-10 {
+        padding: 0 38px;
+    }
+    .heading .col-xs-6{
+        display: inline-flex;
+    }
 }

@@ -43,12 +43,12 @@
                                 </div>
                             </div>
                             <div class="card-footer">
-                                <div class="col-md-6 col-xs-6">
+                                <div class="">
                                     <div class="font-bold">@lang('TASKS NUMBER')</div>
                                     <strong>{{$department->tasks->count()}}</strong>
                                 </div>
                                 @if($department->employees->count() >= 1 && $department->tasks->count() >=1 )
-                                    <div class="col-md-6 col-xs-6 text-right ">
+                                    <div class="pull-right ">
                                         <a href="/track/{{$department->id}}" class="btn btn-primary">@lang('View All Tasks')</a>
                                     </div>
                                 @endif

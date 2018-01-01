@@ -258,3 +258,5 @@ main aside:last-child {
 .dep-title a i{
     float: left;
 }
+.list-element form .btn{
+    float: left;}

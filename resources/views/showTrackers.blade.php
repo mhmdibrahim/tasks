@@ -4,7 +4,7 @@
 <br>
 @section('content')
     <main class="container">
-        <div class="col-md-offset-3">
+        <div class="post">
             @if(session('status') == 1)
                 <div class="alert alert-success">@lang('Tracker Deleted')</div>
             @endif
@@ -14,10 +14,8 @@
                 </div>
                 <div class="panel-body">
                     @forelse($trackers as $tracker)
-                        <div class="row col-md-12 col-xs-12 list-element">
-                            <div class="col-md-10 col-xs-10">
-                                <strong class=" name">{{$tracker->first_name}} {{$tracker->last_name}}</strong>
-                            </div>
+                        <div class=" list-element">
+                            <strong class=" name">{{$tracker->first_name}} {{$tracker->last_name}}</strong>
                             <form action="/delete/tracker" method="POST">
                                 {{csrf_field()}}
                                 {{method_field('delete')}}
