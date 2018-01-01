@@ -54,7 +54,7 @@
                         <input class="form-control" type="text" name="firstName"
                                placeholder="@lang('Enter')@lang('First Name')" value="{{old('firstName')}}">
                     @else
-                        <input class="form-control" type="text" name="firstName" @if(auth()->user()->role == 'admin')readonly @endif
+                        <input class="form-control" type="text" name="firstName" @if(auth()->user()->role == 'admin' || auth()->user()->role == 'tracker')readonly @endif
                                placeholder="@lang('Enter') @lang('First Name')" value="{{$user->first_name}}">
                     @endif
                 </div>
@@ -66,7 +66,7 @@
                         <input class="form-control" type="text" name="lastName"
                                placeholder="@lang('Enter')@lang('Last Name')" value="{{old('lastName')}}">
                     @else
-                        <input class="form-control" type="text" name="lastName" @if(auth()->user()->role == 'admin')readonly @endif
+                        <input class="form-control" type="text" name="lastName" @if(auth()->user()->role == 'admin' || auth()->user()->role == 'tracker')readonly @endif
                                placeholder="@lang('Enter') @lang('Last Name')") value="{{$user->last_name}}">
                     @endif
                 </div>
@@ -78,7 +78,7 @@
                         <input class="form-control" type="email" name="email"
                                placeholder="@lang('Enter') @lang('Email')" value="{{old('email')}}">
                     @else
-                        <input class="form-control" type="email" name="email" @if(auth()->user()->role == 'admin')readonly @endif
+                        <input class="form-control" type="email" name="email" @if(auth()->user()->role == 'admin' || auth()->user()->role == 'tracker')readonly @endif
                                placeholder="@lang('Enter') @lang('Email')" value="{{$user->email}}">
                     @endif
                 </div>
@@ -90,7 +90,7 @@
                         <input class="form-control" type="text" name="jobTitle"
                                placeholder="@lang('Enter') @lang('Job Title')" value="{{old('jobTitle')}}">
                     @else
-                        <input class="form-control" type="text" name="jobTitle" @if(auth()->user()->role == 'admin')readonly @endif
+                        <input class="form-control" type="text" name="jobTitle" @if(auth()->user()->role == 'admin' || auth()->user()->role == 'tracker')readonly @endif
                                placeholder="@lang('Enter') @lang('Job Title')" value="{{$user->job_title}}">
                     @endif
                 </div>
@@ -102,7 +102,7 @@
                         <input class="form-control" type="text" name="phoneNumber"
                                placeholder="@lang('Enter') @lang('Phone Number')" value="{{old('phoneNumber')}}">
                     @else
-                        <input class="form-control" type="text" name="phoneNumber" @if(auth()->user()->role == 'admin')readonly @endif
+                        <input class="form-control" type="text" name="phoneNumber" @if(auth()->user()->role == 'admin' || auth()->user()->role == 'tracker')readonly @endif
                                placeholder="@lang('Enter') @lang('Phone Number')" value="{{$user->phone}}">
                     @endif
                 </div>
@@ -110,7 +110,7 @@
             <div class="form-group">
                 <label class="control-label col-md-3 col-xs-12">@lang('gender')</label>
                 <div class="col-md-9 col-xs-12">
-                    <select name="gender" class="form-control" @if(auth()->user()->role == 'admin' && !$errors->any())disabled @endif>
+                    <select name="gender" class="form-control" @if(auth()->user()->role == 'admin' && !$errors->any() || auth()->user()->role == 'tracker')disabled @endif>
                         @if($errors->any())
                             <option value="male" @if(old('gender')=='male')selected @endif>@lang('male')</option>
                             <option value="female" @if(old('gender')=='female')selected @endif>@lang('female')</option>
@@ -126,7 +126,7 @@
             <div class="form-group">
                 <label class="control-label col-md-3 col-xs-12">@lang('Department')</label>
                 <div class="col-md-9 col-xs-12">
-                    <select class="form-control" name="department" @if(auth()->user()->role == 'admin' && !$errors->any())disabled @endif>
+                    <select class="form-control" name="department" @if(auth()->user()->role == 'admin' && !$errors->any() || auth()->user()->role == 'tracker')disabled @endif>
                         @if(old('department') == null && $user->department_id == null)
                             <option disabled id="holder" selected>@lang('-Select Department-')</option>
                         @else
@@ -145,9 +145,11 @@
                 </div>
             </div>
             <div class="btn-right" >
+                @if (!(auth()->user()->role == 'tracker' ))
                 <button type="submit" id="submit" class="btn btn-primary"
-                        @if(auth()->user()->role == 'admin' && !$errors->any() && session('status') == null )style="display: none" @endif>
+                        @if(auth()->user()->role == 'admin' && !$errors->any() && session('status') == null ) style="display: none" @endif>
                     @lang('Edit')</button>
+                @endif
             </div>
                 <input type="hidden" name="id" value="{{$user->id}}">
             </div>

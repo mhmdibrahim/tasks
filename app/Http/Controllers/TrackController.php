@@ -6,6 +6,7 @@ use function foo\func;
 use Illuminate\Http\Request;
 use App\Department;
 use Carbon\Carbon;
+use App\User ;
 
 class TrackController extends Controller
 {
@@ -56,6 +57,11 @@ class TrackController extends Controller
             }
         ])->find($department);
         return view('showDepartment')->with('department',$department)->with('date',$day);
+    }
+    public function showEmployeeDitails($id){
+        return view('editProfile')
+            ->with('departments',Department::all())
+            ->with('user',User::find($id));
     }
 }
 

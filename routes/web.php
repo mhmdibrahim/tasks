@@ -73,3 +73,7 @@ Route::post('edit','EditProfileController@edit')
 Route::get('language/{lang}','LanguageController@changeLanguage')
     ->name('language-chooser');
 
+Route::get('tracker/show/user/{id}', 'TrackController@showEmployeeDitails')
+    ->middleware('auth')
+    ->middleware('tracker');
+

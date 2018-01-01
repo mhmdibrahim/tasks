@@ -22,10 +22,12 @@
                                     @forelse($department->employees as $employee)
                                     <div class="row col-md-12 col-xs-12 list-element">
                                         <div class="col-md-2 col-xs-2">
-                                            <a href="profile.html" ><img alt="" class="img-circle"  src="/images/Blank_Avatar.png" ></a>
+                                            <a href="tracker/show/user/{{$employee->id}}" ><img  class="img-circle"  src="/images/Blank_Avatar.png" ></a>
                                         </div>
                                         <div class="col-md-10 col-xs-10">
+                                            <a href="tracker/show/user/{{$employee->id}}">
                                             <strong class=" name">{{$employee->first_name}} {{$employee->last_name}}</strong>
+                                            </a>
                                             <div class=" col-md-12 col-xs-12 emp-info">
                                                 <p class="  job-title">{{$employee->job_title}}</p>
                                                 <p class= "phone">{{$employee->phone}}</p>
