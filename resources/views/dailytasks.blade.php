@@ -40,7 +40,7 @@
                             <label for="task" >@lang('Your Task')</label>
                         </div>
                         <div class="col-md-11 col-xs-12 pad-0">
-                            <input type="text"  id="" class="form-control floatLabel " name="task">
+                            <input type="text"  id="" class="form-control floatLabel " placeholder="@lang('Enter') @lang('your Task here')" name="task">
                         </div>
   
                     </div>
