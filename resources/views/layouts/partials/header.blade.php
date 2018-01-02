@@ -3,7 +3,7 @@
     <nav class="navbar navbar-default navbar-fixed-top topnav">
         <div class="container">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">@lang('Syal')</a>
+                <a class="navbar-brand" href="/">@lang('Syal')</a>
             </div>
             <button class="navbar-toggler btn " type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">

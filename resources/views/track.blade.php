@@ -46,7 +46,7 @@
                             </div>
                             <div class="card-footer">
                                 <div class="">
-                                    <div class="font-bold">@lang('TASKS NUMBER')</div>
+                                    <div class="font-bold">@lang('Tasks')</div>
                                     <strong>{{$department->tasks->count()}}</strong>
                                 </div>
                                 @if($department->employees->count() >= 1 && $department->tasks->count() >=1 )
