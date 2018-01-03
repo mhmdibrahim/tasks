@@ -72,6 +72,10 @@
                     <p>@lang('You Have No Tasks')</p>
                 </div>
             @endforelse
+
+                <div class="footer text-right">
+                    <a href="/task/previous" class="btn btn-primary">@lang("Yesterday Tasks")</a>
+                </div>
         </section>
     </main>
     <script>

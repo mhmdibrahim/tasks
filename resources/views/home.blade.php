@@ -80,6 +80,7 @@
                                    placeholder="@lang('Enter') @lang('Job Title')" name="jobTitle"
                                    value="{{old('jobTitle')}}">
                         </div>
+
                         <div class="controls">
                             <label for="phoneNumber" class="optional">@lang('Phone Number')</label>
                             <input type="tel" id="phoneNumber" class="floatLabel form-control optional"
@@ -160,8 +161,13 @@
                                                 <div class="row col-md-12 col-xs-12 list-element">
                                                     <div class="col-md-2 col-xs-2 pad-0">
                                                         <a href="admin/edit/user/{{$employee->id}}">
-                                                            <img alt="" class="img-circle" src="/images/Blank_Avatar.png">
+                                                            @if($employee->gender == "female" )
+                                                            <img alt="" class="img-circle" src="/images/avatar-icono.png">
+                                                             @else
+                                                                <img alt="" class="img-circle" src="/images/blank_profile_male.jpg">
+                                                            @endif
                                                         </a>
+
                                                     </div>
                                                     <div class="col-md-10 col-xs-10">
                                                         <a href="admin/edit/user/{{$employee->id}}">

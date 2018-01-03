@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
 use App\Task;
 use Carbon\Carbon;
@@ -32,5 +33,12 @@ class TasksController extends Controller
     public function delete(Request $request){
         Task::destroy($request->id);
         return back()->with('status',2);
+    }
+
+    public function previousTasks(){
+
+        $user = auth()->user() ;
+        $tasks = $user->tasks()->where('created_at', '>=', Carbon::today())->get();
+        return view('eldertasks')->with('tasks',$tasks);
     }
 }

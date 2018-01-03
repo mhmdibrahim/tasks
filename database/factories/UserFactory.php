@@ -17,6 +17,7 @@ $factory->define(App\User::class, function (Faker $faker) {
         'job_title' => $faker->jobTitle,
         'phone' => $faker->phoneNumber,
         'gender'=>$gender[rand(0,1)],
+        'image'=>$faker->image 
 
     ];
 });

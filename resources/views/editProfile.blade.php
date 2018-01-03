@@ -95,6 +95,21 @@
                     @endif
                 </div>
             </div>
+
+                @if(auth()->user()->role == 'regular')
+                <div class="form-group">
+                    <label class="control-label col-md-3 col-xs-12">@lang('Image')</label>
+                    <div class="col-md-9 col-xs-12">
+                        @if($errors->any())
+                            <input class="form-control" type="file" name="image"
+                                   placeholder="@lang('Insert') @lang('Image')" value="{{old('image')}}">
+                        @else
+                            <input class="form-control" type="text" name="image"
+                            placeholder="@lang('Insert') @lang('Image')" value="{{$user->image}}">
+                        @endif
+                    </div>
+                </div>
+                @endif
             <div class="form-group">
                 <label class="control-label col-md-3 col-xs-12">@lang('Phone Number')</label>
                 <div class="col-md-9 col-xs-12">

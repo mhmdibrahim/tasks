@@ -53,6 +53,9 @@ Route::delete('/delete/tracker','Dashboard@deleteTracker')
 Route::get('task', 'TasksController@index')
     ->middleware('auth');
 
+Route::get('task/previous', 'TasksController@previousTasks')
+    ->middleware('auth');
+
 Route::post('task', 'TasksController@addTask')
     ->middleware('auth');
 
