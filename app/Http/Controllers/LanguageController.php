@@ -13,7 +13,7 @@ class LanguageController extends Controller
 {
     public function changeLanguage($lang)
     {
-        session()->put('locale', $lang);
+        session()->put('locale',$lang);
         return redirect()->back();
     }
 }

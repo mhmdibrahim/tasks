@@ -184,7 +184,7 @@
         edit.addEventListener('click',function(){
             for(var i=0 ; i<inputs.length ; i++){
                 inputs[i].readOnly = false;
-                inputs[i].disabled = false
+                inputs[i].disabled = false;
             }
             btn.style.display = 'inline';
         });
