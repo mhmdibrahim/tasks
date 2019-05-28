@@ -175,6 +175,7 @@
             <input type="hidden" name="id" value="{{$user->id}}">
         </form>
     </main>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>
         var edit = document.getElementById('edit');
         var inputs = document.getElementsByClassName('form-control');
@@ -190,10 +191,30 @@
         });
         btn2.addEventListener('click',function(){
             var confirmed = deleteConfirm();
+            console.log(confirmed);
            if(confirmed)form.submit();
         });
         function deleteConfirm(){
-            return confirm('are you sure you want to delete this department');
+            swal({
+                title: "Are you sure?",
+                text: "Once deleted, you will not be able to recover this imaginary file!",
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+            })
+                .then((willDelete) => {
+                    if (willDelete) {
+                        swal("Employee delete successfully", {
+                            icon: "success",
+
+                        });
+                        return true ;
+                    } else {
+                        swal("Data is safe!");
+                    }
+                });
+            // return confirm('are you sure you want to delete this department');
         }
     </script>
+
 @endsection

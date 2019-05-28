@@ -39,7 +39,7 @@
                             </ul>
                         </li>
                         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"
-                                                href="#">@lang('Language')<span
+                                                 href="#">@lang('Language')<span
                                         class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="/language/ar">@lang('Arabic') </a></li>
